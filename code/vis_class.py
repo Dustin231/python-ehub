@@ -20,7 +20,8 @@ from bkcharts.attributes import cat,color
 from bkcharts.operations import blend
 import networkx as nx
 
-from ehub_multienergy import data,model
+from notebook_import import *
+from python_ehub import data,model
 
 class VizTool:
     
