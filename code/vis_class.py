@@ -381,7 +381,7 @@ class VizTool:
             for hub_step in range(1,self.n_hubs+1):
                 storage_dict['f' + str(forms)][hub_step-1] = storage[(hub_step,forms)]
         
-        storage_dict['f1'] = [23,67,98,41,11]
+        #storage_dict['f1'] = [23,67,98,41,11]
         
         storage_bar = Bar(storage_dict,
                   values='f1',
