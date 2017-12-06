@@ -42,17 +42,20 @@ class InputData:
     #  Initialization when class is created
     #-----------------------------------------------------------------------
     
-    def __init__(self, ExcelPath, demands='Demand data',solar='Solar data', tech='Technology', gen='General'):  #if no values are passed, use default ones
+    def __init__(self, ExcelPath, demands='Demand data',solar='Solar data', tech='Technology', gen='General', EC='Energy carriers', net = 'Network'):  #if no values are passed, use default ones
         self.path = ExcelPath
         self.DemandSheet = demands
         self.SolarSheet = solar
         self.TechSheet = tech
         self.GeneralSheet = gen
-        
+        self.ECSheet = EC
+        self.NetSheet = net
+                
         self.TechOutputs = None
         self.Technologies = None
         self.DemandData = None
         self.StorageData = None
+        self.EC_dict = None
         self.numberofhubs = None
         self.numberofdemands = None
         
@@ -66,7 +69,9 @@ class InputData:
         self.Demanddata()
         self.TechParameters()
         self.TechOutput()
-        self.Storage()        
+        self.Storage()
+        self.EnergyCarriers()
+        self.Network()
         
     def TechParameters(self):
         """
@@ -75,6 +80,7 @@ class InputData:
         """
         Technologies=pd.read_excel(self.path,sheetname=self.TechSheet, skiprows=1, index_col=0, skip_footer=38) #technology characteristics
         Technologies=Technologies.dropna(axis=1, how='all') #technology characteristics 
+        self.instCapTech = Technologies.loc["Capacity (kW or m2)"] # pre-installed capcities; data is the same for all hubs; need to keep NaN flag
         Technologies=Technologies.fillna(0) #technology characteristics
         dd={}
         for i in range(self.numberofhubs):
@@ -87,6 +93,7 @@ class InputData:
         Skip all other lines on the sheet that are not related to the technologies output.
         """
         TechOutputs=pd.read_excel(self.path,sheetname=self.TechSheet, skiprows=15, index_col=0, skip_footer=28) #Output matrix
+        
         TechOutputs=TechOutputs.dropna(axis=0,how='all')  #Output matrix
         TechOutputs=TechOutputs.dropna(axis=1,how='all')  #Output matrix
         self.TechOutputs=TechOutputs
@@ -120,9 +127,72 @@ class InputData:
         number=number.dropna(axis=1,how='all')  #Output matrix
         number=number.iloc[0][0]
         self.numberofhubs=number
+            
+    def EnergyCarriers(self):
+        """
+        Get the list of energy carriers used in the model, assign the energy carriers values from 1 to N in a dictionary, and save the energy carrier values in a list
+        """
         
-    
-    
+        # Read data
+        ECs = pd.read_excel(self.path,sheetname=self.ECSheet, header=None, skiprows=1)
+        ECs = ECs.dropna(axis=1, how='all')
+        
+        # Create dictionary
+        dic = {}
+        for i in range(ECs.shape[0]):
+            dic[ECs.loc[i][0]] = i+1
+        self.EC_dict = dic
+        
+        # Convert stored energy carrier input data to assigned energy carrier ID in dictionary, save in list
+        StgE = []
+        for i,stg_name in enumerate(self.StorageData.loc["Stored energy carrier"]):
+            StgE += [self.EC_dict[stg_name]]
+        self.stgE = StgE
+        
+    def Network(self):
+        """
+        Retrieve network data from Excel "Network" spreadsheet
+        """
+        
+        # Read data
+        net = pd.read_excel(self.path,sheetname=self.NetSheet, header=None, skiprows=2, index_col = 0)
+        net = net.dropna(axis=1, how='all')
+        self.NetworkData = net
+                
+        # Convert stored energy carrier input data to assigned energy carrier ID in dictionary, save in list
+        NetE = []
+            
+        for i,EC_name in enumerate(self.NetworkData.loc["Energy carrier"]):
+            try:
+                NetE += [self.EC_dict[EC_name]]
+            except KeyError: # if a lookup error occurs
+                print("Energy carrier specified for network link could not be identified")
+                raise # reraise last exception
+                
+        self.netE = NetE
+        
+        # Store other parameters
+        self.node1 = self.NetworkData.loc["Node 1"]
+        self.node2 = self.NetworkData.loc["Node 2"]
+        self.netLength = self.NetworkData.loc["Length (m)"]
+        self.netLength = self.netLength.fillna(0)
+        self.netLoss = self.NetworkData.loc["Network loss (fraction/m)"]
+        self.netLoss = self.netLoss.fillna(0)
+        self.instCap = self.NetworkData.loc["Installed capacity (kW)"]
+        self.instCap = self.instCap.fillna(0) # CHANGE, leave as NAN
+        self.maxCap = self.NetworkData.loc["Maximum capacity (kW)"]
+        self.maxCap = self.maxCap.fillna(float('inf')) # if maximum is not given, assign it to infinity
+        self.minCap = self.NetworkData.loc["Minimum capacity (kW)"]
+        self.minCap = self.minCap.fillna(0)
+        self.invCost = self.NetworkData.loc["Investment cost (CHF/kW/m)"]
+        self.invCost = self.invCost.fillna(0)
+        self.OMVCost = self.NetworkData.loc["Variable O&M cost (CHF/kWh)"]
+        self.OMVCost = self.OMVCost.fillna(0)        
+        self.OMFCost = self.NetworkData.loc["Fixed O&M cost (CHF/kW)"]
+        self.OMFCost = self.OMFCost.fillna(0)
+        self.uniFlow = self.NetworkData.loc["Uni-directional flow? (Y)"]
+        self.uniFlow = self.uniFlow.str.lower() # convert to lower case
+
     
     #------------------------------------------------------------------------------------
     #  Functions used for translating dataframe/panels to dictionary format used by Pyomo
@@ -233,9 +303,7 @@ class InputData:
                 Roof_techset.append(n+2) #first is electricity +1 since it starts at 0
                 
         return Roof_techset
-    
-    
-    
+   
     
     #----------------------------------------------------------------------
     # C-matrix
@@ -353,7 +421,7 @@ class InputData:
         maxCap={}
         for n in range(self.numberofhubs):
             MaxCap=pd.DataFrame(self.Technologies[n].loc["Maximum Capacity",])
-            MaxCap.index=list(range(2,len(self.Technologies[n].loc["MinLoad (%)",].index)+2))
+            MaxCap.index=list(range(2,len(self.Technologies[n].loc["MinLoad (%)",].index)+2)) 
             maxCap[n]= MaxCap
 
             SolartechsSets=list(compress(list(range(1+1,len(self.Technologies[n].columns)+2)), list(self.Technologies[n].loc["Area (m2)"]>0)))
@@ -386,6 +454,52 @@ class InputData:
         maximalcapacities={}
         maximalcapacities = self.DictND(maximalcapacities, Capacities)
         return maximalcapacities
+    
+    
+    
+    def TechCapInit(self, model):
+        """
+        Initialize existing technology capacities; return pyomo formatted dictionary for binary cost indicator
+        Needs to be revisited with changes to output matrix usage, note also that no indicator is assigned to the electricity grid
+        """
+        
+        YN_techcost_dict = {} # indicator to apply costs based on capacity (investment); model does not apply these costs to a pre-installed capacity
+        ecOutSum = self.TechOutputs.sum(axis=0) # sum output matrix across rows
+        setvals = [] # for tracking purposes only
+        
+        for i in range(len(self.instCapTech)): # for each tech
+            techID = i+2
+            if(np.isnan(self.instCapTech[i])): # if capacity is not given
+                YN_techcost_dict[techID] = 1 # investment costs apply
+            else:
+                YN_techcost_dict[techID] = 0 # capacity is pre-defined; investment costs do not apply
+            
+                for j in range(self.numberofhubs): # for each hub
+                    hubID = j+1
+                    hublist = self.Technologies[j].loc["Hubs"][i]
+                    if isinstance(hublist,float): # if only a single hub was given and it is read as float, convert to int
+                        hublist = int(hublist)
+                    hublist = str(hublist).split(',') # convert to string (int case); if more thane one hub is given, split hubs into a list using ',' as a delimiter
+                    
+                    for k in range(self.numberofdemands): # for each energy carrier
+                        ecID = k+1
+                                            
+                        if str(hubID) in hublist: # if capacity is given and technology is present in hub
+                            capVal = self.instCapTech[i]
+                            
+                            if ecID == 1 and data.TechOutputs.iloc[k,i] == 1: # electricity
+                                model.Capacities[hubID, techID, ecID].fix(capVal) # set capacity
+                                setvals.append([hubID, techID, ecID, capVal])
+                            elif ecID != 1 and data.TechOutputs.iloc[k,i] == 1 and ecOutSum[i] < 2: # not a CHP; set capacity; NOTE: this may not work for the heat pump with -1 assignments; this assigns capacity to the ec == 1 only, the others are set to zero
+                                model.Capacities[hubID, techID, ecID].fix(capVal) # set capacity
+                                setvals.append([hubID, techID, ecID, capVal])
+                            elif ecID != 1 and data.TechOutputs.iloc[k,i] == 1 and ecOutSum[i] > 1: # CHP; do not set capacity (do nothing)
+                                pass # do nothing
+                            else:
+                                model.Capacities[hubID, techID, ecID].fix(0) # set capacity to zero
+                                setvals.append([hubID, techID, ecID, 0])
+                            
+        return (YN_techcost_dict)
     
     
     
@@ -562,26 +676,13 @@ class InputData:
         """
         Return Pyomo formatted lifetime in years per technology.
         """
-        dummy = {}
-        for n in range(self.numberofhubs):
-            Life=pd.DataFrame(list(self.Technologies[0].loc["Lifetime (yr)"]))
-            Life.columns=[1]
-            Life.index=list(range(2,len(self.TechOutputs.columns)+2))
-            dummy[n]=Life
-            
-        Life = pd.Panel(dummy)
-        
-        Life= Life.to_frame() #same for all hubs
-        Life.reset_index(inplace = True)
-        Life.index = Life['major']
-        del Life['major']
-        del Life['minor']
-        Life.columns = [int(x)+1 for x in Life.columns]
-        del Life.index.name
-        Life = Life.transpose()
+
+        Life=pd.DataFrame(list(self.Technologies[0].loc["Lifetime (yr)"]))
+        Life.columns=[1]
+        Life.index=list(range(2,len(self.TechOutputs.columns)+2))
 
         lifeTimeTechs={}
-        lifeTimeTechs=self.DictND(lifeTimeTechs, Life)
+        lifeTimeTechs=self.Dict1D_val_index(lifeTimeTechs, Life)
         return lifeTimeTechs
         
     
@@ -741,11 +842,7 @@ class InputData:
         maxStorCh={}
         MaxCharge=pd.DataFrame(list(self.StorageData.loc["max_charge"]))
         MaxCharge.columns=[1]
-        MaxCharge = MaxCharge.transpose()
-        MaxCharge.columns = [int(x)+1 for x in MaxCharge.columns]
-        for i in range(2,self.numberofhubs+1):
-            MaxCharge.loc[i] = MaxCharge.iloc[0]
-        maxStorCh=self.DictND(maxStorCh, MaxCharge)
+        maxStorCh=self.Dict1D(maxStorCh, MaxCharge)
         
         return maxStorCh
     
@@ -757,11 +854,7 @@ class InputData:
         maxStorDisch={}
         MaxDischarge=pd.DataFrame(list(self.StorageData.loc["max_discharge"]))
         MaxDischarge.columns=[1]
-        MaxDischarge = MaxDischarge.transpose()
-        MaxDischarge.columns = [int(x)+1 for x in MaxDischarge.columns]
-        for i in range(2,self.numberofhubs+1):
-            MaxDischarge.loc[i] = MaxDischarge.iloc[0]
-        maxStorDisch=self.DictND(maxStorDisch, MaxDischarge)
+        maxStorDisch=self.Dict1D(maxStorDisch, MaxDischarge)
         return maxStorDisch
     
     
@@ -772,11 +865,7 @@ class InputData:
         lossesStorStanding={}
         losses=pd.DataFrame(list(self.StorageData.loc["decay"]))
         losses.columns=[1]
-        losses = losses.transpose()
-        losses.columns = [int(x)+1 for x in losses.columns]
-        for i in range(2,self.numberofhubs+1):
-            losses.loc[i] = losses.iloc[0]
-        lossesStorStanding=self.DictND(lossesStorStanding, losses)
+        lossesStorStanding=self.Dict1D(lossesStorStanding, losses)
         return lossesStorStanding
     
     
@@ -787,11 +876,7 @@ class InputData:
         chargingEff={}
         Ch_eff=pd.DataFrame(list(self.StorageData.loc["ch_eff"]))
         Ch_eff.columns=[1]
-        Ch_eff = Ch_eff.transpose()
-        Ch_eff.columns = [int(x)+1 for x in Ch_eff.columns]
-        for i in range(2,self.numberofhubs+1):
-            Ch_eff.loc[i] = Ch_eff.iloc[0]
-        chargingEff=self.DictND(chargingEff, Ch_eff)
+        chargingEff=self.Dict1D(chargingEff, Ch_eff)
         return chargingEff
     
     def StorageEfDisch(self):
@@ -801,11 +886,7 @@ class InputData:
         dischLosses={}
         Disch_eff=pd.DataFrame(list(self.StorageData.loc["disch_eff"]))
         Disch_eff.columns=[1]
-        Disch_eff = Disch_eff.transpose()
-        Disch_eff.columns = [int(x)+1 for x in Disch_eff.columns]
-        for i in range(2,self.numberofhubs+1):
-            Disch_eff.loc[i] = Disch_eff.iloc[0]
-        dischLosses=self.DictND(dischLosses, Disch_eff)
+        dischLosses=self.Dict1D(dischLosses, Disch_eff)
         return dischLosses
     
     
@@ -816,11 +897,7 @@ class InputData:
         minSoC={}
         min_state=pd.DataFrame(list(self.StorageData.loc["min_state"]))
         min_state.columns=[1]
-        min_state = min_state.transpose()
-        min_state.columns = [int(x)+1 for x in min_state.columns]
-        for i in range(2,self.numberofhubs+1):
-            min_state.loc[i] = min_state.iloc[0]
-        minSoC=self.DictND(minSoC, min_state)
+        minSoC=self.Dict1D(minSoC, min_state)
         return minSoC
     
     
@@ -828,14 +905,13 @@ class InputData:
         """
         Return Pyomo formatted list of lifetime expectancy (yr) per storage.
         """
-        lifeTimeStorages={}
+        
         LifeBattery=pd.DataFrame(list(self.StorageData.loc["LifeBat (year)"]))
         LifeBattery.columns=[1]
-        LifeBattery = LifeBattery.transpose()
-        LifeBattery.columns = [int(x)+1 for x in LifeBattery.columns]
-        for i in range(2,self.numberofhubs+1):
-            LifeBattery.loc[i] = LifeBattery.iloc[0]
-        lifeTimeStorages=self.DictND(lifeTimeStorages, LifeBattery)
+        LifeBattery.index=list(range(1,self.StorageData.shape[1]+1))
+        
+        lifeTimeStorages={}
+        lifeTimeStorages=self.Dict1D_val_index(lifeTimeStorages, LifeBattery)
         return lifeTimeStorages
     
     
@@ -846,11 +922,7 @@ class InputData:
         linStorageCosts={}
         LinearCostStorage=pd.DataFrame(list(self.StorageData.loc["CostBat (chf/kWh)"]))
         LinearCostStorage.columns=[1]
-        LinearCostStorage = LinearCostStorage.transpose()
-        LinearCostStorage.columns = [int(x)+1 for x in LinearCostStorage.columns]
-        for i in range(2,self.numberofhubs+1):
-            LinearCostStorage.loc[i] = LinearCostStorage.iloc[0]
-        linStorageCosts=self.DictND(linStorageCosts, LinearCostStorage)
+        linStorageCosts=self.Dict1D(linStorageCosts, LinearCostStorage)
         return linStorageCosts
     
     
@@ -868,34 +940,132 @@ class InputData:
     
     def StorageBinary(self):
         """
-        Return Pyomo formatted dict of in which hubs storage is present per demand type.
+        Return Pyomo formatted dict of in which hubs storage is present per energy carrier type
         """
-        dummy = np.zeros((self.numberofhubs, self.numberofdemands, ))
-        for i in range(self.numberofdemands):
-            for j in range(self.numberofhubs):
-                if isinstance(self.StorageData.loc["Hubs"][i],float) or isinstance(self.StorageData.loc["Hubs"][i],int)or isinstance(self.StorageData.loc["Hubs"][i],int): #check if technology is present in one or more hubs, otherwise there is error
-                    if str(j+1)==self.StorageData.loc["Hubs"][i]: #python starts with 0, Pyomo with 1
-                        dummy[j,i] = 1
-                elif str(j+1) in list(self.StorageData.loc["Hubs"][i]): #python starts with 0, Pyomo with 1
-                    dummy[j,i] = 1
 
-        StorageY= pd.DataFrame(dummy)
-        StorageY.columns= [int(x)+1 for x in StorageY.columns]
-        StorageY.index = [int(x)+1 for x in StorageY.index]
+        Nstg = self.StorageData.shape[1] # number of storage techs
+#        StgE = list(set(data.stgE)) # list of unique storage energy carriers
+#        NstgE = len(StgE) # number of storage energy carriers
+        
+        dummy = np.zeros((self.numberofhubs, self.numberofdemands, Nstg)) # this format is required by DictPanel (not intuitive, could be improved)
+                       
+        for i in range(Nstg):
+            for k in range(self.numberofdemands):
+                for j in range(self.numberofhubs):
+                    #check if technology is present in each hub
+                    if isinstance(self.StorageData.loc["Hubs"][i],float) or isinstance(self.StorageData.loc["Hubs"][i],int):  # present in only one hub
+                        if j+1==self.StorageData.loc["Hubs"][i] and k+1 == data.stgE[i]: #if hub j exists for tech i, AND the storage energy == energy carrier for tech i, then change flag to 1; python starts with 0, Pyomo with 1
+                            dummy[j,k,i] = 1
+                            
+                    elif str(j+1) in list(self.StorageData.loc["Hubs"][i]) and k+1 == data.stgE[i]: #python starts with 0, Pyomo with 1; if hub j exists for tech i (in a list of multiple hubs), AND the storage energy == energy carrier for tech i, then change flag to 1;
+                        dummy[j,k,i] = 1
 
+        StorageY= pd.Panel(dummy)
+        StorageY.major_axis = [int(x)+1 for x in StorageY.major_axis]
+        StorageY.minor_axis = [int(x)+1 for x in StorageY.minor_axis]
+        
         StorageYbinary={}
-        StorageYbinary = self.DictND(StorageYbinary, StorageY)
+        StorageYbinary = self.DictPanel(StorageYbinary, StorageY)
         return StorageYbinary
 
+    #----------------------------------------------------------------------
+    # Network 
+    #----------------------------------------------------------------------
+    
+    def NetNPV(self):
+        """
+        Return Pyomo formatted NPV per storage.
+        """
+        Interest_rate_R=self.InterestRate()
+        Life=pd.DataFrame(list(self.NetworkData.loc["Lifetime (years)"]))
+        Life.columns=[1]
+        NetPresentValue={}
+        NPV=1 / (((1 + Interest_rate_R) ** Life - 1) / (Interest_rate_R * ((1 + Interest_rate_R) ** Life)))
+        NetPresentValue=self.Dict1D(NetPresentValue,NPV)
+        return NetPresentValue
+    
+    
      
-
+    def Network_assign(self, model):
+        """
+        Assign network connection data per link, connection hubs, and energy carrier; return pyomo formatted dictionaries
+        """
+        
+#        YN = np.zeros(data.NetworkData.shape[1], self.numberofhubs, self.numberofhubs, self.numberofdemands) # by default, no connection exists
+        
+        YNx_dict = {} # network link between hubs (indicator for allowable flow from hub i to j)
+        len_dict = {} # network length
+        loss_dict = {} # network loss
+        invcost_dict = {} # investment cost
+        OMFcost_dict = {} # fixed O&M cost
+        OMVcost_dict = {} # variable O&M cost
+        maxcap_dict = {} # maximum capacity
+        mincap_dict = {} # minimum capacity
+        YN_netcost_dict = {} # indicator to apply costs based on capacity (investment, fixed); model does not apply these costs to a pre-installed capacity, or from hub j to i where costs from hub i to j are already accounted for
+                
+        for i in range(data.NetworkData.shape[1]):
+            linkID = i+1
+            len_dict[linkID] = data.netLength.iloc[i]
+            loss_dict[linkID] = data.netLoss.iloc[i]
+            invcost_dict[linkID] = data.invCost.iloc[i]
+            OMFcost_dict[linkID] = data.OMFCost.iloc[i]
+            OMVcost_dict[linkID] = data.OMVCost.iloc[i]
+            for j in range(self.numberofhubs):
+                hub_i = j+1
+                for k in range(self.numberofhubs):
+                    hub_j = k+1
+                    for l in range(self.numberofdemands):
+                        EC = l+1
+                        if data.node1.iloc[i] == hub_i and data.node2.iloc[i] == hub_j and data.netE[i] == EC and hub_i != hub_j:
+                            YNx_dict[linkID, hub_i, hub_j, EC] = 1
+                            
+                            if data.uniFlow.iloc[i] == 'y':
+                                YNx_dict[linkID, hub_j, hub_i, EC] = 0
+                            else:
+                                YNx_dict[linkID, hub_j, hub_i, EC] = 1
+                                
+                            maxcap_dict[linkID, hub_i, hub_j, EC] = data.maxCap.iloc[i]
+                            maxcap_dict[linkID, hub_j, hub_i, EC] = data.maxCap.iloc[i]
+                            mincap_dict[linkID, hub_i, hub_j, EC] = data.minCap.iloc[i]
+                            mincap_dict[linkID, hub_j, hub_i, EC] = data.minCap.iloc[i]
+                            
+                            if data.instCap.iloc[i] > 0: # if installed capacity exists
+                                model.CapNet[linkID, hub_i, hub_j, EC].fix(data.instCap.iloc[i]) # set capacity to data.instCap.iloc[i]
+                                YN_netcost_dict[linkID, hub_i, hub_j, EC] = 0 # do not apply cost based on capacity (investment, fixed)
+                                YN_netcost_dict[linkID, hub_j, hub_i, EC] = 0
+                            else:
+                                YN_netcost_dict[linkID, hub_i, hub_j, EC] = 1 # only acccount for investment and fixed cost from i to j
+                                YN_netcost_dict[linkID, hub_j, hub_i, EC] = 0 # ignore investment and fixed cost from j to i
+                            
+                        elif data.node1.iloc[i] == hub_j and data.node2.iloc[i] == hub_i and data.netE[i] == EC and hub_i != hub_j:
+                            linkID # do nothing (parameters have been set in previous block; this segment is to avoid overwriting values with 0)
+                        
+                        else:
+                            YNx_dict[linkID, hub_i, hub_j, EC] = 0
+                            maxcap_dict[linkID, hub_i, hub_j, EC] = 0
+                            mincap_dict[linkID, hub_i, hub_j, EC] = 0
+                            YN_netcost_dict[linkID, hub_i, hub_j, EC] = 0
+                            model.CapNet[linkID, hub_i, hub_j, EC].fix(0) # set capacity to 0
+                            
+        return (YNx_dict, YN_netcost_dict, len_dict, loss_dict, invcost_dict, OMFcost_dict, OMVcost_dict, maxcap_dict, mincap_dict)
+    
+#    def netLength_assign(self):
+#        """
+#        Return Pyomo formatted list of linear investment cost per storage.
+#        """
+#        linStorageCosts={}
+#        LinearCostStorage=pd.DataFrame(list(self.StorageData.loc["CostBat (chf/kWh)"]))
+#        LinearCostStorage.columns=[1]
+#        linStorageCosts=self.Dict1D(linStorageCosts, LinearCostStorage)
+#        return linStorageCosts        
+        
 
 # # Initialized class with excel input data
 
 # In[28]:
 
 
-excel_path=r'C:\Users\yam\Documents\Ehub modeling tool\python-ehub-dev\cases\Example_multi_node_case.xlsx'
+excel_path=r'C:\Users\yam\Documents\Ehub modeling tool\python-ehub-dev\cases\Example_multi_node_case_MY.xlsx'
 data=InputData(excel_path)
 
 
@@ -916,10 +1086,12 @@ model = ConcreteModel()
 model.Time = RangeSet(1, data.DemandData.shape[1]) #0 is items, 1 is row
 model.SubTime = RangeSet(2, data.DemandData.shape[1], within=model.Time) #0 is items, 1 is row
 model.In = RangeSet(1, data.Technologies.shape[2]+1) #0 is items, 1 is row , 2 is column , it is assumed that the layout of hub's technologies is the same and the choice of technology is controled by max cap in each DF
-
 model.Out = RangeSet(1, data.numberofdemands) #0 is items, 1 is row , 2 is column
 model.NonElectricity = Set(initialize=list(range(2,data.numberofdemands+1)), within=model.Out)
 number_of_demands= list(range(1, data.numberofdemands+1))
+
+model.Stg = RangeSet(1, data.StorageData.shape[1])  # storage technology ID
+#model.StgE = Set(initialize=set(data.stgE), within = model.Out) # unique set of energy carriers considered in storage
 
 model.SolarTechs = Set(initialize=data.SolarSet(), within=model.In) 
 
@@ -935,18 +1107,19 @@ model.hubs=RangeSet(1,data.DemandData.shape[0]) #0 is items /number of hubs
 model.hub_i=RangeSet(1,data.DemandData.shape[0], within=model.hubs) #used for networks e.q. Q(i,j)
 model.hub_j=RangeSet(1,data.DemandData.shape[0], within=model.hubs) #used for networks e.q. Q(i,j)
 
+model.LinkID = RangeSet(1,data.NetworkData.shape[1]) # link ID for network connection between hub_i and hub_j for the given energy carrier
 
 # coupling matrix & Technical parameters
 model.cMatrix = Param(model.In, model.Out, initialize=data.cMatrix())      # coupling matrix technology efficiencies 
 model.maxCapTechs = Param(model.hubs, model.DispTechs, initialize=data.MaxCapacity()) 
 model.maxCapTechsAll = Param(model.hubs, model.Techs, initialize=data.MaxCapacityALL())
-model.maxStorCh = Param(model.hubs, model.Out, initialize=data.StorageCh())
-model.maxStorDisch = Param(model.hubs, model.Out, initialize= data.StorageDisch())
+model.maxStorCh = Param(model.Stg, initialize=data.StorageCh())
+model.maxStorDisch = Param(model.Stg, initialize= data.StorageDisch())
 
-model.lossesStorStanding = Param(model.hubs, model.Out, initialize = data.StorageLoss())
-model.chargingEff = Param(model.hubs, model.Out, initialize = data.StorageEfCh())
-model.dischLosses = Param(model.hubs, model.Out, initialize = data.StorageEfDisch())
-model.minSoC = Param(model.hubs, model.Out, initialize = data.StorageMinSoC())
+model.lossesStorStanding = Param(model.Stg, initialize = data.StorageLoss())
+model.chargingEff = Param(model.Stg, initialize = data.StorageEfCh())
+model.dischLosses = Param(model.Stg, initialize = data.StorageEfDisch())
+model.minSoC = Param(model.Stg, initialize = data.StorageMinSoC())
 model.partLoad = Param(model.In, model.Out, initialize=data.PartLoad()) #PartloadInput
 model.maxSolarArea = Param(initialize=500)
 
@@ -956,21 +1129,20 @@ model.maxCarbon = Param(initialize=65000000)
 
 # Cost parameters
 model.linCapCosts = Param(model.hubs, model.In, model.Out, initialize= data.LinearCost()) # Technologies capital costs
-model.linStorageCosts = Param(model.hubs, model.Out, initialize = data.StorageLinCost())
+model.linStorageCosts = Param(model.Stg, initialize = data.StorageLinCost())
 model.opPrices = Param( model.In, initialize=data.FuelPrice())    # Operating prices technologies
 model.feedInTariffs = Param(model.Out, initialize=data.FeedIn())  # feed-in tariffs
 model.omvCosts = Param(model.hubs, model.In, initialize=data.VarMaintCost())         # Maintenance costs
 model.interestRate = Param(within=NonNegativeReals, initialize=data.InterestRate())
 
 # lifetime
-model.lifeTimeTechs = Param(model.hubs, model.In, initialize = data.LifeTime())
-model.lifeTimeStorages = Param(model.hubs, model.Out, initialize = data.StorageLife())
+model.lifeTimeTechs = Param(model.In, initialize = data.LifeTime())
+model.lifeTimeStorages = Param(model.Stg, initialize = data.StorageLife())
 
-## Network parameters
-model.HeatLosses=Param(model.hub_i, model.hub_j, initialize=0.000)
+#model.HeatLosses=Param(model.hub_i, model.hub_j, initialize=0.000)
 #model.Distance=Param(model.hub_i, model.hub_j, initialize=)
-model.PipeCost=Param(initialize=200)
-model.Losses=Param(model.hub_i, model.hub_j, initialize=0 )
+#model.PipeCost=Param(initialize=200)
+#model.Losses=Param(model.hub_i, model.hub_j, initialize=0 )
 
 ## Declaring Global Parameters ##
 model.timeHorizon = Param(within=NonNegativeReals, initialize=20)
@@ -988,28 +1160,49 @@ model.Capacities = Var(model.hubs, model.In, model.Out, domain=NonNegativeReals)
 model.Ytechnologies = Var(model.hubs, model.In, model.Out, domain=Binary) #binary if the technology has been installed
 model.Yon = Var(model.hubs, model.Time, model.In, domain=Binary) #binary for part-load showing if the technology is on or off 
 model.TotalCost = Var(domain=Reals) #total cost
-model.OpCost = Var(domain=NonNegativeReals) #operation cost
-model.MaintCost = Var(domain=NonNegativeReals) #maintainance cost
+model.FuelCost = Var(domain=NonNegativeReals) # fuel cost
+model.VOMCost = Var(domain=NonNegativeReals) # variable operation and maintainance cost
+model.FOMCost = Var(domain=NonNegativeReals) # fixed operation and maintainance cost
 model.IncomeExp = Var(domain=NonNegativeReals) #'earned' money from exporting 
 model.InvCost = Var(domain=NonNegativeReals) #investment cost
 model.TotalCarbon = Var(domain=Reals) #total carbon
 model.TotalCarbon2 = Var(domain=Reals) #total carbon (due to Pyomo internal rules it is needed to have two variables)
 model.NetPresentValueTech = Param(model.In, domain=NonNegativeReals, initialize=data.NPV()) #NPV for technologies
-model.NetPresentValueStor = Param(model.Out, domain=NonNegativeReals, initialize=data.StorageNPV()) #NPV for storages
+model.NetPresentValueStor = Param(model.Stg, domain=NonNegativeReals, initialize=data.StorageNPV()) #NPV for storages
+model.NetPresentValueNet = Param(model.LinkID, domain=NonNegativeReals, initialize=data.NetNPV()) #NPV for storages
+
+# Technology pre-installed capacities
+model.YtCapCost = Param(model.Techs, initialize = data.TechCapInit(model)) # indicator to apply costs based on capacity (investment); model does not apply these costs to a pre-installed capacity; this function also assigns pre-installed capacities to the cap variable
 
 ## Network variables
-model.DH_Q = Var(model.hub_i, model.hub_j,model.Time, model.Out, domain=Reals) #domain=NonNegativeReals <=if only one directional network, DH_Q is variable which shows how much energy is exchanged in the network per demand type 
-model.Ypipeline = Var(model.hub_i, model.hub_j, domain=Binary) #when performing network design optimisation, it shows which hubs/nodes the network is connecting
-model.YpipelineFixed = Param(model.Out, model.hub_i, model.hub_j, domain=Binary, initialize=data.FixedNetworks()) #if the network layout is predefined
+model.DH_Q = Var(model.LinkID, model.hub_i, model.hub_j, model.Out, model.Time, domain=NonNegativeReals)
+model.Yx_op = Var(model.LinkID, model.hub_i, model.hub_j, model.Out, model.Time, domain=Binary)
+model.CapNet = Var(model.LinkID, model.hub_i, model.hub_j, model.Out, domain=NonNegativeReals)
+
+## Network parameters
+YNx_dict, YNx_capcost_dict, len_dict, loss_dict, invcost_dict, OMFcost_dict, OMVcost_dict, maxcap_dict, mincap_dict =  data.Network_assign(model) # must be called after model.CapNet declaration (function initializes model.CapNet installed capacities)
+model.Yx = Param(model.LinkID, model.hub_i, model.hub_j, model.Out, initialize = YNx_dict) # network link between hubs (indicator for allowable flow from hub i to j)
+model.YxCapCost = Param(model.LinkID, model.hub_i, model.hub_j, model.Out, initialize = YNx_capcost_dict) # indicator to apply costs based on capacity (investment, fixed); model does not apply these costs to a pre-installed capacity, or from hub j to i where costs from hub i to j are already accounted for
+model.netLength = Param(model.LinkID, initialize = len_dict) # network length
+model.netLoss = Param(model.LinkID, initialize = loss_dict) # network loss
+model.netInvCost = Param(model.LinkID, initialize = invcost_dict) # investment cost
+model.netOMFCost = Param(model.LinkID, initialize = OMFcost_dict) # fixed O&M cost
+model.netOMVCost = Param(model.LinkID, initialize = OMVcost_dict) # variable O&M cost
+model.netMax = Param(model.LinkID, model.hub_i, model.hub_j, model.Out, initialize = maxcap_dict) # maximum capacity
+model.netMin = Param(model.LinkID, model.hub_i, model.hub_j, model.Out, initialize = mincap_dict) # minimum capacity
+
+#model.DH_Q = Var(model.hub_i, model.hub_j,model.Time, model.Out, domain=Reals) #domain=NonNegativeReals <=if only one directional network, DH_Q is variable which shows how much energy is exchanged in the network per demand type 
+#model.Ypipeline = Var(model.hub_i, model.hub_j, domain=Binary) #when performing network design optimisation, it shows which hubs/nodes the network is connecting
+#model.YpipelineFixed = Param(model.Out, model.hub_i, model.hub_j, domain=Binary, initialize=data.FixedNetworks()) #if the network layout is predefined
 
                       
 #Storage variables
-model.Qin = Var(model.hubs, model.Time, model.Out, domain=NonNegativeReals) #how much storage is charged
-model.Qout = Var(model.hubs, model.Time, model.Out, domain=NonNegativeReals) #how much storage is discharged
-model.E = Var(model.hubs, model.Time, model.Out, domain=NonNegativeReals) #state of charge of storage
-model.StorageCap = Var(model.hubs, model.Out, domain=NonNegativeReals) #installed capacity of storage
+model.Qin = Var(model.hubs, model.Time, model.Stg, model.Out, domain=NonNegativeReals) #how much storage is charged
+model.Qout = Var(model.hubs, model.Time, model.Stg, model.Out, domain=NonNegativeReals) #how much storage is discharged
+model.E = Var(model.hubs, model.Time, model.Stg, model.Out, domain=NonNegativeReals) #state of charge of storage
+model.StorageCap = Var(model.hubs, model.Stg, model.Out, domain=NonNegativeReals) #installed capacity of storage
 #model.Ystorage = Var(model.hubs, model.Out, domain=Binary)
-model.Ystorage = Param(model.hubs, model.Out, domain=Binary, initialize=data.StorageBinary()) #in which hubs the storage is present
+model.Ystorage = Param(model.hubs, model.Stg, model.Out, domain=Binary, initialize=data.StorageBinary()) #in which hubs the storage is present
 #model.maxStorageCap = Param(model.Out, initialize= maxStorageCap)
 
 
@@ -1022,12 +1215,12 @@ model.Ystorage = Param(model.hubs, model.Out, domain=Binary, initialize=data.Sto
 ## GLobal constraints
 #-----------------------------------------------------------------------------#
 def MultipleloadsBalance_rule(model, i,  t, out): #energy balance when multiple hubs are present
-    return (model.loads[i, t,out] + model.Pexport[i, t,out] == (( model.Qout[ i, t,out] - model.Qin[i, t,out] +
+    return (model.loads[i, t,out] + model.Pexport[i, t,out] == ( sum(model.Qout[ i,t,s,out] - model.Qin[i,t,s,out] for s in model.Stg) +
                                                         sum(model.P[i, t,inp]*model.cMatrix[inp,out] for inp in model.In) 
-                                                                + sum(model.DH_Q[j,i,t,out]*(1-model.Losses[i,j])- model.DH_Q[i,j,t,out] for j in model.hub_i )))) 
+                                                                + sum(model.DH_Q[l,j,i,out,t]*(1-model.netLoss[l]*model.netLength[l])- model.DH_Q[l,i,j,out,t] for l in model.LinkID for j in model.hub_i ))) 
 
 def loadsBalance_rule(model, i, t, out): #energy balance when single hub is present
-    return (model.loads[i, t,out] + model.Pexport[i, t,out] == (model.Qout[ i, t,out] - model.Qin[i, t,out] + 
+    return (model.loads[i, t,out] + model.Pexport[i, t,out] == (sum(model.Qout[ i,t,s,out] - model.Qin[i,t,s,out] for s in model.Stg) + 
                                                         sum(model.P[i, t,inp]*model.cMatrix[inp,out] for inp in model.In)))
 #check how many hubs are there
 if numberofhubs>1:
@@ -1035,13 +1228,20 @@ if numberofhubs>1:
 else:
     model.loadsBalance = Constraint(model.hub_i, model.Time, model.Out, rule=loadsBalance_rule) #constraint not having network
 
-#technology output cannot be higher than installed capacity
+#technology output cannot be higher than installed capacity 
+# - for dispatchable technologies (i.e., non-solar technologies- assumption):
 def capacityConst_rule(model, i, t, inp, out):
     if model.cMatrix[inp,out] <= 0:
         return(model.P[i, t, inp]  * (-1)*model.cMatrix[inp,out]<= model.Capacities[i, inp,out])
     else:
         return (model.P[i, t, inp]  * model.cMatrix[inp,out]<= model.Capacities[i, inp,out])
-model.capacityConst = Constraint(model.hub_i, model.Time, model.In, model.Out, rule=capacityConst_rule)
+model.capacityConst = Constraint(model.hub_i, model.Time, model.DispTechs, model.Out, rule=capacityConst_rule)
+
+# - for solar technologies
+solarkWperm2 = 0.2 # NOTE: solar panel kW/m2 assumption; temporary fix. This should be specified in the user input file.
+def capacityConstSol_rule(model, i, t, inp, out):
+        return (model.P[i, t, inp]  * model.cMatrix[inp,out]<= model.Capacities[i, inp,out] * solarkWperm2)
+model.capacityConstSol = Constraint(model.hub_i, model.Time, model.SolarTechs, model.Out, rule=capacityConstSol_rule)
 
 #installed capacity cannot be higher than upper limit of possible capacity
 def maxCapacity_rule2(model, i, tech, out):
@@ -1099,9 +1299,9 @@ def solarInput_rule(model, i, t, sol, out):
 model.solarInput = Constraint(model.hub_i, model.Time, model.SolarTechs, model.Out, rule=solarInput_rule) 
 
 #sum of roof area of all roof techs cannot be bigger than total roof area
-def roofArea_rule(model,i, roof, demand):
-    return (sum(model.Capacities[i, roof,d] for d in number_of_demands) <= model.maxSolarArea) # Roof area of all roof technologies has to be smaller than the total roof area
-model.roofArea = Constraint(model.hub_i, model.roof_tech,model.Out,rule=roofArea_rule) #model.roof_tech
+def roofArea_rule(model,i):
+    return (sum(model.Capacities[i, roof,d] for roof in model.roof_tech for d in number_of_demands) <= model.maxSolarArea) # Roof area of all roof technologies has to be smaller than the total roof area
+model.roofArea = Constraint(model.hub_i,rule=roofArea_rule) #model.roof_tech
 
 #if tech is installed, Ytechnologies binary is 1 (it can be used for fixed investment costs)
 def fixCostConst_rule(model, i, inp, out):
@@ -1118,40 +1318,43 @@ for i in range(1, numberofhubs+1):
         model.con.add(model.Ytechnologies[i, CHP_list[x-1],dispatch_demands[x-1,0]]==model.Ytechnologies[i, CHP_list[x-1],dispatch_demands[x-1,1]])
         model.con.add(model.Capacities[i, CHP_list[x-1],dispatch_demands[x-1,0]] <= model.maxCapTechs[i, CHP_list[x-1]] * model.Ytechnologies[i, CHP_list[x-1],dispatch_demands[x-1,0]])
 
+#-----------------------------------------------------------------------------#
+## Network constraints
+#-----------------------------------------------------------------------------#
 
+# network energy transfer must be less than energy output from capacity per hour
+def netQ_rule(model, l, i, j, ec, t):
+    return (model.DH_Q[l,i,j,ec,t] <= model.Yx[l,i,j,ec] * model.CapNet[l,i,j,ec])
 
+model.netQ_const = Constraint(model.LinkID, model.hub_i, model.hub_j, model.Out, model.Time, rule=netQ_rule)
 
-#network can be used only if a pipe is installed
-def DH_rule(model, i, j, t, out):
-    return (model.DH_Q[i,j,t,out] <= model.Ypipeline[i,j] * model.bigM)
+# assumed bi-directional network flow; capacity from i to j is equal to capacity from j to i
+def netCapEq_rule(model, l, i, j, ec):
+    return (model.CapNet[l,i,j,ec] == model.CapNet[l,j,i,ec])
 
-#network can be used only if a pipe is installed
-def network_fixed_rule(model,i, j, t, out):
-    return(model.DH_Q[i,j,t,out] <= model.bigM * model.YpipelineFixed[out,i,j] )
-
-#network can be used only if a pipe is installed
-def network_fixed_rule_bi(model,i, j, t, out):
-    return(model.DH_Q[i,j,t,out] >= -model.bigM * model.YpipelineFixed[out,i,j] )
-
-if numberofhubs>1 and fixednetwork==1: #if network is predifined
-    model.network_fixed = Constraint(model.hub_i, model.hub_j, model.Time,model.Out, rule=network_fixed_rule) #if one directional network use only this constraint
-    model.network_fixedbi = Constraint(model.hub_i, model.hub_j, model.Time,model.Out, rule=network_fixed_rule_bi) #if network is bidirectional use this network as well
+model.netCapEq_const = Constraint(model.LinkID, model.hub_i, model.hub_j, model.Out, rule=netCapEq_rule)
     
-if numberofhubs>1 and fixednetwork==0: #if network layout is optimised
-    
-    model.DHYcon = ConstraintList()
-    for i in range(1, numberofhubs+1-1): #because of Pyomo, initialized possible connection manually
-        model.DHYcon.add((model.Ypipeline[i,i]<= 0 ))
-        for j in range(i+1, numberofhubs+1):
-                model.DHYcon.add((model.Ypipeline[j,j]<= 0 )) #pipe has to be installed between two different hubs
-                model.DHYcon.add((model.Ypipeline[i,j]+model.Ypipeline[j,i] <= 1 )) #only one way pipe can be installed
-                
-    model.DH_network = Constraint(model.hub_i, model.hub_j, model.Time, model.Out, rule=DH_rule)
-    
-    
+# ensure single directional flow at every time period (either flow from i to j or j to i, but not both in the same time period)
+def YxOp_rule1(model, l, i, j, ec, t):
+    return (model.Yx_op[l,i,j,ec,t] <= model.DH_Q[l,i,j,ec,t])
 
-                
+model.YxOp_netQ_const = Constraint(model.LinkID, model.hub_i, model.hub_j, model.Out, model.Time, rule=YxOp_rule1)
 
+def YxOp_rule2(model, l, i, j, ec, t):
+    return (model.Yx_op[l,i,j,ec,t] + model.Yx_op[l,j,i,ec,t] <= 1)
+
+model.YxOp_const = Constraint(model.LinkID, model.hub_i, model.hub_j, model.Out, model.Time, rule=YxOp_rule2)
+
+# ensure network minimum and maximum capacity bounds are obeyed
+def netMaxCap_rule(model, l, i, j, ec):
+    return (model.CapNet[l,i,j,ec] <= model.netMax[l,i,j,ec])
+
+model.netMaxCap_const = Constraint(model.LinkID, model.hub_i, model.hub_j, model.Out, rule=netMaxCap_rule)
+
+def netMinCap_rule(model, l, i, j, ec):
+    return (model.CapNet[l,i,j,ec] >= model.netMin[l,i,j,ec])
+
+model.netMinCap_const = Constraint(model.LinkID, model.hub_i, model.hub_j, model.Out, rule=netMinCap_rule)
 
 # ### Create storage constraints
 
@@ -1163,11 +1366,21 @@ if numberofhubs>1 and fixednetwork==0: #if network layout is optimised
 #-----------------------------------------------------------------------------#
 
 #continuinity equation for storage
-def storageBalance_rule(model, i, t, out):
-    return (model.E[i, t, out] == ((1-model.lossesStorStanding[i,out]) * model.E[i, (t-1), out]  
-                                + model.chargingEff[i,out] * model.Qin[i, t, out] 
-                                - (1/model.dischLosses[i,out]) * model.Qout[i, t, out]))
-model.storageBalance = Constraint(model.hub_i, model.SubTime, model.Out, rule=storageBalance_rule) #storage continuinity variable
+def storageBalance_rule(model, i, t, stg, out):
+    return (model.E[i, t, stg, out] == ((1-model.lossesStorStanding[stg]) * model.E[i, (t-1), stg, out]  
+                                + model.chargingEff[stg] * model.Qin[i, t, stg, out] 
+                                - (1/model.dischLosses[stg]) * model.Qout[i, t, stg, out]))
+model.storageBalance = Constraint(model.hub_i, model.SubTime, model.Stg, model.Out, rule=storageBalance_rule) #storage continuinity variable
+
+# storage state of charge (SoC) should be the same at the start and end time period
+def storageStartEnd_rule(model, h, stg, ec):
+    return (model.E[h, 1, stg, ec] == model.E[h, data.DemandData.shape[1], stg, ec])
+model.storageStartEnd = Constraint(model.hubs, model.Stg, model.Out, rule=storageStartEnd_rule)
+
+# storage initial SoC
+def initSoc_rule(model, h, stg, ec):
+    return (model.E[h, 1, stg, ec] == model.StorageCap[h, stg, ec]*model.minSoC[stg])
+model.initSoC = Constraint(model.hubs, model.Stg, model.Out, rule=initSoc_rule)
 
 #uncomment for different storage initializations
 '''
@@ -1194,28 +1407,28 @@ model.storageInitThermal2 = Constraint(rule=storageInitThermal2_rule)
 '''
 
 
-def storageChargeRate_rule(model, i, t, out):
-    return (model.Qin[i, t,out] <= model.maxStorCh[i, out] * model.StorageCap[i, out])
-model.storageChargeRate = Constraint(model.hub_i, model.Time, model.Out, rule=storageChargeRate_rule) #maximum charging
+def storageChargeRate_rule(model, i, t, stg, out):
+    return (model.Qin[i, t, stg, out] <= model.maxStorCh[stg] * model.StorageCap[i, stg, out])
+model.storageChargeRate = Constraint(model.hub_i, model.Time, model.Stg, model.Out, rule=storageChargeRate_rule) #maximum charging
 
-def storageDischRate_rule(model, i, t, out):
-    return (model.Qout[i, t,out] <= model.maxStorDisch[i,out] * model.StorageCap[i, out])
-model.storageDischRate = Constraint(model.hub_i,model.Time, model.Out, rule=storageDischRate_rule) #maximum discharging
-'''
-def storageMinState_rule(model, t, out):
-    return (model.E[t,out] >= model.StorageCap[out] * model.minSoC[out])
-model.storageMinState = Constraint(model.Time, model.Out, rule=storageMinState_rule) #minimum SoC allowed
-'''
+def storageDischRate_rule(model, i, t, stg, out):
+    return (model.Qout[i, t, stg, out] <= model.maxStorDisch[stg] * model.StorageCap[i, stg, out])
+model.storageDischRate = Constraint(model.hub_i,model.Time, model.Stg, model.Out, rule=storageDischRate_rule) #maximum discharging
+
+# storage minimum SoC
+def storageMinState_rule(model, h, t, stg, ec):
+    return (model.E[h, t, stg, ec] >= model.StorageCap[h, stg, ec]*model.minSoC[stg])
+model.storageMinState = Constraint(model.hubs, model.Time, model.Stg, model.Out, rule=storageMinState_rule) #minimum SoC allowed
 
 #SoC has to be <=than installed capacity
-def storageCap_rule(model, i, t, out):
-    return (model.E[i, t,out] <= model.StorageCap[i, out] )
-model.storageCap = Constraint(model.hub_i,model.Time, model.Out, rule=storageCap_rule) #smaller than storage cap
+def storageCap_rule(model, i, t, stg, out):
+    return (model.E[i, t, stg, out] <= model.StorageCap[i, stg, out] )
+model.storageCap = Constraint(model.hub_i,model.Time, model.Stg, model.Out, rule=storageCap_rule) #smaller than storage cap
 
 #if storage is installed binary Ystorage is 1 (can be used for fixed investment costs)
-def storageMaxCap_rule(model, i,  out):
-    return (model.StorageCap[i, out] <= model.bigM * model.Ystorage[i,out] )
-model.storageMaxCap = Constraint(model.hub_i,  model.Out, rule=storageMaxCap_rule) #to force storage binary to 1 if storage is installed
+def storageMaxCap_rule(model, i, stg, out):
+    return (model.StorageCap[i, stg, out] <= model.bigM * model.Ystorage[i, stg, out] )
+model.storageMaxCap = Constraint(model.hub_i, model.Stg, model.Out, rule=storageMaxCap_rule) #to force storage binary to 1 if storage is installed
 
 
 # ### Create objective function(s)
@@ -1236,19 +1449,23 @@ model.Total_Cost = Objective(rule=objective_rule, sense=minimize) #use this if c
 #model.Total_Carbon = Objective(rule=objective_rule, sense=minimize) #use this if carbon minimization is objective
 
 #operational costs
-def opCost_rule(model):
-    return(model.OpCost == ((sum (model.opPrices[inp] 
+def fuelCost_rule(model):
+    return(model.FuelCost == (sum (model.opPrices[inp] 
                             * sum(model.P[i, t,inp] for i in model.hub_i for t in model.Time)
                             for inp in model.In)))
-                            )
-model.opCost = Constraint(rule=opCost_rule) 
+model.fuelCost = Constraint(rule=fuelCost_rule) 
 
-def maintenanceCost_rule(model):
-    return(model.MaintCost == (sum(model.P[i, t,inp] * 
-                              model.cMatrix[inp,out] * model.omvCosts[i, inp]
-                              for i in model.hub_i for t in model.Time for inp in model.In for out in model.Out)
-                              ))
-model.maintCost = Constraint(rule=maintenanceCost_rule)
+def vomCost_rule(model):
+    return(model.VOMCost == (sum(model.P[i, t,inp] * model.cMatrix[inp,out] * model.omvCosts[i, inp]
+                            for i in model.hub_i for t in model.Time for inp in model.In for out in model.Out)
+                            + sum(model.DH_Q[l,i,j,out,t]*(1-model.netLoss[l]*model.netLength[l])*model.netOMVCost[l]
+                            for l in model.LinkID for i in model.hub_i for j in model.hub_j for out in model.Out for t in model.Time)))
+model.vomCost = Constraint(rule=vomCost_rule)
+
+def fomCost_rule(model):
+    return(model.FOMCost == (sum(model.CapNet[l,i,j,out]*model.netOMFCost[l]
+                            for l in model.LinkID for i in model.hub_i for j in model.hub_j for out in model.Out)))
+model.fomCost = Constraint(rule=fomCost_rule)
 
 #revenue from exporting
 def incomeExp_rule(model):
@@ -1258,16 +1475,15 @@ def incomeExp_rule(model):
                             )
 model.incomeExp = Constraint(rule=incomeExp_rule)
 
-#investment cost for multiple hubs
+#investment cost for multiple hubs * model.YtCapCost[inp]
 def DHinvCost_rule(model):
-    return(model.InvCost == (sum(model.NetPresentValueTech[inp] * (model.linCapCosts[i, inp,out] * model.Capacities[i, inp,out] ) for i in model.hub_i for inp in model.Techs for out in model.Out) #+ model.fixCapCosts[inp,out] * model.Ytechnologies[inp,out]
-                            + sum(model.NetPresentValueStor[out] * model.linStorageCosts[i, out] * model.StorageCap[i, out] for i in model.hub_i for out in model.Out)))
-                               #+ sum(model.Distance[i,j]*model.PipeCost*model.Ypipeline[i,j] for i in model.hub_i for j in model.hub_j))
+    return(model.InvCost == (sum(model.NetPresentValueTech[inp] * (model.linCapCosts[i, inp,out] * model.Capacities[i, inp,out] * model.YtCapCost[inp]) for i in model.hub_i for inp in model.Techs for out in model.Out)
+                            + sum(model.NetPresentValueStor[stg] * model.linStorageCosts[stg] * model.StorageCap[i, stg, out] for i in model.hub_i for stg in model.Stg for out in model.Out)
+                            + sum(model.NetPresentValueNet[l]*model.netInvCost[l]*model.netLength[l]*model.CapNet[l,i,j,out]*model.YxCapCost[l,i,j,out] for l in model.LinkID for i in model.hub_i for j in model.hub_j for out in model.Out)))
 #investment cost for single hub
 def invCost_rule(model):
-    return(model.InvCost == (sum(model.NetPresentValueTech[inp] * (model.linCapCosts[i, inp,out] * model.Capacities[i, inp,out] ) for i in model.hub_i for inp in model.Techs for out in model.Out) #+ model.fixCapCosts[inp,out] * model.Ytechnologies[inp,out]
-                            + sum(model.NetPresentValueStor[out] * model.linStorageCosts[i, out] * model.StorageCap[i, out] for i in model.hub_i for out in model.Out)
-                            ))
+    return(model.InvCost == (sum(model.NetPresentValueTech[inp] * (model.linCapCosts[i, inp,out] * model.Capacities[i, inp,out] * model.YtCapCost[inp]) for i in model.hub_i for inp in model.Techs for out in model.Out) #+ model.fixCapCosts[inp,out] * model.Ytechnologies[inp,out]
+                            + sum(model.NetPresentValueStor[stg] * model.linStorageCosts[stg] * model.StorageCap[i, stg, out] for i in model.hub_i for stg in model.Stg for out in model.Out)))
 
 if numberofhubs>1:
     model.invCost = Constraint(rule=DHinvCost_rule) #if more than 1 building is present include network costs
@@ -1276,7 +1492,7 @@ else:
 
 #total cost
 def totalCost_rule(model):
-    return(model.TotalCost == model.InvCost + model.OpCost + model.MaintCost - model.IncomeExp)
+    return(model.TotalCost == model.InvCost + model.FuelCost + model.VOMCost + model.FOMCost - model.IncomeExp)
 model.totalCost = Constraint(rule=totalCost_rule) 
 
 #Pyomo specific way to specify total carbon variable
@@ -1456,16 +1672,29 @@ print(model.TotalCarbon.value)
 
 
 #get installed capacities in all hubs/nodes for all demands
-#capacities_matrix = np.zeros(((data.Technologies.shape[2]+1)*data.numberofdemands, data.numberofhubs))
-#for i in range(data.numberofhubs):
-#    for j in range(data.Technologies.shape[2]+1):
-#        for k in range(data.numberofdemands):
-#            capacities_matrix[j*4+k,i] = model.Capacities[i+1,j+1,k+1].value   #change 4 to number of demands
+capacities_matrix = np.zeros(((data.Technologies.shape[2]+1)*data.numberofdemands, data.numberofhubs))
+for i in range(data.numberofhubs):
+    for j in range(data.Technologies.shape[2]+1):
+        for k in range(data.numberofdemands):
+            capacities_matrix[j*3+k,i] = model.Capacities[i+1,j+1,k+1].value   #change 4 to number of demands
             
-#Capacities = pd.DataFrame(capacities_matrix)  
-#Capacities = Capacities.replace(to_replace='NaN', value=0)
-#Capacities.columns = range(1,len(Capacities.columns)+1)
-#Capacities
+Capacities = pd.DataFrame(capacities_matrix)  
+Capacities = Capacities.replace(to_replace='NaN', value=0)
+Capacities.columns = range(1,len(Capacities.columns)+1)
+Capacities
+
+       
+#get installed storage capacities in all hubs/nodes for all demands
+stgcapacities_matrix = np.zeros(((data.StorageData.shape[1])*data.numberofdemands, data.numberofhubs))
+for i in range(data.numberofhubs):
+    for j in range(data.StorageData.shape[1]):
+        for k in range(data.numberofdemands):
+            stgcapacities_matrix[j*3+k,i] = model.StorageCap[i+1,j+1,k+1].value   #change 4 to number of demands
+            
+StgCapacities = pd.DataFrame(stgcapacities_matrix)  
+StgCapacities = StgCapacities.replace(to_replace='NaN', value=0)
+StgCapacities.columns = range(1,len(StgCapacities.columns)+1)
+StgCapacities
 
 
 # In[52]:
