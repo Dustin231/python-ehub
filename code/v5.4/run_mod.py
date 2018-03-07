@@ -13,9 +13,9 @@ from run_solve import *
 from save_var import *
 from save_param import *
 
-def run_model(excel_path, param_file, result_file):
+def run_model(input_path, param_file, result_file):
 
-    inp_data=InputData(excel_path) # read-in input data; class defined in input_data.py
+    inp_data=InputData(input_path) # read-in input data; class defined in input_data.py
     mod = ConcreteModel() # create model instance
     
     ## define model
