@@ -5,11 +5,9 @@
 from run_mod import *
 
 # input data file location
-#input_path=r'C:\Users\yam\Documents\Ehub modeling tool\python-ehub-dev\cases\Ehub input - multi-node example v5.3.xlsx'
 input_path=r'C:\Users\yam\Documents\Test cases\Test case - multi hub net micro r5.xlsx'
 
 # results saved to text file location
-#result_file = 'C:/Users/yam/Documents/GitHub/python-ehub/cases/Results/Results.txt'
 result_file = 'C:/Users/yam/Documents/Test cases/Results/results_r5.txt'
 
 # model parameters saved to text file location
