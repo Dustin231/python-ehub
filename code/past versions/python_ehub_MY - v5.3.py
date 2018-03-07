@@ -317,37 +317,35 @@ class InputData:
         net = pd.read_excel(self.path,sheetname=self.NetSheet, header=None, skiprows=2, index_col = 0)
         net = net.dropna(axis=1, how='all')
         self.NetworkData = net
-        flag = not net.empty # boolean flag for network data; ==  0 if no network exists, == 1 if network exists
+
+        # Convert stored energy carrier input data to assigned energy carrier ID in dictionary, save in list
+        NetE = self.LookupEC(self.NetworkData.loc["Energy carrier"],"Energy carrier lookup failed for network link under Network input spreadsheet")             
+        self.netE = NetE
         
-        if flag is True: # check if network link data is given
-            # Convert stored energy carrier input data to assigned energy carrier ID in dictionary, save in list
-            NetE = self.LookupEC(self.NetworkData.loc["Energy carrier"],"Energy carrier lookup failed for network link under Network input spreadsheet")             
-            self.netE = NetE
-            
-            # Store other parameters
-            self.node1 = self.NetworkData.loc["Node 1"]
-            self.node2 = self.NetworkData.loc["Node 2"]
-            self.netLength = self.NetworkData.loc["Length (m)"]
-            self.netLength = self.netLength.fillna(0)
-            self.netLoss = self.NetworkData.loc["Network loss (fraction/m)"]
-            self.netLoss = self.netLoss.fillna(0)
-            self.instCap = self.NetworkData.loc["Installed capacity (kW)"]
-            self.instCap = self.instCap.fillna(0) # CHANGE, leave as NAN
-            self.maxCap = self.NetworkData.loc["Maximum capacity (kW)"]
-            self.maxCap = self.maxCap.fillna(float('inf')) # if maximum is not given, assign it to infinity
-            self.minCap = self.NetworkData.loc["Minimum capacity (kW)"]
-            self.minCap = self.minCap.fillna(0)
-            self.invCost = self.NetworkData.loc["Investment cost (CHF/kW/m)"]
-            self.invCost = self.invCost.fillna(0)
-            self.OMVCost = self.NetworkData.loc["Variable O&M cost (CHF/kWh)"]
-            self.OMVCost = self.OMVCost.fillna(0)        
-            self.OMFCost = self.NetworkData.loc["Fixed O&M cost (CHF/kW)"]
-            self.OMFCost = self.OMFCost.fillna(0)
-            self.netCO2 = self.NetworkData.loc["CO2 investment (kg-CO2/kW/m)"]
-            self.netCO2 = self.netCO2.fillna(0)
-            self.netlife = self.NetworkData.loc["Lifetime (years)"]
-            self.uniFlow = self.NetworkData.loc["Uni-directional flow? (Y)"]
-            self.uniFlow = self.uniFlow.str.lower() # convert to lower case
+        # Store other parameters
+        self.node1 = self.NetworkData.loc["Node 1"]
+        self.node2 = self.NetworkData.loc["Node 2"]
+        self.netLength = self.NetworkData.loc["Length (m)"]
+        self.netLength = self.netLength.fillna(0)
+        self.netLoss = self.NetworkData.loc["Network loss (%/m)"]/100
+        self.netLoss = self.netLoss.fillna(0)
+        self.instCap = self.NetworkData.loc["Installed capacity (kW)"]
+#            self.instCap = self.instCap.fillna(0) # CHANGE, leave as NAN
+        self.maxCap = self.NetworkData.loc["Maximum capacity (kW)"]
+        self.maxCap = self.maxCap.fillna(float('inf')) # if maximum is not given, assign it to infinity
+        self.minCap = self.NetworkData.loc["Minimum capacity (kW)"]
+        self.minCap = self.minCap.fillna(0)
+        self.invCost = self.NetworkData.loc["Investment cost (CHF/kW/m)"]
+        self.invCost = self.invCost.fillna(0)
+        self.OMVCost = self.NetworkData.loc["Variable O&M cost (CHF/kWh)"]
+        self.OMVCost = self.OMVCost.fillna(0)        
+        self.OMFCost = self.NetworkData.loc["Fixed O&M cost (CHF/kW)"]
+        self.OMFCost = self.OMFCost.fillna(0)
+        self.netCO2 = self.NetworkData.loc["CO2 investment (kg-CO2/kW/m)"]
+        self.netCO2 = self.netCO2.fillna(0)
+        self.netlife = self.NetworkData.loc["Lifetime (years)"]
+        self.uniFlow = self.NetworkData.loc["Uni-directional flow? (Y)"]
+        self.uniFlow = self.uniFlow.str.lower() # convert to lower case
 
     
     #------------------------------------------------------------------------------------
@@ -634,7 +632,7 @@ class InputData:
         """
 
         dlim = np.zeros((self.numberofhubs, self.numbertech)) 
-        limit = pd.DataFrame(list(data.Technologies[0].loc[lookup]))
+        limit = pd.DataFrame(list(self.Technologies[0].loc[lookup]))
                        
         for i in range(self.numbertech):
             for j in range(self.numberofhubs):
@@ -1157,11 +1155,11 @@ class InputData:
                     for j in range(self.numberofhubs):
                         #check if technology is present in each hub
                         if isinstance(self.StorageData.loc["Hubs"][i],float) or isinstance(self.StorageData.loc["Hubs"][i],int):  # present in only one hub
-                            if j+1==self.StorageData.loc["Hubs"][i] and k+1 == data.stgE[i]: #if hub j exists for tech i, AND the storage energy == energy carrier for tech i, then max cap is assigned; python starts with 0, Pyomo with 1
+                            if j+1==self.StorageData.loc["Hubs"][i] and k+1 == self.stgE[i]: #if hub j exists for tech i, AND the storage energy == energy carrier for tech i, then max cap is assigned; python starts with 0, Pyomo with 1
                                 dmax[j,k,i] = maxcap.iloc[i][0]
                                 dmin[j,k,i] = mincap.iloc[i][0]
                                 
-                        elif str(j+1) in list(self.StorageData.loc["Hubs"][i]) and k+1 == data.stgE[i]: #python starts with 0, Pyomo with 1; if hub j exists for tech i (in a list of multiple hubs), AND the storage energy == energy carrier for tech i, then max cap is assigned;
+                        elif str(j+1) in list(self.StorageData.loc["Hubs"][i]) and k+1 == self.stgE[i]: #python starts with 0, Pyomo with 1; if hub j exists for tech i (in a list of multiple hubs), AND the storage energy == energy carrier for tech i, then max cap is assigned;
                             dmax[j,k,i] = maxcap.iloc[i][0]
                             dmin[j,k,i] = mincap.iloc[i][0]
 
@@ -1248,43 +1246,43 @@ class InputData:
         life_dict = {} # lifetime
         YN_netcost_dict = {} # indicator to apply costs based on capacity (investment, fixed); model does not apply these costs to a pre-installed capacity, or from hub j to i where costs from hub i to j are already accounted for
                 
-        for i in range(data.NetworkData.shape[1]):
+        for i in range(self.NetworkData.shape[1]):
             linkID = i+1
-            len_dict[linkID] = data.netLength.iloc[i]
-            loss_dict[linkID] = data.netLoss.iloc[i]
-            invcost_dict[linkID] = data.invCost.iloc[i]
-            OMFcost_dict[linkID] = data.OMFCost.iloc[i]
-            OMVcost_dict[linkID] = data.OMVCost.iloc[i]
-            CO2_dict[linkID] = data.netCO2.iloc[i]
-            life_dict[linkID] = data.netlife.iloc[i]
+            len_dict[linkID] = self.netLength.iloc[i]
+            loss_dict[linkID] = self.netLoss.iloc[i]
+            invcost_dict[linkID] = self.invCost.iloc[i]
+            OMFcost_dict[linkID] = self.OMFCost.iloc[i]
+            OMVcost_dict[linkID] = self.OMVCost.iloc[i]
+            CO2_dict[linkID] = self.netCO2.iloc[i]
+            life_dict[linkID] = self.netlife.iloc[i]
             for j in range(self.numberofhubs):
                 hub_i = j+1
                 for k in range(self.numberofhubs):
                     hub_j = k+1
                     for l in range(self.numberec):
                         EC = l+1
-                        if data.node1.iloc[i] == hub_i and data.node2.iloc[i] == hub_j and data.netE[i] == EC and hub_i != hub_j:
+                        if self.node1.iloc[i] == hub_i and self.node2.iloc[i] == hub_j and self.netE[i] == EC and hub_i != hub_j:
                             YNx_dict[linkID, hub_i, hub_j, EC] = 1
                             
-                            if data.uniFlow.iloc[i] == 'y':
+                            if self.uniFlow.iloc[i] == 'y':
                                 YNx_dict[linkID, hub_j, hub_i, EC] = 0
                             else:
                                 YNx_dict[linkID, hub_j, hub_i, EC] = 1
                                 
-                            maxcap_dict[linkID, hub_i, hub_j, EC] = data.maxCap.iloc[i]
-                            maxcap_dict[linkID, hub_j, hub_i, EC] = data.maxCap.iloc[i]
-                            mincap_dict[linkID, hub_i, hub_j, EC] = data.minCap.iloc[i]
-                            mincap_dict[linkID, hub_j, hub_i, EC] = data.minCap.iloc[i]
+                            maxcap_dict[linkID, hub_i, hub_j, EC] = self.maxCap.iloc[i]
+                            maxcap_dict[linkID, hub_j, hub_i, EC] = self.maxCap.iloc[i]
+                            mincap_dict[linkID, hub_i, hub_j, EC] = self.minCap.iloc[i]
+                            mincap_dict[linkID, hub_j, hub_i, EC] = self.minCap.iloc[i]
                             
-                            if data.instCap.iloc[i] > 0: # if installed capacity exists
-                                model.CapNet[linkID, hub_i, hub_j, EC].fix(data.instCap.iloc[i]) # set capacity to data.instCap.iloc[i]
+                            if np.isnan(self.instCap.iloc[i]) == False: # if installed capacity exists
+                                model.CapNet[linkID, hub_i, hub_j, EC].fix(self.instCap.iloc[i]) # set capacity to self.instCap.iloc[i]
                                 YN_netcost_dict[linkID, hub_i, hub_j, EC] = 0 # do not apply cost based on capacity (investment, fixed)
                                 YN_netcost_dict[linkID, hub_j, hub_i, EC] = 0
                             else:
                                 YN_netcost_dict[linkID, hub_i, hub_j, EC] = 1 # only acccount for investment and fixed cost from i to j
                                 YN_netcost_dict[linkID, hub_j, hub_i, EC] = 0 # ignore investment and fixed cost from j to i
                             
-                        elif data.node1.iloc[i] == hub_j and data.node2.iloc[i] == hub_i and data.netE[i] == EC and hub_i != hub_j:
+                        elif self.node1.iloc[i] == hub_j and self.node2.iloc[i] == hub_i and self.netE[i] == EC and hub_i != hub_j:
                             linkID # do nothing (parameters have been set in previous block; this segment is to avoid overwriting values with 0)
                         
                         else:
@@ -1451,6 +1449,19 @@ maxS_dict, minS_dict = data.StgMaxMinCapInit()
 model.maxCapStg = Param(model.hubs, model.Stg, model.EC, initialize = maxS_dict) # max installed storage capacity
 model.minCapStg = Param(model.hubs, model.Stg, model.EC, initialize = minS_dict) # min installed storage capacity
 model.YsCapCost = Param(model.Stg, initialize = data.StgCapInit(model)) # Storage pre-installed capacities initalize and flag
+
+model.maxStorCh.display()
+model.maxStorDisch.display()
+model.standbyLoss.display()
+model.chargingEff.display()
+model.dischargingEff.display()
+model.minSoC.display()
+model.invStg.display()
+model.lifeStg.display()
+model.stgCO2.display()
+model.maxCapStg.display()
+model.minCapStg.display()
+model.YsCapCost.display()
 
 ## Network parameters
 YNx_dict, YNx_capcost_dict, len_dict, loss_dict, invcost_dict, OMFcost_dict, OMVcost_dict, maxcap_dict, mincap_dict, CO2_dict, life_dict =  data.Network_assign(model) # must be called after model.CapNet declaration (function initializes model.CapNet installed capacities)
