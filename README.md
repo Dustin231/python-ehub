@@ -1,7 +1,7 @@
 Getting Started Guide: E-hub Modeling Tool (v5.4)
 ============
 
-This guide is intended to help new users get started with the e-hub modeling tool.
+This guide is intended to help new users get started with the e-hub modeling tool. This document is also located under the GitHub "docs" folder.
 
 Requirements
 ------------
