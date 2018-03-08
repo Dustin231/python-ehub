@@ -20,42 +20,50 @@ Requirements
 Installation Quick Start
 ---------------
 
-**Python:**
+***Python:***
 -	An easy was to get started with Python is by installing the Anaconda package from: https://www.anaconda.com/download/
 -	Download and install the appropriate Python version 3.6+ for your machine
 
-**Libraries:**
--	Open Anaconda Prompt
+***Libraries:***
+-	Launch Anaconda Prompt
 -	Enter the following commands to install pandas, numpy, and Pyomo libraries, respectively (may require administrator access):
 1.	“conda install pandas”
 2.	“conda install numpy”
 3.	“pip install pyomo”
 
-**Solver:**
+***Solver:***
 -	To install the glpk solver, enter the command: “conda install -c conda-forge glpk” (using Anaconda Prompt)
 
-**OpenOffice:**
+***OpenOffice:***
 -	Download and install the appropriate OpenOffice software package for your machine from:  https://www.openoffice.org/download/ 
 
 
-
-3.	Defining a Model
+Defining a Model
 ---------------
 
-The energy hub model is specified using a spreadsheet. The input spreadsheet template is located under the “cases” GitHub folder. Several worksheets are used to define the model. These are briefly described below. Further information regarding the input fields and their specification is provided in the comments on individual cells within the worksheets.
-The complete optimization problem is defined and documented in the “E-hub optimization problem.docx” file under the GitHub “docs” folder.
+The energy hub model is defined using a spreadsheet. The input spreadsheet template is located under the “cases” GitHub folder. Several worksheets are used to define the model. These are briefly described below. Further information regarding the input fields and their specification is provided in the comments on individual cells within the worksheets.
+Note that the complete optimization problem is defined and documented in the “E-hub optimization problem.docx” file under the GitHub “docs” folder.
+
+***Worksheet Descriptions:***
 
 *General:* Overarching optimization problem and modeling parameters
 
-*Energy Carriers:* List of energy carriers referenced in the model
-*Imports:* Imported energy carriers; note that every model requires at least one import (even at zero cost/carbon emissions) in order to satisfy conversion technologies’ energy balance equation.
+*Energy Carriers:* Complete list of energy carriers referenced in the model
+
+*Imports:* Imported energy carriers; note that every model requires at least one import in order to satisfy energy balance equations.
+
 *Exports:* Exported energy carriers, if any
+
 *Demand:* Energy carrier demand by hub
-*Energy Converters:* Energy conversion technologies; at least one must be specified.  Note that the following general types of technologies can be specified:
+
+*Energy Converters:* Energy conversion technologies; at least one must be specified. Multi input/output conversion processes with fixed input and output shares may be specified. For a more complete explanation (including graphics), please refer to the *Getting Started* file under the GitHub "docs" folder.
+
+*Storage:* Storage technologies, if any
+
+*Network:*  Network connections, if any
+
+*Solar Profile:* Solar irradiation profile and energy carrier, if any
 
 
-**DisDemands Error:**
-
-- Comment out or delete this line in the DisDemands function: `for i, value in enumerate(np.array(self.TechOutputs[[val-2]],dtype=int)):`
-
-- Change it to this: `for i, value in enumerate(np.array(pd.Series.to_frame(self.TechOutputs.iloc[:,val-2]),dtype=int)):`
+Defining a Model
+---------------
