@@ -64,6 +64,8 @@ Note that the complete optimization problem is defined and documented in the “
 
 *Solar Profile:* Solar irradiation profile and energy carrier (if any)
 
+Note that custom modeling equations can be defined by a user in Python within the “mod_custom.py” file under the “code” GitHub folder.
+
 
 Running a Model
 ---------------
