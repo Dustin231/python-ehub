@@ -1,12 +1,7 @@
-Getting Started Guide: E-hub Tool (v5.4)
+Getting Started Guide: E-hub Modeling Tool (v5.4)
 ============
 
-
-**Test4**
-
-*Test4*
-
-***Test4***
+This guide is intended to help new users get started with the e-hub modeling tool.
 
 Requirements
 ------------
@@ -42,6 +37,7 @@ Defining a Model
 ---------------
 
 The energy hub model is defined using a spreadsheet. The input spreadsheet template is located under the “cases” GitHub folder. Several worksheets are used to define the model. These are briefly described below. Further information regarding the input fields and their specification is provided in the comments on individual cells within the worksheets.
+
 Note that the complete optimization problem is defined and documented in the “E-hub optimization problem.docx” file under the GitHub “docs” folder.
 
 **Worksheet Descriptions:**
