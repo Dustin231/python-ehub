@@ -20,22 +20,24 @@ Requirements
 Installation Quick Start
 ---------------
 
-Python:
+**Python:**
 -	An easy was to get started with Python is by installing the Anaconda package from: https://www.anaconda.com/download/
 -	Download and install the appropriate Python version 3.6+ for your machine
 
-Libraries:
+**Libraries:**
 -	Open Anaconda Prompt
 -	Enter the following commands to install pandas, numpy, and Pyomo libraries, respectively (may require administrator access):
 1.	“conda install pandas”
 2.	“conda install numpy”
 3.	“pip install pyomo”
 
-Solver:
+**Solver:**
 -	To install the glpk solver, enter the command: “conda install -c conda-forge glpk” (using Anaconda Prompt)
 
-OpenOffice:
+**OpenOffice:**
 -	Download and install the appropriate OpenOffice software package for your machine from:  https://www.openoffice.org/download/ 
+
+
 
 Common errors
 ---------------
