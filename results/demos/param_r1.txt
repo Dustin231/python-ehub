@@ -1,0 +1,484 @@
+eff 1 4.0
+eff 2 0.95
+eff 4 0.55
+eff 5 0.19
+effFixOut 3 1 0.3
+effFixOut 3 2 0.6375000000000001
+effFixOut 3 3 0
+effFixOut 3 4 0
+effFixOut 3 5 0
+effFixOut 3 6 0
+partLoad 1 nan
+partLoad 2 nan
+partLoad 3 nan
+partLoad 4 nan
+partLoad 5 nan
+lifeTechs 1 15
+lifeTechs 2 15
+lifeTechs 3 15
+lifeTechs 4 15
+lifeTechs 5 20
+maxCapTechs 1 1 5.0
+maxCapTechs 1 2 inf
+maxCapTechs 1 3 inf
+maxCapTechs 1 4 inf
+maxCapTechs 1 5 inf
+minCapTechs 1 1 0
+minCapTechs 1 2 0
+minCapTechs 1 3 0
+minCapTechs 1 4 0
+minCapTechs 1 5 5
+maxOutTechs 1 1 inf
+maxOutTechs 1 2 inf
+maxOutTechs 1 3 inf
+maxOutTechs 1 4 inf
+maxOutTechs 1 5 inf
+minOutTechs 1 1 0
+minOutTechs 1 2 0
+minOutTechs 1 3 0
+minOutTechs 1 4 0
+minOutTechs 1 5 0
+techCO2 1 0
+techCO2 2 0
+techCO2 3 0
+techCO2 4 0
+techCO2 5 0
+YtCapCost 1 1
+YtCapCost 2 0
+YtCapCost 3 1
+YtCapCost 4 1
+YtCapCost 5 1
+solkWm2 1 nan
+solkWm2 2 nan
+solkWm2 3 nan
+solkWm2 4 0.2
+solkWm2 5 0.2
+invTech 1 1300
+invTech 2 500
+invTech 3 3000
+invTech 4 1300
+invTech 5 1800
+omvTech 1 0.0
+omvTech 2 0.0
+omvTech 3 0.0
+omvTech 4 0.0
+omvTech 5 0.6
+omfTech 1 1.4
+omfTech 2 1.5
+omfTech 3 70.0
+omfTech 4 0.1
+omfTech 5 5.0
+CRFtech 1 0.11682954493601999
+CRFtech 2 0.11682954493601999
+CRFtech 3 0.11682954493601999
+CRFtech 4 0.11682954493601999
+CRFtech 5 0.10185220882315059
+maxStorCh 1 0.3
+maxStorCh 2 0.3
+maxStorDisch 1 0.3
+maxStorDisch 2 0.3
+standbyLoss 1 0.001
+standbyLoss 2 0.001
+chargingEff 1 0.9
+chargingEff 2 0.9
+dischargingEff 1 0.9
+dischargingEff 2 0.9
+minSoC 1 0
+minSoC 2 0
+invStg 1 150
+invStg 2 1
+lifeStg 1 10
+lifeStg 2 15
+omfStg 1 0
+omfStg 2 0
+stgCO2 1 0
+stgCO2 2 0
+CRFstg 1 0.14902948869707536
+CRFstg 2 0.11682954493601999
+maxCapStg 1 1 1 inf
+maxCapStg 1 2 1 0.0
+maxCapStg 1 1 2 0.0
+maxCapStg 1 2 2 inf
+maxCapStg 1 1 3 0.0
+maxCapStg 1 2 3 0.0
+maxCapStg 1 1 4 0.0
+maxCapStg 1 2 4 0.0
+maxCapStg 1 1 5 0.0
+maxCapStg 1 2 5 0.0
+maxCapStg 1 1 6 0.0
+maxCapStg 1 2 6 0.0
+minCapStg 1 1 1 0.0
+minCapStg 1 2 1 0.0
+minCapStg 1 1 2 0.0
+minCapStg 1 2 2 0.0
+minCapStg 1 1 3 0.0
+minCapStg 1 2 3 0.0
+minCapStg 1 1 4 0.0
+minCapStg 1 2 4 0.0
+minCapStg 1 1 5 0.0
+minCapStg 1 2 5 0.0
+minCapStg 1 1 6 0.0
+minCapStg 1 2 6 0.0
+YsCapCost 1 1
+YsCapCost 2 1
+impCost 3 0.09
+impCost 4 0.0
+impCost 5 0.07
+impCost 6 0.11
+impCost 1 0.21
+expPrice 1 0.1
+co2Tax 3 0.01
+co2Tax 4 0.0
+co2Tax 5 0.0
+co2Tax 6 0.01
+co2Tax 1 0.0
+maxImp 3 inf
+maxImp 4 inf
+maxImp 5 inf
+maxImp 6 inf
+maxImp 1 inf
+ecCO2 3 0.198
+ecCO2 4 0.0
+ecCO2 5 0.01
+ecCO2 6 0.23
+ecCO2 1 0.03
+interestRate 0.08
+bigM 100000
+maxCarbon nan
+loads 1 1 1 3.0
+loads 1 2 1 3.0
+loads 1 3 1 3.0
+loads 1 4 1 3.0
+loads 1 5 1 3.0
+loads 1 6 1 3.0
+loads 1 7 1 24.0
+loads 1 8 1 23.0
+loads 1 9 1 24.0
+loads 1 10 1 19.0
+loads 1 11 1 19.0
+loads 1 12 1 19.0
+loads 1 13 1 23.0
+loads 1 14 1 23.0
+loads 1 15 1 23.0
+loads 1 16 1 24.0
+loads 1 17 1 22.0
+loads 1 18 1 22.0
+loads 1 19 1 27.0
+loads 1 20 1 28.0
+loads 1 21 1 27.0
+loads 1 22 1 10.0
+loads 1 23 1 12.0
+loads 1 24 1 11.0
+loads 1 25 1 3.0
+loads 1 26 1 3.0
+loads 1 27 1 3.0
+loads 1 28 1 3.0
+loads 1 29 1 3.0
+loads 1 30 1 3.0
+loads 1 31 1 24.0
+loads 1 32 1 24.0
+loads 1 33 1 23.0
+loads 1 34 1 19.0
+loads 1 35 1 19.0
+loads 1 36 1 19.0
+loads 1 37 1 23.0
+loads 1 38 1 23.0
+loads 1 39 1 23.0
+loads 1 40 1 23.0
+loads 1 41 1 22.0
+loads 1 42 1 22.0
+loads 1 43 1 28.0
+loads 1 44 1 27.0
+loads 1 45 1 27.0
+loads 1 46 1 26.0
+loads 1 47 1 25.0
+loads 1 48 1 20.0
+loads 1 1 2 21.0
+loads 1 2 2 24.0
+loads 1 3 2 26.0
+loads 1 4 2 28.0
+loads 1 5 2 30.0
+loads 1 6 2 31.0
+loads 1 7 2 73.0
+loads 1 8 2 66.0
+loads 1 9 2 63.0
+loads 1 10 2 58.0
+loads 1 11 2 49.0
+loads 1 12 2 37.0
+loads 1 13 2 30.0
+loads 1 14 2 27.0
+loads 1 15 2 26.0
+loads 1 16 2 32.0
+loads 1 17 2 31.0
+loads 1 18 2 39.0
+loads 1 19 2 39.0
+loads 1 20 2 40.0
+loads 1 21 2 44.0
+loads 1 22 2 44.0
+loads 1 23 2 14.0
+loads 1 24 2 18.0
+loads 1 25 2 20.0
+loads 1 26 2 23.0
+loads 1 27 2 25.0
+loads 1 28 2 27.0
+loads 1 29 2 29.0
+loads 1 30 2 40.0
+loads 1 31 2 82.0
+loads 1 32 2 70.0
+loads 1 33 2 65.0
+loads 1 34 2 58.0
+loads 1 35 2 49.0
+loads 1 36 2 37.0
+loads 1 37 2 30.0
+loads 1 38 2 27.0
+loads 1 39 2 24.0
+loads 1 40 2 30.0
+loads 1 41 2 29.0
+loads 1 42 2 41.0
+loads 1 43 2 33.0
+loads 1 44 2 37.0
+loads 1 45 2 42.0
+loads 1 46 2 40.0
+loads 1 47 2 38.0
+loads 1 48 2 36.0
+loads 1 1 3 0.0
+loads 1 2 3 0.0
+loads 1 3 3 0.0
+loads 1 4 3 0.0
+loads 1 5 3 0.0
+loads 1 6 3 0.0
+loads 1 7 3 0.0
+loads 1 8 3 0.0
+loads 1 9 3 0.0
+loads 1 10 3 0.0
+loads 1 11 3 0.0
+loads 1 12 3 0.0
+loads 1 13 3 0.0
+loads 1 14 3 0.0
+loads 1 15 3 0.0
+loads 1 16 3 0.0
+loads 1 17 3 0.0
+loads 1 18 3 0.0
+loads 1 19 3 0.0
+loads 1 20 3 0.0
+loads 1 21 3 0.0
+loads 1 22 3 0.0
+loads 1 23 3 0.0
+loads 1 24 3 0.0
+loads 1 25 3 0.0
+loads 1 26 3 0.0
+loads 1 27 3 0.0
+loads 1 28 3 0.0
+loads 1 29 3 0.0
+loads 1 30 3 0.0
+loads 1 31 3 0.0
+loads 1 32 3 0.0
+loads 1 33 3 0.0
+loads 1 34 3 0.0
+loads 1 35 3 0.0
+loads 1 36 3 0.0
+loads 1 37 3 0.0
+loads 1 38 3 0.0
+loads 1 39 3 0.0
+loads 1 40 3 0.0
+loads 1 41 3 0.0
+loads 1 42 3 0.0
+loads 1 43 3 0.0
+loads 1 44 3 0.0
+loads 1 45 3 0.0
+loads 1 46 3 0.0
+loads 1 47 3 0.0
+loads 1 48 3 0.0
+loads 1 1 4 0.0
+loads 1 2 4 0.0
+loads 1 3 4 0.0
+loads 1 4 4 0.0
+loads 1 5 4 0.0
+loads 1 6 4 0.0
+loads 1 7 4 0.0
+loads 1 8 4 0.0
+loads 1 9 4 0.0
+loads 1 10 4 0.0
+loads 1 11 4 0.0
+loads 1 12 4 0.0
+loads 1 13 4 0.0
+loads 1 14 4 0.0
+loads 1 15 4 0.0
+loads 1 16 4 0.0
+loads 1 17 4 0.0
+loads 1 18 4 0.0
+loads 1 19 4 0.0
+loads 1 20 4 0.0
+loads 1 21 4 0.0
+loads 1 22 4 0.0
+loads 1 23 4 0.0
+loads 1 24 4 0.0
+loads 1 25 4 0.0
+loads 1 26 4 0.0
+loads 1 27 4 0.0
+loads 1 28 4 0.0
+loads 1 29 4 0.0
+loads 1 30 4 0.0
+loads 1 31 4 0.0
+loads 1 32 4 0.0
+loads 1 33 4 0.0
+loads 1 34 4 0.0
+loads 1 35 4 0.0
+loads 1 36 4 0.0
+loads 1 37 4 0.0
+loads 1 38 4 0.0
+loads 1 39 4 0.0
+loads 1 40 4 0.0
+loads 1 41 4 0.0
+loads 1 42 4 0.0
+loads 1 43 4 0.0
+loads 1 44 4 0.0
+loads 1 45 4 0.0
+loads 1 46 4 0.0
+loads 1 47 4 0.0
+loads 1 48 4 0.0
+loads 1 1 5 0.0
+loads 1 2 5 0.0
+loads 1 3 5 0.0
+loads 1 4 5 0.0
+loads 1 5 5 0.0
+loads 1 6 5 0.0
+loads 1 7 5 0.0
+loads 1 8 5 0.0
+loads 1 9 5 0.0
+loads 1 10 5 0.0
+loads 1 11 5 0.0
+loads 1 12 5 0.0
+loads 1 13 5 0.0
+loads 1 14 5 0.0
+loads 1 15 5 0.0
+loads 1 16 5 0.0
+loads 1 17 5 0.0
+loads 1 18 5 0.0
+loads 1 19 5 0.0
+loads 1 20 5 0.0
+loads 1 21 5 0.0
+loads 1 22 5 0.0
+loads 1 23 5 0.0
+loads 1 24 5 0.0
+loads 1 25 5 0.0
+loads 1 26 5 0.0
+loads 1 27 5 0.0
+loads 1 28 5 0.0
+loads 1 29 5 0.0
+loads 1 30 5 0.0
+loads 1 31 5 0.0
+loads 1 32 5 0.0
+loads 1 33 5 0.0
+loads 1 34 5 0.0
+loads 1 35 5 0.0
+loads 1 36 5 0.0
+loads 1 37 5 0.0
+loads 1 38 5 0.0
+loads 1 39 5 0.0
+loads 1 40 5 0.0
+loads 1 41 5 0.0
+loads 1 42 5 0.0
+loads 1 43 5 0.0
+loads 1 44 5 0.0
+loads 1 45 5 0.0
+loads 1 46 5 0.0
+loads 1 47 5 0.0
+loads 1 48 5 0.0
+loads 1 1 6 0.0
+loads 1 2 6 0.0
+loads 1 3 6 0.0
+loads 1 4 6 0.0
+loads 1 5 6 0.0
+loads 1 6 6 0.0
+loads 1 7 6 0.0
+loads 1 8 6 0.0
+loads 1 9 6 0.0
+loads 1 10 6 0.0
+loads 1 11 6 0.0
+loads 1 12 6 0.0
+loads 1 13 6 0.0
+loads 1 14 6 0.0
+loads 1 15 6 0.0
+loads 1 16 6 0.0
+loads 1 17 6 0.0
+loads 1 18 6 0.0
+loads 1 19 6 0.0
+loads 1 20 6 0.0
+loads 1 21 6 0.0
+loads 1 22 6 0.0
+loads 1 23 6 0.0
+loads 1 24 6 0.0
+loads 1 25 6 0.0
+loads 1 26 6 0.0
+loads 1 27 6 0.0
+loads 1 28 6 0.0
+loads 1 29 6 0.0
+loads 1 30 6 0.0
+loads 1 31 6 0.0
+loads 1 32 6 0.0
+loads 1 33 6 0.0
+loads 1 34 6 0.0
+loads 1 35 6 0.0
+loads 1 36 6 0.0
+loads 1 37 6 0.0
+loads 1 38 6 0.0
+loads 1 39 6 0.0
+loads 1 40 6 0.0
+loads 1 41 6 0.0
+loads 1 42 6 0.0
+loads 1 43 6 0.0
+loads 1 44 6 0.0
+loads 1 45 6 0.0
+loads 1 46 6 0.0
+loads 1 47 6 0.0
+loads 1 48 6 0.0
+solarEm 1 0.0
+solarEm 2 0.0
+solarEm 3 0.0
+solarEm 4 0.0
+solarEm 5 0.0
+solarEm 6 0.0
+solarEm 7 0.0
+solarEm 8 0.0
+solarEm 9 0.0
+solarEm 10 0.0
+solarEm 11 0.056
+solarEm 12 0.192
+solarEm 13 0.324
+solarEm 14 0.38
+solarEm 15 0.324
+solarEm 16 0.189
+solarEm 17 0.037
+solarEm 18 0.0
+solarEm 19 0.0
+solarEm 20 0.0
+solarEm 21 0.0
+solarEm 22 0.0
+solarEm 23 0.0
+solarEm 24 0.0
+solarEm 25 0.0
+solarEm 26 0.0
+solarEm 27 0.0
+solarEm 28 0.0
+solarEm 29 0.0
+solarEm 30 0.0
+solarEm 31 0.0
+solarEm 32 0.0
+solarEm 33 0.0
+solarEm 34 0.0
+solarEm 35 0.056
+solarEm 36 0.194
+solarEm 37 0.327
+solarEm 38 0.383
+solarEm 39 0.328
+solarEm 40 0.192
+solarEm 41 0.039
+solarEm 42 0.0
+solarEm 43 0.0
+solarEm 44 0.0
+solarEm 45 0.0
+solarEm 46 0.0
+solarEm 47 0.0
+solarEm 48 0.0
+maxSolarArea 500

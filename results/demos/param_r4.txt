@@ -1,0 +1,7437 @@
+eff 1 4.0
+eff 2 0.95
+eff 3 0.95
+eff 4 0.85
+eff 6 0.55
+eff 7 0.19
+eff 8 0.8
+eff 10 0.7
+effFixOut 5 1 0.3
+effFixOut 5 2 0.6375000000000001
+effFixOut 5 3 0
+effFixOut 5 4 0
+effFixOut 5 5 0
+effFixOut 5 6 0
+effFixOut 5 7 0
+effFixOut 9 1 0.28
+effFixOut 9 2 0.6533333333333334
+effFixOut 9 3 0
+effFixOut 9 4 0
+effFixOut 9 5 0
+effFixOut 9 6 0
+effFixOut 9 7 0
+partLoad 1 nan
+partLoad 2 nan
+partLoad 3 nan
+partLoad 4 nan
+partLoad 5 nan
+partLoad 6 nan
+partLoad 7 nan
+partLoad 8 nan
+partLoad 9 0.2
+partLoad 10 nan
+lifeTechs 1 15
+lifeTechs 2 15
+lifeTechs 3 15
+lifeTechs 4 15
+lifeTechs 5 15
+lifeTechs 6 15
+lifeTechs 7 20
+lifeTechs 8 20
+lifeTechs 9 20
+lifeTechs 10 20
+maxCapTechs 1 1 5.0
+maxCapTechs 2 1 0
+maxCapTechs 3 1 0
+maxCapTechs 4 1 0
+maxCapTechs 1 2 inf
+maxCapTechs 2 2 0
+maxCapTechs 3 2 0
+maxCapTechs 4 2 0
+maxCapTechs 1 3 0
+maxCapTechs 2 3 40.0
+maxCapTechs 3 3 0
+maxCapTechs 4 3 0
+maxCapTechs 1 4 0
+maxCapTechs 2 4 0
+maxCapTechs 3 4 80.0
+maxCapTechs 4 4 0
+maxCapTechs 1 5 inf
+maxCapTechs 2 5 inf
+maxCapTechs 3 5 0
+maxCapTechs 4 5 0
+maxCapTechs 1 6 inf
+maxCapTechs 2 6 0
+maxCapTechs 3 6 inf
+maxCapTechs 4 6 0
+maxCapTechs 1 7 inf
+maxCapTechs 2 7 0
+maxCapTechs 3 7 inf
+maxCapTechs 4 7 0
+maxCapTechs 1 8 0
+maxCapTechs 2 8 0
+maxCapTechs 3 8 0
+maxCapTechs 4 8 inf
+maxCapTechs 1 9 0
+maxCapTechs 2 9 0
+maxCapTechs 3 9 0
+maxCapTechs 4 9 40.0
+maxCapTechs 1 10 0
+maxCapTechs 2 10 0
+maxCapTechs 3 10 0
+maxCapTechs 4 10 70.0
+minCapTechs 1 1 0
+minCapTechs 2 1 0
+minCapTechs 3 1 0
+minCapTechs 4 1 0
+minCapTechs 1 2 0
+minCapTechs 2 2 0
+minCapTechs 3 2 0
+minCapTechs 4 2 0
+minCapTechs 1 3 0
+minCapTechs 2 3 0
+minCapTechs 3 3 0
+minCapTechs 4 3 0
+minCapTechs 1 4 0
+minCapTechs 2 4 0
+minCapTechs 3 4 0
+minCapTechs 4 4 0
+minCapTechs 1 5 0
+minCapTechs 2 5 0
+minCapTechs 3 5 0
+minCapTechs 4 5 0
+minCapTechs 1 6 0
+minCapTechs 2 6 0
+minCapTechs 3 6 0
+minCapTechs 4 6 0
+minCapTechs 1 7 5
+minCapTechs 2 7 0
+minCapTechs 3 7 5
+minCapTechs 4 7 0
+minCapTechs 1 8 0
+minCapTechs 2 8 0
+minCapTechs 3 8 0
+minCapTechs 4 8 0
+minCapTechs 1 9 0
+minCapTechs 2 9 0
+minCapTechs 3 9 0
+minCapTechs 4 9 0
+minCapTechs 1 10 0
+minCapTechs 2 10 0
+minCapTechs 3 10 0
+minCapTechs 4 10 0
+maxOutTechs 1 1 inf
+maxOutTechs 2 1 0
+maxOutTechs 3 1 0
+maxOutTechs 4 1 0
+maxOutTechs 1 2 inf
+maxOutTechs 2 2 0
+maxOutTechs 3 2 0
+maxOutTechs 4 2 0
+maxOutTechs 1 3 0
+maxOutTechs 2 3 inf
+maxOutTechs 3 3 0
+maxOutTechs 4 3 0
+maxOutTechs 1 4 0
+maxOutTechs 2 4 0
+maxOutTechs 3 4 inf
+maxOutTechs 4 4 0
+maxOutTechs 1 5 inf
+maxOutTechs 2 5 inf
+maxOutTechs 3 5 0
+maxOutTechs 4 5 0
+maxOutTechs 1 6 inf
+maxOutTechs 2 6 0
+maxOutTechs 3 6 inf
+maxOutTechs 4 6 0
+maxOutTechs 1 7 inf
+maxOutTechs 2 7 0
+maxOutTechs 3 7 inf
+maxOutTechs 4 7 0
+maxOutTechs 1 8 0
+maxOutTechs 2 8 0
+maxOutTechs 3 8 0
+maxOutTechs 4 8 inf
+maxOutTechs 1 9 0
+maxOutTechs 2 9 0
+maxOutTechs 3 9 0
+maxOutTechs 4 9 inf
+maxOutTechs 1 10 0
+maxOutTechs 2 10 0
+maxOutTechs 3 10 0
+maxOutTechs 4 10 inf
+minOutTechs 1 1 0
+minOutTechs 2 1 0
+minOutTechs 3 1 0
+minOutTechs 4 1 0
+minOutTechs 1 2 0
+minOutTechs 2 2 0
+minOutTechs 3 2 0
+minOutTechs 4 2 0
+minOutTechs 1 3 0
+minOutTechs 2 3 0
+minOutTechs 3 3 0
+minOutTechs 4 3 0
+minOutTechs 1 4 0
+minOutTechs 2 4 0
+minOutTechs 3 4 0
+minOutTechs 4 4 0
+minOutTechs 1 5 0
+minOutTechs 2 5 0
+minOutTechs 3 5 0
+minOutTechs 4 5 0
+minOutTechs 1 6 0
+minOutTechs 2 6 0
+minOutTechs 3 6 0
+minOutTechs 4 6 0
+minOutTechs 1 7 0
+minOutTechs 2 7 0
+minOutTechs 3 7 0
+minOutTechs 4 7 0
+minOutTechs 1 8 0
+minOutTechs 2 8 0
+minOutTechs 3 8 0
+minOutTechs 4 8 0
+minOutTechs 1 9 0
+minOutTechs 2 9 0
+minOutTechs 3 9 0
+minOutTechs 4 9 0
+minOutTechs 1 10 0
+minOutTechs 2 10 0
+minOutTechs 3 10 0
+minOutTechs 4 10 0
+techCO2 1 0
+techCO2 2 0
+techCO2 3 0
+techCO2 4 0
+techCO2 5 0
+techCO2 6 0
+techCO2 7 0
+techCO2 8 0
+techCO2 9 0
+techCO2 10 0
+YtCapCost 1 1
+YtCapCost 2 0
+YtCapCost 3 1
+YtCapCost 4 1
+YtCapCost 5 1
+YtCapCost 6 1
+YtCapCost 7 1
+YtCapCost 8 1
+YtCapCost 9 1
+YtCapCost 10 1
+solkWm2 1 nan
+solkWm2 2 nan
+solkWm2 3 nan
+solkWm2 4 nan
+solkWm2 5 nan
+solkWm2 6 0.2
+solkWm2 7 0.2
+solkWm2 8 nan
+solkWm2 9 nan
+solkWm2 10 nan
+invTech 1 1300
+invTech 2 500
+invTech 3 450
+invTech 4 430
+invTech 5 3000
+invTech 6 1300
+invTech 7 1800
+invTech 8 600
+invTech 9 700
+invTech 10 300
+omvTech 1 0.0
+omvTech 2 0.0
+omvTech 3 0.0
+omvTech 4 0.0
+omvTech 5 0.0
+omvTech 6 0.0
+omvTech 7 0.6
+omvTech 8 0.01
+omvTech 9 0.01
+omvTech 10 0.0
+omfTech 1 1.4
+omfTech 2 1.5
+omfTech 3 1.5
+omfTech 4 0.5
+omfTech 5 70.0
+omfTech 6 0.1
+omfTech 7 5.0
+omfTech 8 0.1
+omfTech 9 17.0
+omfTech 10 4.0
+CRFtech 1 0.11682954493601999
+CRFtech 2 0.11682954493601999
+CRFtech 3 0.11682954493601999
+CRFtech 4 0.11682954493601999
+CRFtech 5 0.11682954493601999
+CRFtech 6 0.11682954493601999
+CRFtech 7 0.10185220882315059
+CRFtech 8 0.10185220882315059
+CRFtech 9 0.10185220882315059
+CRFtech 10 0.10185220882315059
+maxStorCh 1 0.3
+maxStorCh 2 0.3
+maxStorCh 3 0.3
+maxStorCh 4 0.3
+maxStorDisch 1 0.3
+maxStorDisch 2 0.3
+maxStorDisch 3 0.3
+maxStorDisch 4 0.3
+standbyLoss 1 0.001
+standbyLoss 2 0.001
+standbyLoss 3 0.001
+standbyLoss 4 0.0008
+chargingEff 1 0.9
+chargingEff 2 0.9
+chargingEff 3 0.9
+chargingEff 4 0.9
+dischargingEff 1 0.9
+dischargingEff 2 0.9
+dischargingEff 3 0.9
+dischargingEff 4 0.9
+minSoC 1 0
+minSoC 2 0
+minSoC 3 0
+minSoC 4 0
+invStg 1 150.0
+invStg 2 1.0
+invStg 3 100.0
+invStg 4 0.8
+lifeStg 1 10
+lifeStg 2 15
+lifeStg 3 15
+lifeStg 4 20
+omfStg 1 0
+omfStg 2 0
+omfStg 3 0
+omfStg 4 0
+stgCO2 1 0
+stgCO2 2 0
+stgCO2 3 0
+stgCO2 4 0
+CRFstg 1 0.14902948869707536
+CRFstg 2 0.11682954493601999
+CRFstg 3 0.11682954493601999
+CRFstg 4 0.10185220882315059
+maxCapStg 1 1 1 inf
+maxCapStg 1 2 1 0.0
+maxCapStg 1 3 1 0.0
+maxCapStg 1 4 1 0.0
+maxCapStg 1 1 2 0.0
+maxCapStg 1 2 2 inf
+maxCapStg 1 3 2 0.0
+maxCapStg 1 4 2 0.0
+maxCapStg 1 1 3 0.0
+maxCapStg 1 2 3 0.0
+maxCapStg 1 3 3 0.0
+maxCapStg 1 4 3 0.0
+maxCapStg 1 1 4 0.0
+maxCapStg 1 2 4 0.0
+maxCapStg 1 3 4 0.0
+maxCapStg 1 4 4 0.0
+maxCapStg 1 1 5 0.0
+maxCapStg 1 2 5 0.0
+maxCapStg 1 3 5 0.0
+maxCapStg 1 4 5 0.0
+maxCapStg 1 1 6 0.0
+maxCapStg 1 2 6 0.0
+maxCapStg 1 3 6 0.0
+maxCapStg 1 4 6 0.0
+maxCapStg 1 1 7 0.0
+maxCapStg 1 2 7 0.0
+maxCapStg 1 3 7 0.0
+maxCapStg 1 4 7 0.0
+maxCapStg 2 1 1 inf
+maxCapStg 2 2 1 0.0
+maxCapStg 2 3 1 0.0
+maxCapStg 2 4 1 0.0
+maxCapStg 2 1 2 0.0
+maxCapStg 2 2 2 inf
+maxCapStg 2 3 2 0.0
+maxCapStg 2 4 2 0.0
+maxCapStg 2 1 3 0.0
+maxCapStg 2 2 3 0.0
+maxCapStg 2 3 3 0.0
+maxCapStg 2 4 3 0.0
+maxCapStg 2 1 4 0.0
+maxCapStg 2 2 4 0.0
+maxCapStg 2 3 4 0.0
+maxCapStg 2 4 4 0.0
+maxCapStg 2 1 5 0.0
+maxCapStg 2 2 5 0.0
+maxCapStg 2 3 5 0.0
+maxCapStg 2 4 5 0.0
+maxCapStg 2 1 6 0.0
+maxCapStg 2 2 6 0.0
+maxCapStg 2 3 6 0.0
+maxCapStg 2 4 6 0.0
+maxCapStg 2 1 7 0.0
+maxCapStg 2 2 7 0.0
+maxCapStg 2 3 7 0.0
+maxCapStg 2 4 7 0.0
+maxCapStg 3 1 1 inf
+maxCapStg 3 2 1 0.0
+maxCapStg 3 3 1 0.0
+maxCapStg 3 4 1 0.0
+maxCapStg 3 1 2 0.0
+maxCapStg 3 2 2 inf
+maxCapStg 3 3 2 0.0
+maxCapStg 3 4 2 0.0
+maxCapStg 3 1 3 0.0
+maxCapStg 3 2 3 0.0
+maxCapStg 3 3 3 0.0
+maxCapStg 3 4 3 0.0
+maxCapStg 3 1 4 0.0
+maxCapStg 3 2 4 0.0
+maxCapStg 3 3 4 0.0
+maxCapStg 3 4 4 0.0
+maxCapStg 3 1 5 0.0
+maxCapStg 3 2 5 0.0
+maxCapStg 3 3 5 0.0
+maxCapStg 3 4 5 0.0
+maxCapStg 3 1 6 0.0
+maxCapStg 3 2 6 0.0
+maxCapStg 3 3 6 0.0
+maxCapStg 3 4 6 0.0
+maxCapStg 3 1 7 0.0
+maxCapStg 3 2 7 0.0
+maxCapStg 3 3 7 0.0
+maxCapStg 3 4 7 0.0
+maxCapStg 4 1 1 0.0
+maxCapStg 4 2 1 0.0
+maxCapStg 4 3 1 inf
+maxCapStg 4 4 1 0.0
+maxCapStg 4 1 2 0.0
+maxCapStg 4 2 2 0.0
+maxCapStg 4 3 2 0.0
+maxCapStg 4 4 2 inf
+maxCapStg 4 1 3 0.0
+maxCapStg 4 2 3 0.0
+maxCapStg 4 3 3 0.0
+maxCapStg 4 4 3 0.0
+maxCapStg 4 1 4 0.0
+maxCapStg 4 2 4 0.0
+maxCapStg 4 3 4 0.0
+maxCapStg 4 4 4 0.0
+maxCapStg 4 1 5 0.0
+maxCapStg 4 2 5 0.0
+maxCapStg 4 3 5 0.0
+maxCapStg 4 4 5 0.0
+maxCapStg 4 1 6 0.0
+maxCapStg 4 2 6 0.0
+maxCapStg 4 3 6 0.0
+maxCapStg 4 4 6 0.0
+maxCapStg 4 1 7 0.0
+maxCapStg 4 2 7 0.0
+maxCapStg 4 3 7 0.0
+maxCapStg 4 4 7 0.0
+minCapStg 1 1 1 0.0
+minCapStg 1 2 1 0.0
+minCapStg 1 3 1 0.0
+minCapStg 1 4 1 0.0
+minCapStg 1 1 2 0.0
+minCapStg 1 2 2 0.0
+minCapStg 1 3 2 0.0
+minCapStg 1 4 2 0.0
+minCapStg 1 1 3 0.0
+minCapStg 1 2 3 0.0
+minCapStg 1 3 3 0.0
+minCapStg 1 4 3 0.0
+minCapStg 1 1 4 0.0
+minCapStg 1 2 4 0.0
+minCapStg 1 3 4 0.0
+minCapStg 1 4 4 0.0
+minCapStg 1 1 5 0.0
+minCapStg 1 2 5 0.0
+minCapStg 1 3 5 0.0
+minCapStg 1 4 5 0.0
+minCapStg 1 1 6 0.0
+minCapStg 1 2 6 0.0
+minCapStg 1 3 6 0.0
+minCapStg 1 4 6 0.0
+minCapStg 1 1 7 0.0
+minCapStg 1 2 7 0.0
+minCapStg 1 3 7 0.0
+minCapStg 1 4 7 0.0
+minCapStg 2 1 1 0.0
+minCapStg 2 2 1 0.0
+minCapStg 2 3 1 0.0
+minCapStg 2 4 1 0.0
+minCapStg 2 1 2 0.0
+minCapStg 2 2 2 0.0
+minCapStg 2 3 2 0.0
+minCapStg 2 4 2 0.0
+minCapStg 2 1 3 0.0
+minCapStg 2 2 3 0.0
+minCapStg 2 3 3 0.0
+minCapStg 2 4 3 0.0
+minCapStg 2 1 4 0.0
+minCapStg 2 2 4 0.0
+minCapStg 2 3 4 0.0
+minCapStg 2 4 4 0.0
+minCapStg 2 1 5 0.0
+minCapStg 2 2 5 0.0
+minCapStg 2 3 5 0.0
+minCapStg 2 4 5 0.0
+minCapStg 2 1 6 0.0
+minCapStg 2 2 6 0.0
+minCapStg 2 3 6 0.0
+minCapStg 2 4 6 0.0
+minCapStg 2 1 7 0.0
+minCapStg 2 2 7 0.0
+minCapStg 2 3 7 0.0
+minCapStg 2 4 7 0.0
+minCapStg 3 1 1 0.0
+minCapStg 3 2 1 0.0
+minCapStg 3 3 1 0.0
+minCapStg 3 4 1 0.0
+minCapStg 3 1 2 0.0
+minCapStg 3 2 2 0.0
+minCapStg 3 3 2 0.0
+minCapStg 3 4 2 0.0
+minCapStg 3 1 3 0.0
+minCapStg 3 2 3 0.0
+minCapStg 3 3 3 0.0
+minCapStg 3 4 3 0.0
+minCapStg 3 1 4 0.0
+minCapStg 3 2 4 0.0
+minCapStg 3 3 4 0.0
+minCapStg 3 4 4 0.0
+minCapStg 3 1 5 0.0
+minCapStg 3 2 5 0.0
+minCapStg 3 3 5 0.0
+minCapStg 3 4 5 0.0
+minCapStg 3 1 6 0.0
+minCapStg 3 2 6 0.0
+minCapStg 3 3 6 0.0
+minCapStg 3 4 6 0.0
+minCapStg 3 1 7 0.0
+minCapStg 3 2 7 0.0
+minCapStg 3 3 7 0.0
+minCapStg 3 4 7 0.0
+minCapStg 4 1 1 0.0
+minCapStg 4 2 1 0.0
+minCapStg 4 3 1 0.0
+minCapStg 4 4 1 0.0
+minCapStg 4 1 2 0.0
+minCapStg 4 2 2 0.0
+minCapStg 4 3 2 0.0
+minCapStg 4 4 2 0.0
+minCapStg 4 1 3 0.0
+minCapStg 4 2 3 0.0
+minCapStg 4 3 3 0.0
+minCapStg 4 4 3 0.0
+minCapStg 4 1 4 0.0
+minCapStg 4 2 4 0.0
+minCapStg 4 3 4 0.0
+minCapStg 4 4 4 0.0
+minCapStg 4 1 5 0.0
+minCapStg 4 2 5 0.0
+minCapStg 4 3 5 0.0
+minCapStg 4 4 5 0.0
+minCapStg 4 1 6 0.0
+minCapStg 4 2 6 0.0
+minCapStg 4 3 6 0.0
+minCapStg 4 4 6 0.0
+minCapStg 4 1 7 0.0
+minCapStg 4 2 7 0.0
+minCapStg 4 3 7 0.0
+minCapStg 4 4 7 0.0
+YsCapCost 1 1
+YsCapCost 2 1
+YsCapCost 3 1
+YsCapCost 4 1
+netLength 1 100
+netLength 2 150
+netLength 3 150
+netLength 4 100
+netLength 5 150
+netLength 6 150
+netLength 7 110
+netLength 8 110
+netLength 9 110
+netLength 10 110
+netLength 11 110
+netLength 12 110
+netLoss 1 0.001
+netLoss 2 0.0006
+netLoss 3 0.0006
+netLoss 4 0.0009
+netLoss 5 0.00065
+netLoss 6 0.00065
+netLoss 7 0.001
+netLoss 8 0.0006
+netLoss 9 0.0006
+netLoss 10 0.0009
+netLoss 11 0.00065
+netLoss 12 0.00065
+invNet 1 1.0
+invNet 2 1.0
+invNet 3 1.0
+invNet 4 0.9
+invNet 5 0.9
+invNet 6 0.9
+invNet 7 1.0
+invNet 8 1.0
+invNet 9 1.0
+invNet 10 0.9
+invNet 11 0.9
+invNet 12 0.9
+omfNet 1 0
+omfNet 2 0
+omfNet 3 0
+omfNet 4 0
+omfNet 5 0
+omfNet 6 0
+omfNet 7 0
+omfNet 8 0
+omfNet 9 0
+omfNet 10 0
+omfNet 11 0
+omfNet 12 0
+omvNet 1 0
+omvNet 2 0
+omvNet 3 0
+omvNet 4 0
+omvNet 5 0
+omvNet 6 0
+omvNet 7 0
+omvNet 8 0
+omvNet 9 0
+omvNet 10 0
+omvNet 11 0
+omvNet 12 0
+CRFnet 1 0.08174285816161556
+CRFnet 2 0.08174285816161556
+CRFnet 3 0.08174285816161556
+CRFnet 4 0.08117796285734426
+CRFnet 5 0.08117796285734426
+CRFnet 6 0.08117796285734426
+CRFnet 7 0.08174285816161556
+CRFnet 8 0.08174285816161556
+CRFnet 9 0.08174285816161556
+CRFnet 10 0.08117796285734426
+CRFnet 11 0.08117796285734426
+CRFnet 12 0.08117796285734426
+netMax 1 1 1 1 0
+netMax 1 1 1 2 0
+netMax 1 1 1 3 0
+netMax 1 1 1 4 0
+netMax 1 1 1 5 0
+netMax 1 1 1 6 0
+netMax 1 1 1 7 0
+netMax 1 1 2 1 0
+netMax 1 1 2 2 inf
+netMax 1 2 1 2 inf
+netMax 1 1 2 3 0
+netMax 1 1 2 4 0
+netMax 1 1 2 5 0
+netMax 1 1 2 6 0
+netMax 1 1 2 7 0
+netMax 1 1 3 1 0
+netMax 1 1 3 2 0
+netMax 1 1 3 3 0
+netMax 1 1 3 4 0
+netMax 1 1 3 5 0
+netMax 1 1 3 6 0
+netMax 1 1 3 7 0
+netMax 1 1 4 1 0
+netMax 1 1 4 2 0
+netMax 1 1 4 3 0
+netMax 1 1 4 4 0
+netMax 1 1 4 5 0
+netMax 1 1 4 6 0
+netMax 1 1 4 7 0
+netMax 1 2 1 1 0
+netMax 1 2 1 3 0
+netMax 1 2 1 4 0
+netMax 1 2 1 5 0
+netMax 1 2 1 6 0
+netMax 1 2 1 7 0
+netMax 1 2 2 1 0
+netMax 1 2 2 2 0
+netMax 1 2 2 3 0
+netMax 1 2 2 4 0
+netMax 1 2 2 5 0
+netMax 1 2 2 6 0
+netMax 1 2 2 7 0
+netMax 1 2 3 1 0
+netMax 1 2 3 2 0
+netMax 1 2 3 3 0
+netMax 1 2 3 4 0
+netMax 1 2 3 5 0
+netMax 1 2 3 6 0
+netMax 1 2 3 7 0
+netMax 1 2 4 1 0
+netMax 1 2 4 2 0
+netMax 1 2 4 3 0
+netMax 1 2 4 4 0
+netMax 1 2 4 5 0
+netMax 1 2 4 6 0
+netMax 1 2 4 7 0
+netMax 1 3 1 1 0
+netMax 1 3 1 2 0
+netMax 1 3 1 3 0
+netMax 1 3 1 4 0
+netMax 1 3 1 5 0
+netMax 1 3 1 6 0
+netMax 1 3 1 7 0
+netMax 1 3 2 1 0
+netMax 1 3 2 2 0
+netMax 1 3 2 3 0
+netMax 1 3 2 4 0
+netMax 1 3 2 5 0
+netMax 1 3 2 6 0
+netMax 1 3 2 7 0
+netMax 1 3 3 1 0
+netMax 1 3 3 2 0
+netMax 1 3 3 3 0
+netMax 1 3 3 4 0
+netMax 1 3 3 5 0
+netMax 1 3 3 6 0
+netMax 1 3 3 7 0
+netMax 1 3 4 1 0
+netMax 1 3 4 2 0
+netMax 1 3 4 3 0
+netMax 1 3 4 4 0
+netMax 1 3 4 5 0
+netMax 1 3 4 6 0
+netMax 1 3 4 7 0
+netMax 1 4 1 1 0
+netMax 1 4 1 2 0
+netMax 1 4 1 3 0
+netMax 1 4 1 4 0
+netMax 1 4 1 5 0
+netMax 1 4 1 6 0
+netMax 1 4 1 7 0
+netMax 1 4 2 1 0
+netMax 1 4 2 2 0
+netMax 1 4 2 3 0
+netMax 1 4 2 4 0
+netMax 1 4 2 5 0
+netMax 1 4 2 6 0
+netMax 1 4 2 7 0
+netMax 1 4 3 1 0
+netMax 1 4 3 2 0
+netMax 1 4 3 3 0
+netMax 1 4 3 4 0
+netMax 1 4 3 5 0
+netMax 1 4 3 6 0
+netMax 1 4 3 7 0
+netMax 1 4 4 1 0
+netMax 1 4 4 2 0
+netMax 1 4 4 3 0
+netMax 1 4 4 4 0
+netMax 1 4 4 5 0
+netMax 1 4 4 6 0
+netMax 1 4 4 7 0
+netMax 2 1 1 1 0
+netMax 2 1 1 2 0
+netMax 2 1 1 3 0
+netMax 2 1 1 4 0
+netMax 2 1 1 5 0
+netMax 2 1 1 6 0
+netMax 2 1 1 7 0
+netMax 2 1 2 1 0
+netMax 2 1 2 2 0
+netMax 2 1 2 3 0
+netMax 2 1 2 4 0
+netMax 2 1 2 5 0
+netMax 2 1 2 6 0
+netMax 2 1 2 7 0
+netMax 2 1 3 1 0
+netMax 2 1 3 2 0
+netMax 2 1 3 3 0
+netMax 2 1 3 4 0
+netMax 2 1 3 5 0
+netMax 2 1 3 6 0
+netMax 2 1 3 7 0
+netMax 2 1 4 1 0
+netMax 2 1 4 2 0
+netMax 2 1 4 3 0
+netMax 2 1 4 4 0
+netMax 2 1 4 5 0
+netMax 2 1 4 6 0
+netMax 2 1 4 7 0
+netMax 2 2 1 1 0
+netMax 2 2 1 2 0
+netMax 2 2 1 3 0
+netMax 2 2 1 4 0
+netMax 2 2 1 5 0
+netMax 2 2 1 6 0
+netMax 2 2 1 7 0
+netMax 2 2 2 1 0
+netMax 2 2 2 2 0
+netMax 2 2 2 3 0
+netMax 2 2 2 4 0
+netMax 2 2 2 5 0
+netMax 2 2 2 6 0
+netMax 2 2 2 7 0
+netMax 2 2 3 1 0
+netMax 2 2 3 2 inf
+netMax 2 3 2 2 inf
+netMax 2 2 3 3 0
+netMax 2 2 3 4 0
+netMax 2 2 3 5 0
+netMax 2 2 3 6 0
+netMax 2 2 3 7 0
+netMax 2 2 4 1 0
+netMax 2 2 4 2 0
+netMax 2 2 4 3 0
+netMax 2 2 4 4 0
+netMax 2 2 4 5 0
+netMax 2 2 4 6 0
+netMax 2 2 4 7 0
+netMax 2 3 1 1 0
+netMax 2 3 1 2 0
+netMax 2 3 1 3 0
+netMax 2 3 1 4 0
+netMax 2 3 1 5 0
+netMax 2 3 1 6 0
+netMax 2 3 1 7 0
+netMax 2 3 2 1 0
+netMax 2 3 2 3 0
+netMax 2 3 2 4 0
+netMax 2 3 2 5 0
+netMax 2 3 2 6 0
+netMax 2 3 2 7 0
+netMax 2 3 3 1 0
+netMax 2 3 3 2 0
+netMax 2 3 3 3 0
+netMax 2 3 3 4 0
+netMax 2 3 3 5 0
+netMax 2 3 3 6 0
+netMax 2 3 3 7 0
+netMax 2 3 4 1 0
+netMax 2 3 4 2 0
+netMax 2 3 4 3 0
+netMax 2 3 4 4 0
+netMax 2 3 4 5 0
+netMax 2 3 4 6 0
+netMax 2 3 4 7 0
+netMax 2 4 1 1 0
+netMax 2 4 1 2 0
+netMax 2 4 1 3 0
+netMax 2 4 1 4 0
+netMax 2 4 1 5 0
+netMax 2 4 1 6 0
+netMax 2 4 1 7 0
+netMax 2 4 2 1 0
+netMax 2 4 2 2 0
+netMax 2 4 2 3 0
+netMax 2 4 2 4 0
+netMax 2 4 2 5 0
+netMax 2 4 2 6 0
+netMax 2 4 2 7 0
+netMax 2 4 3 1 0
+netMax 2 4 3 2 0
+netMax 2 4 3 3 0
+netMax 2 4 3 4 0
+netMax 2 4 3 5 0
+netMax 2 4 3 6 0
+netMax 2 4 3 7 0
+netMax 2 4 4 1 0
+netMax 2 4 4 2 0
+netMax 2 4 4 3 0
+netMax 2 4 4 4 0
+netMax 2 4 4 5 0
+netMax 2 4 4 6 0
+netMax 2 4 4 7 0
+netMax 3 1 1 1 0
+netMax 3 1 1 2 0
+netMax 3 1 1 3 0
+netMax 3 1 1 4 0
+netMax 3 1 1 5 0
+netMax 3 1 1 6 0
+netMax 3 1 1 7 0
+netMax 3 1 2 1 0
+netMax 3 1 2 2 0
+netMax 3 1 2 3 0
+netMax 3 1 2 4 0
+netMax 3 1 2 5 0
+netMax 3 1 2 6 0
+netMax 3 1 2 7 0
+netMax 3 1 3 1 0
+netMax 3 1 3 3 0
+netMax 3 1 3 4 0
+netMax 3 1 3 5 0
+netMax 3 1 3 6 0
+netMax 3 1 3 7 0
+netMax 3 1 4 1 0
+netMax 3 1 4 2 0
+netMax 3 1 4 3 0
+netMax 3 1 4 4 0
+netMax 3 1 4 5 0
+netMax 3 1 4 6 0
+netMax 3 1 4 7 0
+netMax 3 2 1 1 0
+netMax 3 2 1 2 0
+netMax 3 2 1 3 0
+netMax 3 2 1 4 0
+netMax 3 2 1 5 0
+netMax 3 2 1 6 0
+netMax 3 2 1 7 0
+netMax 3 2 2 1 0
+netMax 3 2 2 2 0
+netMax 3 2 2 3 0
+netMax 3 2 2 4 0
+netMax 3 2 2 5 0
+netMax 3 2 2 6 0
+netMax 3 2 2 7 0
+netMax 3 2 3 1 0
+netMax 3 2 3 2 0
+netMax 3 2 3 3 0
+netMax 3 2 3 4 0
+netMax 3 2 3 5 0
+netMax 3 2 3 6 0
+netMax 3 2 3 7 0
+netMax 3 2 4 1 0
+netMax 3 2 4 2 0
+netMax 3 2 4 3 0
+netMax 3 2 4 4 0
+netMax 3 2 4 5 0
+netMax 3 2 4 6 0
+netMax 3 2 4 7 0
+netMax 3 3 1 1 0
+netMax 3 3 1 2 inf
+netMax 3 1 3 2 inf
+netMax 3 3 1 3 0
+netMax 3 3 1 4 0
+netMax 3 3 1 5 0
+netMax 3 3 1 6 0
+netMax 3 3 1 7 0
+netMax 3 3 2 1 0
+netMax 3 3 2 2 0
+netMax 3 3 2 3 0
+netMax 3 3 2 4 0
+netMax 3 3 2 5 0
+netMax 3 3 2 6 0
+netMax 3 3 2 7 0
+netMax 3 3 3 1 0
+netMax 3 3 3 2 0
+netMax 3 3 3 3 0
+netMax 3 3 3 4 0
+netMax 3 3 3 5 0
+netMax 3 3 3 6 0
+netMax 3 3 3 7 0
+netMax 3 3 4 1 0
+netMax 3 3 4 2 0
+netMax 3 3 4 3 0
+netMax 3 3 4 4 0
+netMax 3 3 4 5 0
+netMax 3 3 4 6 0
+netMax 3 3 4 7 0
+netMax 3 4 1 1 0
+netMax 3 4 1 2 0
+netMax 3 4 1 3 0
+netMax 3 4 1 4 0
+netMax 3 4 1 5 0
+netMax 3 4 1 6 0
+netMax 3 4 1 7 0
+netMax 3 4 2 1 0
+netMax 3 4 2 2 0
+netMax 3 4 2 3 0
+netMax 3 4 2 4 0
+netMax 3 4 2 5 0
+netMax 3 4 2 6 0
+netMax 3 4 2 7 0
+netMax 3 4 3 1 0
+netMax 3 4 3 2 0
+netMax 3 4 3 3 0
+netMax 3 4 3 4 0
+netMax 3 4 3 5 0
+netMax 3 4 3 6 0
+netMax 3 4 3 7 0
+netMax 3 4 4 1 0
+netMax 3 4 4 2 0
+netMax 3 4 4 3 0
+netMax 3 4 4 4 0
+netMax 3 4 4 5 0
+netMax 3 4 4 6 0
+netMax 3 4 4 7 0
+netMax 4 1 1 1 0
+netMax 4 1 1 2 0
+netMax 4 1 1 3 0
+netMax 4 1 1 4 0
+netMax 4 1 1 5 0
+netMax 4 1 1 6 0
+netMax 4 1 1 7 0
+netMax 4 1 2 1 inf
+netMax 4 2 1 1 inf
+netMax 4 1 2 2 0
+netMax 4 1 2 3 0
+netMax 4 1 2 4 0
+netMax 4 1 2 5 0
+netMax 4 1 2 6 0
+netMax 4 1 2 7 0
+netMax 4 1 3 1 0
+netMax 4 1 3 2 0
+netMax 4 1 3 3 0
+netMax 4 1 3 4 0
+netMax 4 1 3 5 0
+netMax 4 1 3 6 0
+netMax 4 1 3 7 0
+netMax 4 1 4 1 0
+netMax 4 1 4 2 0
+netMax 4 1 4 3 0
+netMax 4 1 4 4 0
+netMax 4 1 4 5 0
+netMax 4 1 4 6 0
+netMax 4 1 4 7 0
+netMax 4 2 1 2 0
+netMax 4 2 1 3 0
+netMax 4 2 1 4 0
+netMax 4 2 1 5 0
+netMax 4 2 1 6 0
+netMax 4 2 1 7 0
+netMax 4 2 2 1 0
+netMax 4 2 2 2 0
+netMax 4 2 2 3 0
+netMax 4 2 2 4 0
+netMax 4 2 2 5 0
+netMax 4 2 2 6 0
+netMax 4 2 2 7 0
+netMax 4 2 3 1 0
+netMax 4 2 3 2 0
+netMax 4 2 3 3 0
+netMax 4 2 3 4 0
+netMax 4 2 3 5 0
+netMax 4 2 3 6 0
+netMax 4 2 3 7 0
+netMax 4 2 4 1 0
+netMax 4 2 4 2 0
+netMax 4 2 4 3 0
+netMax 4 2 4 4 0
+netMax 4 2 4 5 0
+netMax 4 2 4 6 0
+netMax 4 2 4 7 0
+netMax 4 3 1 1 0
+netMax 4 3 1 2 0
+netMax 4 3 1 3 0
+netMax 4 3 1 4 0
+netMax 4 3 1 5 0
+netMax 4 3 1 6 0
+netMax 4 3 1 7 0
+netMax 4 3 2 1 0
+netMax 4 3 2 2 0
+netMax 4 3 2 3 0
+netMax 4 3 2 4 0
+netMax 4 3 2 5 0
+netMax 4 3 2 6 0
+netMax 4 3 2 7 0
+netMax 4 3 3 1 0
+netMax 4 3 3 2 0
+netMax 4 3 3 3 0
+netMax 4 3 3 4 0
+netMax 4 3 3 5 0
+netMax 4 3 3 6 0
+netMax 4 3 3 7 0
+netMax 4 3 4 1 0
+netMax 4 3 4 2 0
+netMax 4 3 4 3 0
+netMax 4 3 4 4 0
+netMax 4 3 4 5 0
+netMax 4 3 4 6 0
+netMax 4 3 4 7 0
+netMax 4 4 1 1 0
+netMax 4 4 1 2 0
+netMax 4 4 1 3 0
+netMax 4 4 1 4 0
+netMax 4 4 1 5 0
+netMax 4 4 1 6 0
+netMax 4 4 1 7 0
+netMax 4 4 2 1 0
+netMax 4 4 2 2 0
+netMax 4 4 2 3 0
+netMax 4 4 2 4 0
+netMax 4 4 2 5 0
+netMax 4 4 2 6 0
+netMax 4 4 2 7 0
+netMax 4 4 3 1 0
+netMax 4 4 3 2 0
+netMax 4 4 3 3 0
+netMax 4 4 3 4 0
+netMax 4 4 3 5 0
+netMax 4 4 3 6 0
+netMax 4 4 3 7 0
+netMax 4 4 4 1 0
+netMax 4 4 4 2 0
+netMax 4 4 4 3 0
+netMax 4 4 4 4 0
+netMax 4 4 4 5 0
+netMax 4 4 4 6 0
+netMax 4 4 4 7 0
+netMax 5 1 1 1 0
+netMax 5 1 1 2 0
+netMax 5 1 1 3 0
+netMax 5 1 1 4 0
+netMax 5 1 1 5 0
+netMax 5 1 1 6 0
+netMax 5 1 1 7 0
+netMax 5 1 2 1 0
+netMax 5 1 2 2 0
+netMax 5 1 2 3 0
+netMax 5 1 2 4 0
+netMax 5 1 2 5 0
+netMax 5 1 2 6 0
+netMax 5 1 2 7 0
+netMax 5 1 3 1 0
+netMax 5 1 3 2 0
+netMax 5 1 3 3 0
+netMax 5 1 3 4 0
+netMax 5 1 3 5 0
+netMax 5 1 3 6 0
+netMax 5 1 3 7 0
+netMax 5 1 4 1 0
+netMax 5 1 4 2 0
+netMax 5 1 4 3 0
+netMax 5 1 4 4 0
+netMax 5 1 4 5 0
+netMax 5 1 4 6 0
+netMax 5 1 4 7 0
+netMax 5 2 1 1 0
+netMax 5 2 1 2 0
+netMax 5 2 1 3 0
+netMax 5 2 1 4 0
+netMax 5 2 1 5 0
+netMax 5 2 1 6 0
+netMax 5 2 1 7 0
+netMax 5 2 2 1 0
+netMax 5 2 2 2 0
+netMax 5 2 2 3 0
+netMax 5 2 2 4 0
+netMax 5 2 2 5 0
+netMax 5 2 2 6 0
+netMax 5 2 2 7 0
+netMax 5 2 3 1 inf
+netMax 5 3 2 1 inf
+netMax 5 2 3 2 0
+netMax 5 2 3 3 0
+netMax 5 2 3 4 0
+netMax 5 2 3 5 0
+netMax 5 2 3 6 0
+netMax 5 2 3 7 0
+netMax 5 2 4 1 0
+netMax 5 2 4 2 0
+netMax 5 2 4 3 0
+netMax 5 2 4 4 0
+netMax 5 2 4 5 0
+netMax 5 2 4 6 0
+netMax 5 2 4 7 0
+netMax 5 3 1 1 0
+netMax 5 3 1 2 0
+netMax 5 3 1 3 0
+netMax 5 3 1 4 0
+netMax 5 3 1 5 0
+netMax 5 3 1 6 0
+netMax 5 3 1 7 0
+netMax 5 3 2 2 0
+netMax 5 3 2 3 0
+netMax 5 3 2 4 0
+netMax 5 3 2 5 0
+netMax 5 3 2 6 0
+netMax 5 3 2 7 0
+netMax 5 3 3 1 0
+netMax 5 3 3 2 0
+netMax 5 3 3 3 0
+netMax 5 3 3 4 0
+netMax 5 3 3 5 0
+netMax 5 3 3 6 0
+netMax 5 3 3 7 0
+netMax 5 3 4 1 0
+netMax 5 3 4 2 0
+netMax 5 3 4 3 0
+netMax 5 3 4 4 0
+netMax 5 3 4 5 0
+netMax 5 3 4 6 0
+netMax 5 3 4 7 0
+netMax 5 4 1 1 0
+netMax 5 4 1 2 0
+netMax 5 4 1 3 0
+netMax 5 4 1 4 0
+netMax 5 4 1 5 0
+netMax 5 4 1 6 0
+netMax 5 4 1 7 0
+netMax 5 4 2 1 0
+netMax 5 4 2 2 0
+netMax 5 4 2 3 0
+netMax 5 4 2 4 0
+netMax 5 4 2 5 0
+netMax 5 4 2 6 0
+netMax 5 4 2 7 0
+netMax 5 4 3 1 0
+netMax 5 4 3 2 0
+netMax 5 4 3 3 0
+netMax 5 4 3 4 0
+netMax 5 4 3 5 0
+netMax 5 4 3 6 0
+netMax 5 4 3 7 0
+netMax 5 4 4 1 0
+netMax 5 4 4 2 0
+netMax 5 4 4 3 0
+netMax 5 4 4 4 0
+netMax 5 4 4 5 0
+netMax 5 4 4 6 0
+netMax 5 4 4 7 0
+netMax 6 1 1 1 0
+netMax 6 1 1 2 0
+netMax 6 1 1 3 0
+netMax 6 1 1 4 0
+netMax 6 1 1 5 0
+netMax 6 1 1 6 0
+netMax 6 1 1 7 0
+netMax 6 1 2 1 0
+netMax 6 1 2 2 0
+netMax 6 1 2 3 0
+netMax 6 1 2 4 0
+netMax 6 1 2 5 0
+netMax 6 1 2 6 0
+netMax 6 1 2 7 0
+netMax 6 1 3 2 0
+netMax 6 1 3 3 0
+netMax 6 1 3 4 0
+netMax 6 1 3 5 0
+netMax 6 1 3 6 0
+netMax 6 1 3 7 0
+netMax 6 1 4 1 0
+netMax 6 1 4 2 0
+netMax 6 1 4 3 0
+netMax 6 1 4 4 0
+netMax 6 1 4 5 0
+netMax 6 1 4 6 0
+netMax 6 1 4 7 0
+netMax 6 2 1 1 0
+netMax 6 2 1 2 0
+netMax 6 2 1 3 0
+netMax 6 2 1 4 0
+netMax 6 2 1 5 0
+netMax 6 2 1 6 0
+netMax 6 2 1 7 0
+netMax 6 2 2 1 0
+netMax 6 2 2 2 0
+netMax 6 2 2 3 0
+netMax 6 2 2 4 0
+netMax 6 2 2 5 0
+netMax 6 2 2 6 0
+netMax 6 2 2 7 0
+netMax 6 2 3 1 0
+netMax 6 2 3 2 0
+netMax 6 2 3 3 0
+netMax 6 2 3 4 0
+netMax 6 2 3 5 0
+netMax 6 2 3 6 0
+netMax 6 2 3 7 0
+netMax 6 2 4 1 0
+netMax 6 2 4 2 0
+netMax 6 2 4 3 0
+netMax 6 2 4 4 0
+netMax 6 2 4 5 0
+netMax 6 2 4 6 0
+netMax 6 2 4 7 0
+netMax 6 3 1 1 inf
+netMax 6 1 3 1 inf
+netMax 6 3 1 2 0
+netMax 6 3 1 3 0
+netMax 6 3 1 4 0
+netMax 6 3 1 5 0
+netMax 6 3 1 6 0
+netMax 6 3 1 7 0
+netMax 6 3 2 1 0
+netMax 6 3 2 2 0
+netMax 6 3 2 3 0
+netMax 6 3 2 4 0
+netMax 6 3 2 5 0
+netMax 6 3 2 6 0
+netMax 6 3 2 7 0
+netMax 6 3 3 1 0
+netMax 6 3 3 2 0
+netMax 6 3 3 3 0
+netMax 6 3 3 4 0
+netMax 6 3 3 5 0
+netMax 6 3 3 6 0
+netMax 6 3 3 7 0
+netMax 6 3 4 1 0
+netMax 6 3 4 2 0
+netMax 6 3 4 3 0
+netMax 6 3 4 4 0
+netMax 6 3 4 5 0
+netMax 6 3 4 6 0
+netMax 6 3 4 7 0
+netMax 6 4 1 1 0
+netMax 6 4 1 2 0
+netMax 6 4 1 3 0
+netMax 6 4 1 4 0
+netMax 6 4 1 5 0
+netMax 6 4 1 6 0
+netMax 6 4 1 7 0
+netMax 6 4 2 1 0
+netMax 6 4 2 2 0
+netMax 6 4 2 3 0
+netMax 6 4 2 4 0
+netMax 6 4 2 5 0
+netMax 6 4 2 6 0
+netMax 6 4 2 7 0
+netMax 6 4 3 1 0
+netMax 6 4 3 2 0
+netMax 6 4 3 3 0
+netMax 6 4 3 4 0
+netMax 6 4 3 5 0
+netMax 6 4 3 6 0
+netMax 6 4 3 7 0
+netMax 6 4 4 1 0
+netMax 6 4 4 2 0
+netMax 6 4 4 3 0
+netMax 6 4 4 4 0
+netMax 6 4 4 5 0
+netMax 6 4 4 6 0
+netMax 6 4 4 7 0
+netMax 7 1 1 1 0
+netMax 7 1 1 2 0
+netMax 7 1 1 3 0
+netMax 7 1 1 4 0
+netMax 7 1 1 5 0
+netMax 7 1 1 6 0
+netMax 7 1 1 7 0
+netMax 7 1 2 1 0
+netMax 7 1 2 2 0
+netMax 7 1 2 3 0
+netMax 7 1 2 4 0
+netMax 7 1 2 5 0
+netMax 7 1 2 6 0
+netMax 7 1 2 7 0
+netMax 7 1 3 1 0
+netMax 7 1 3 2 0
+netMax 7 1 3 3 0
+netMax 7 1 3 4 0
+netMax 7 1 3 5 0
+netMax 7 1 3 6 0
+netMax 7 1 3 7 0
+netMax 7 1 4 1 0
+netMax 7 1 4 2 inf
+netMax 7 4 1 2 inf
+netMax 7 1 4 3 0
+netMax 7 1 4 4 0
+netMax 7 1 4 5 0
+netMax 7 1 4 6 0
+netMax 7 1 4 7 0
+netMax 7 2 1 1 0
+netMax 7 2 1 2 0
+netMax 7 2 1 3 0
+netMax 7 2 1 4 0
+netMax 7 2 1 5 0
+netMax 7 2 1 6 0
+netMax 7 2 1 7 0
+netMax 7 2 2 1 0
+netMax 7 2 2 2 0
+netMax 7 2 2 3 0
+netMax 7 2 2 4 0
+netMax 7 2 2 5 0
+netMax 7 2 2 6 0
+netMax 7 2 2 7 0
+netMax 7 2 3 1 0
+netMax 7 2 3 2 0
+netMax 7 2 3 3 0
+netMax 7 2 3 4 0
+netMax 7 2 3 5 0
+netMax 7 2 3 6 0
+netMax 7 2 3 7 0
+netMax 7 2 4 1 0
+netMax 7 2 4 2 0
+netMax 7 2 4 3 0
+netMax 7 2 4 4 0
+netMax 7 2 4 5 0
+netMax 7 2 4 6 0
+netMax 7 2 4 7 0
+netMax 7 3 1 1 0
+netMax 7 3 1 2 0
+netMax 7 3 1 3 0
+netMax 7 3 1 4 0
+netMax 7 3 1 5 0
+netMax 7 3 1 6 0
+netMax 7 3 1 7 0
+netMax 7 3 2 1 0
+netMax 7 3 2 2 0
+netMax 7 3 2 3 0
+netMax 7 3 2 4 0
+netMax 7 3 2 5 0
+netMax 7 3 2 6 0
+netMax 7 3 2 7 0
+netMax 7 3 3 1 0
+netMax 7 3 3 2 0
+netMax 7 3 3 3 0
+netMax 7 3 3 4 0
+netMax 7 3 3 5 0
+netMax 7 3 3 6 0
+netMax 7 3 3 7 0
+netMax 7 3 4 1 0
+netMax 7 3 4 2 0
+netMax 7 3 4 3 0
+netMax 7 3 4 4 0
+netMax 7 3 4 5 0
+netMax 7 3 4 6 0
+netMax 7 3 4 7 0
+netMax 7 4 1 1 0
+netMax 7 4 1 3 0
+netMax 7 4 1 4 0
+netMax 7 4 1 5 0
+netMax 7 4 1 6 0
+netMax 7 4 1 7 0
+netMax 7 4 2 1 0
+netMax 7 4 2 2 0
+netMax 7 4 2 3 0
+netMax 7 4 2 4 0
+netMax 7 4 2 5 0
+netMax 7 4 2 6 0
+netMax 7 4 2 7 0
+netMax 7 4 3 1 0
+netMax 7 4 3 2 0
+netMax 7 4 3 3 0
+netMax 7 4 3 4 0
+netMax 7 4 3 5 0
+netMax 7 4 3 6 0
+netMax 7 4 3 7 0
+netMax 7 4 4 1 0
+netMax 7 4 4 2 0
+netMax 7 4 4 3 0
+netMax 7 4 4 4 0
+netMax 7 4 4 5 0
+netMax 7 4 4 6 0
+netMax 7 4 4 7 0
+netMax 8 1 1 1 0
+netMax 8 1 1 2 0
+netMax 8 1 1 3 0
+netMax 8 1 1 4 0
+netMax 8 1 1 5 0
+netMax 8 1 1 6 0
+netMax 8 1 1 7 0
+netMax 8 1 2 1 0
+netMax 8 1 2 2 0
+netMax 8 1 2 3 0
+netMax 8 1 2 4 0
+netMax 8 1 2 5 0
+netMax 8 1 2 6 0
+netMax 8 1 2 7 0
+netMax 8 1 3 1 0
+netMax 8 1 3 2 0
+netMax 8 1 3 3 0
+netMax 8 1 3 4 0
+netMax 8 1 3 5 0
+netMax 8 1 3 6 0
+netMax 8 1 3 7 0
+netMax 8 1 4 1 0
+netMax 8 1 4 2 0
+netMax 8 1 4 3 0
+netMax 8 1 4 4 0
+netMax 8 1 4 5 0
+netMax 8 1 4 6 0
+netMax 8 1 4 7 0
+netMax 8 2 1 1 0
+netMax 8 2 1 2 0
+netMax 8 2 1 3 0
+netMax 8 2 1 4 0
+netMax 8 2 1 5 0
+netMax 8 2 1 6 0
+netMax 8 2 1 7 0
+netMax 8 2 2 1 0
+netMax 8 2 2 2 0
+netMax 8 2 2 3 0
+netMax 8 2 2 4 0
+netMax 8 2 2 5 0
+netMax 8 2 2 6 0
+netMax 8 2 2 7 0
+netMax 8 2 3 1 0
+netMax 8 2 3 2 0
+netMax 8 2 3 3 0
+netMax 8 2 3 4 0
+netMax 8 2 3 5 0
+netMax 8 2 3 6 0
+netMax 8 2 3 7 0
+netMax 8 2 4 1 0
+netMax 8 2 4 2 inf
+netMax 8 4 2 2 inf
+netMax 8 2 4 3 0
+netMax 8 2 4 4 0
+netMax 8 2 4 5 0
+netMax 8 2 4 6 0
+netMax 8 2 4 7 0
+netMax 8 3 1 1 0
+netMax 8 3 1 2 0
+netMax 8 3 1 3 0
+netMax 8 3 1 4 0
+netMax 8 3 1 5 0
+netMax 8 3 1 6 0
+netMax 8 3 1 7 0
+netMax 8 3 2 1 0
+netMax 8 3 2 2 0
+netMax 8 3 2 3 0
+netMax 8 3 2 4 0
+netMax 8 3 2 5 0
+netMax 8 3 2 6 0
+netMax 8 3 2 7 0
+netMax 8 3 3 1 0
+netMax 8 3 3 2 0
+netMax 8 3 3 3 0
+netMax 8 3 3 4 0
+netMax 8 3 3 5 0
+netMax 8 3 3 6 0
+netMax 8 3 3 7 0
+netMax 8 3 4 1 0
+netMax 8 3 4 2 0
+netMax 8 3 4 3 0
+netMax 8 3 4 4 0
+netMax 8 3 4 5 0
+netMax 8 3 4 6 0
+netMax 8 3 4 7 0
+netMax 8 4 1 1 0
+netMax 8 4 1 2 0
+netMax 8 4 1 3 0
+netMax 8 4 1 4 0
+netMax 8 4 1 5 0
+netMax 8 4 1 6 0
+netMax 8 4 1 7 0
+netMax 8 4 2 1 0
+netMax 8 4 2 3 0
+netMax 8 4 2 4 0
+netMax 8 4 2 5 0
+netMax 8 4 2 6 0
+netMax 8 4 2 7 0
+netMax 8 4 3 1 0
+netMax 8 4 3 2 0
+netMax 8 4 3 3 0
+netMax 8 4 3 4 0
+netMax 8 4 3 5 0
+netMax 8 4 3 6 0
+netMax 8 4 3 7 0
+netMax 8 4 4 1 0
+netMax 8 4 4 2 0
+netMax 8 4 4 3 0
+netMax 8 4 4 4 0
+netMax 8 4 4 5 0
+netMax 8 4 4 6 0
+netMax 8 4 4 7 0
+netMax 9 1 1 1 0
+netMax 9 1 1 2 0
+netMax 9 1 1 3 0
+netMax 9 1 1 4 0
+netMax 9 1 1 5 0
+netMax 9 1 1 6 0
+netMax 9 1 1 7 0
+netMax 9 1 2 1 0
+netMax 9 1 2 2 0
+netMax 9 1 2 3 0
+netMax 9 1 2 4 0
+netMax 9 1 2 5 0
+netMax 9 1 2 6 0
+netMax 9 1 2 7 0
+netMax 9 1 3 1 0
+netMax 9 1 3 2 0
+netMax 9 1 3 3 0
+netMax 9 1 3 4 0
+netMax 9 1 3 5 0
+netMax 9 1 3 6 0
+netMax 9 1 3 7 0
+netMax 9 1 4 1 0
+netMax 9 1 4 2 0
+netMax 9 1 4 3 0
+netMax 9 1 4 4 0
+netMax 9 1 4 5 0
+netMax 9 1 4 6 0
+netMax 9 1 4 7 0
+netMax 9 2 1 1 0
+netMax 9 2 1 2 0
+netMax 9 2 1 3 0
+netMax 9 2 1 4 0
+netMax 9 2 1 5 0
+netMax 9 2 1 6 0
+netMax 9 2 1 7 0
+netMax 9 2 2 1 0
+netMax 9 2 2 2 0
+netMax 9 2 2 3 0
+netMax 9 2 2 4 0
+netMax 9 2 2 5 0
+netMax 9 2 2 6 0
+netMax 9 2 2 7 0
+netMax 9 2 3 1 0
+netMax 9 2 3 2 0
+netMax 9 2 3 3 0
+netMax 9 2 3 4 0
+netMax 9 2 3 5 0
+netMax 9 2 3 6 0
+netMax 9 2 3 7 0
+netMax 9 2 4 1 0
+netMax 9 2 4 2 0
+netMax 9 2 4 3 0
+netMax 9 2 4 4 0
+netMax 9 2 4 5 0
+netMax 9 2 4 6 0
+netMax 9 2 4 7 0
+netMax 9 3 1 1 0
+netMax 9 3 1 2 0
+netMax 9 3 1 3 0
+netMax 9 3 1 4 0
+netMax 9 3 1 5 0
+netMax 9 3 1 6 0
+netMax 9 3 1 7 0
+netMax 9 3 2 1 0
+netMax 9 3 2 2 0
+netMax 9 3 2 3 0
+netMax 9 3 2 4 0
+netMax 9 3 2 5 0
+netMax 9 3 2 6 0
+netMax 9 3 2 7 0
+netMax 9 3 3 1 0
+netMax 9 3 3 2 0
+netMax 9 3 3 3 0
+netMax 9 3 3 4 0
+netMax 9 3 3 5 0
+netMax 9 3 3 6 0
+netMax 9 3 3 7 0
+netMax 9 3 4 1 0
+netMax 9 3 4 2 inf
+netMax 9 4 3 2 inf
+netMax 9 3 4 3 0
+netMax 9 3 4 4 0
+netMax 9 3 4 5 0
+netMax 9 3 4 6 0
+netMax 9 3 4 7 0
+netMax 9 4 1 1 0
+netMax 9 4 1 2 0
+netMax 9 4 1 3 0
+netMax 9 4 1 4 0
+netMax 9 4 1 5 0
+netMax 9 4 1 6 0
+netMax 9 4 1 7 0
+netMax 9 4 2 1 0
+netMax 9 4 2 2 0
+netMax 9 4 2 3 0
+netMax 9 4 2 4 0
+netMax 9 4 2 5 0
+netMax 9 4 2 6 0
+netMax 9 4 2 7 0
+netMax 9 4 3 1 0
+netMax 9 4 3 3 0
+netMax 9 4 3 4 0
+netMax 9 4 3 5 0
+netMax 9 4 3 6 0
+netMax 9 4 3 7 0
+netMax 9 4 4 1 0
+netMax 9 4 4 2 0
+netMax 9 4 4 3 0
+netMax 9 4 4 4 0
+netMax 9 4 4 5 0
+netMax 9 4 4 6 0
+netMax 9 4 4 7 0
+netMax 10 1 1 1 0
+netMax 10 1 1 2 0
+netMax 10 1 1 3 0
+netMax 10 1 1 4 0
+netMax 10 1 1 5 0
+netMax 10 1 1 6 0
+netMax 10 1 1 7 0
+netMax 10 1 2 1 0
+netMax 10 1 2 2 0
+netMax 10 1 2 3 0
+netMax 10 1 2 4 0
+netMax 10 1 2 5 0
+netMax 10 1 2 6 0
+netMax 10 1 2 7 0
+netMax 10 1 3 1 0
+netMax 10 1 3 2 0
+netMax 10 1 3 3 0
+netMax 10 1 3 4 0
+netMax 10 1 3 5 0
+netMax 10 1 3 6 0
+netMax 10 1 3 7 0
+netMax 10 1 4 1 inf
+netMax 10 4 1 1 inf
+netMax 10 1 4 2 0
+netMax 10 1 4 3 0
+netMax 10 1 4 4 0
+netMax 10 1 4 5 0
+netMax 10 1 4 6 0
+netMax 10 1 4 7 0
+netMax 10 2 1 1 0
+netMax 10 2 1 2 0
+netMax 10 2 1 3 0
+netMax 10 2 1 4 0
+netMax 10 2 1 5 0
+netMax 10 2 1 6 0
+netMax 10 2 1 7 0
+netMax 10 2 2 1 0
+netMax 10 2 2 2 0
+netMax 10 2 2 3 0
+netMax 10 2 2 4 0
+netMax 10 2 2 5 0
+netMax 10 2 2 6 0
+netMax 10 2 2 7 0
+netMax 10 2 3 1 0
+netMax 10 2 3 2 0
+netMax 10 2 3 3 0
+netMax 10 2 3 4 0
+netMax 10 2 3 5 0
+netMax 10 2 3 6 0
+netMax 10 2 3 7 0
+netMax 10 2 4 1 0
+netMax 10 2 4 2 0
+netMax 10 2 4 3 0
+netMax 10 2 4 4 0
+netMax 10 2 4 5 0
+netMax 10 2 4 6 0
+netMax 10 2 4 7 0
+netMax 10 3 1 1 0
+netMax 10 3 1 2 0
+netMax 10 3 1 3 0
+netMax 10 3 1 4 0
+netMax 10 3 1 5 0
+netMax 10 3 1 6 0
+netMax 10 3 1 7 0
+netMax 10 3 2 1 0
+netMax 10 3 2 2 0
+netMax 10 3 2 3 0
+netMax 10 3 2 4 0
+netMax 10 3 2 5 0
+netMax 10 3 2 6 0
+netMax 10 3 2 7 0
+netMax 10 3 3 1 0
+netMax 10 3 3 2 0
+netMax 10 3 3 3 0
+netMax 10 3 3 4 0
+netMax 10 3 3 5 0
+netMax 10 3 3 6 0
+netMax 10 3 3 7 0
+netMax 10 3 4 1 0
+netMax 10 3 4 2 0
+netMax 10 3 4 3 0
+netMax 10 3 4 4 0
+netMax 10 3 4 5 0
+netMax 10 3 4 6 0
+netMax 10 3 4 7 0
+netMax 10 4 1 2 0
+netMax 10 4 1 3 0
+netMax 10 4 1 4 0
+netMax 10 4 1 5 0
+netMax 10 4 1 6 0
+netMax 10 4 1 7 0
+netMax 10 4 2 1 0
+netMax 10 4 2 2 0
+netMax 10 4 2 3 0
+netMax 10 4 2 4 0
+netMax 10 4 2 5 0
+netMax 10 4 2 6 0
+netMax 10 4 2 7 0
+netMax 10 4 3 1 0
+netMax 10 4 3 2 0
+netMax 10 4 3 3 0
+netMax 10 4 3 4 0
+netMax 10 4 3 5 0
+netMax 10 4 3 6 0
+netMax 10 4 3 7 0
+netMax 10 4 4 1 0
+netMax 10 4 4 2 0
+netMax 10 4 4 3 0
+netMax 10 4 4 4 0
+netMax 10 4 4 5 0
+netMax 10 4 4 6 0
+netMax 10 4 4 7 0
+netMax 11 1 1 1 0
+netMax 11 1 1 2 0
+netMax 11 1 1 3 0
+netMax 11 1 1 4 0
+netMax 11 1 1 5 0
+netMax 11 1 1 6 0
+netMax 11 1 1 7 0
+netMax 11 1 2 1 0
+netMax 11 1 2 2 0
+netMax 11 1 2 3 0
+netMax 11 1 2 4 0
+netMax 11 1 2 5 0
+netMax 11 1 2 6 0
+netMax 11 1 2 7 0
+netMax 11 1 3 1 0
+netMax 11 1 3 2 0
+netMax 11 1 3 3 0
+netMax 11 1 3 4 0
+netMax 11 1 3 5 0
+netMax 11 1 3 6 0
+netMax 11 1 3 7 0
+netMax 11 1 4 1 0
+netMax 11 1 4 2 0
+netMax 11 1 4 3 0
+netMax 11 1 4 4 0
+netMax 11 1 4 5 0
+netMax 11 1 4 6 0
+netMax 11 1 4 7 0
+netMax 11 2 1 1 0
+netMax 11 2 1 2 0
+netMax 11 2 1 3 0
+netMax 11 2 1 4 0
+netMax 11 2 1 5 0
+netMax 11 2 1 6 0
+netMax 11 2 1 7 0
+netMax 11 2 2 1 0
+netMax 11 2 2 2 0
+netMax 11 2 2 3 0
+netMax 11 2 2 4 0
+netMax 11 2 2 5 0
+netMax 11 2 2 6 0
+netMax 11 2 2 7 0
+netMax 11 2 3 1 0
+netMax 11 2 3 2 0
+netMax 11 2 3 3 0
+netMax 11 2 3 4 0
+netMax 11 2 3 5 0
+netMax 11 2 3 6 0
+netMax 11 2 3 7 0
+netMax 11 2 4 1 inf
+netMax 11 4 2 1 inf
+netMax 11 2 4 2 0
+netMax 11 2 4 3 0
+netMax 11 2 4 4 0
+netMax 11 2 4 5 0
+netMax 11 2 4 6 0
+netMax 11 2 4 7 0
+netMax 11 3 1 1 0
+netMax 11 3 1 2 0
+netMax 11 3 1 3 0
+netMax 11 3 1 4 0
+netMax 11 3 1 5 0
+netMax 11 3 1 6 0
+netMax 11 3 1 7 0
+netMax 11 3 2 1 0
+netMax 11 3 2 2 0
+netMax 11 3 2 3 0
+netMax 11 3 2 4 0
+netMax 11 3 2 5 0
+netMax 11 3 2 6 0
+netMax 11 3 2 7 0
+netMax 11 3 3 1 0
+netMax 11 3 3 2 0
+netMax 11 3 3 3 0
+netMax 11 3 3 4 0
+netMax 11 3 3 5 0
+netMax 11 3 3 6 0
+netMax 11 3 3 7 0
+netMax 11 3 4 1 0
+netMax 11 3 4 2 0
+netMax 11 3 4 3 0
+netMax 11 3 4 4 0
+netMax 11 3 4 5 0
+netMax 11 3 4 6 0
+netMax 11 3 4 7 0
+netMax 11 4 1 1 0
+netMax 11 4 1 2 0
+netMax 11 4 1 3 0
+netMax 11 4 1 4 0
+netMax 11 4 1 5 0
+netMax 11 4 1 6 0
+netMax 11 4 1 7 0
+netMax 11 4 2 2 0
+netMax 11 4 2 3 0
+netMax 11 4 2 4 0
+netMax 11 4 2 5 0
+netMax 11 4 2 6 0
+netMax 11 4 2 7 0
+netMax 11 4 3 1 0
+netMax 11 4 3 2 0
+netMax 11 4 3 3 0
+netMax 11 4 3 4 0
+netMax 11 4 3 5 0
+netMax 11 4 3 6 0
+netMax 11 4 3 7 0
+netMax 11 4 4 1 0
+netMax 11 4 4 2 0
+netMax 11 4 4 3 0
+netMax 11 4 4 4 0
+netMax 11 4 4 5 0
+netMax 11 4 4 6 0
+netMax 11 4 4 7 0
+netMax 12 1 1 1 0
+netMax 12 1 1 2 0
+netMax 12 1 1 3 0
+netMax 12 1 1 4 0
+netMax 12 1 1 5 0
+netMax 12 1 1 6 0
+netMax 12 1 1 7 0
+netMax 12 1 2 1 0
+netMax 12 1 2 2 0
+netMax 12 1 2 3 0
+netMax 12 1 2 4 0
+netMax 12 1 2 5 0
+netMax 12 1 2 6 0
+netMax 12 1 2 7 0
+netMax 12 1 3 1 0
+netMax 12 1 3 2 0
+netMax 12 1 3 3 0
+netMax 12 1 3 4 0
+netMax 12 1 3 5 0
+netMax 12 1 3 6 0
+netMax 12 1 3 7 0
+netMax 12 1 4 1 0
+netMax 12 1 4 2 0
+netMax 12 1 4 3 0
+netMax 12 1 4 4 0
+netMax 12 1 4 5 0
+netMax 12 1 4 6 0
+netMax 12 1 4 7 0
+netMax 12 2 1 1 0
+netMax 12 2 1 2 0
+netMax 12 2 1 3 0
+netMax 12 2 1 4 0
+netMax 12 2 1 5 0
+netMax 12 2 1 6 0
+netMax 12 2 1 7 0
+netMax 12 2 2 1 0
+netMax 12 2 2 2 0
+netMax 12 2 2 3 0
+netMax 12 2 2 4 0
+netMax 12 2 2 5 0
+netMax 12 2 2 6 0
+netMax 12 2 2 7 0
+netMax 12 2 3 1 0
+netMax 12 2 3 2 0
+netMax 12 2 3 3 0
+netMax 12 2 3 4 0
+netMax 12 2 3 5 0
+netMax 12 2 3 6 0
+netMax 12 2 3 7 0
+netMax 12 2 4 1 0
+netMax 12 2 4 2 0
+netMax 12 2 4 3 0
+netMax 12 2 4 4 0
+netMax 12 2 4 5 0
+netMax 12 2 4 6 0
+netMax 12 2 4 7 0
+netMax 12 3 1 1 0
+netMax 12 3 1 2 0
+netMax 12 3 1 3 0
+netMax 12 3 1 4 0
+netMax 12 3 1 5 0
+netMax 12 3 1 6 0
+netMax 12 3 1 7 0
+netMax 12 3 2 1 0
+netMax 12 3 2 2 0
+netMax 12 3 2 3 0
+netMax 12 3 2 4 0
+netMax 12 3 2 5 0
+netMax 12 3 2 6 0
+netMax 12 3 2 7 0
+netMax 12 3 3 1 0
+netMax 12 3 3 2 0
+netMax 12 3 3 3 0
+netMax 12 3 3 4 0
+netMax 12 3 3 5 0
+netMax 12 3 3 6 0
+netMax 12 3 3 7 0
+netMax 12 3 4 1 inf
+netMax 12 4 3 1 inf
+netMax 12 3 4 2 0
+netMax 12 3 4 3 0
+netMax 12 3 4 4 0
+netMax 12 3 4 5 0
+netMax 12 3 4 6 0
+netMax 12 3 4 7 0
+netMax 12 4 1 1 0
+netMax 12 4 1 2 0
+netMax 12 4 1 3 0
+netMax 12 4 1 4 0
+netMax 12 4 1 5 0
+netMax 12 4 1 6 0
+netMax 12 4 1 7 0
+netMax 12 4 2 1 0
+netMax 12 4 2 2 0
+netMax 12 4 2 3 0
+netMax 12 4 2 4 0
+netMax 12 4 2 5 0
+netMax 12 4 2 6 0
+netMax 12 4 2 7 0
+netMax 12 4 3 2 0
+netMax 12 4 3 3 0
+netMax 12 4 3 4 0
+netMax 12 4 3 5 0
+netMax 12 4 3 6 0
+netMax 12 4 3 7 0
+netMax 12 4 4 1 0
+netMax 12 4 4 2 0
+netMax 12 4 4 3 0
+netMax 12 4 4 4 0
+netMax 12 4 4 5 0
+netMax 12 4 4 6 0
+netMax 12 4 4 7 0
+netMin 1 1 1 1 0
+netMin 1 1 1 2 0
+netMin 1 1 1 3 0
+netMin 1 1 1 4 0
+netMin 1 1 1 5 0
+netMin 1 1 1 6 0
+netMin 1 1 1 7 0
+netMin 1 1 2 1 0
+netMin 1 1 2 2 0
+netMin 1 2 1 2 0
+netMin 1 1 2 3 0
+netMin 1 1 2 4 0
+netMin 1 1 2 5 0
+netMin 1 1 2 6 0
+netMin 1 1 2 7 0
+netMin 1 1 3 1 0
+netMin 1 1 3 2 0
+netMin 1 1 3 3 0
+netMin 1 1 3 4 0
+netMin 1 1 3 5 0
+netMin 1 1 3 6 0
+netMin 1 1 3 7 0
+netMin 1 1 4 1 0
+netMin 1 1 4 2 0
+netMin 1 1 4 3 0
+netMin 1 1 4 4 0
+netMin 1 1 4 5 0
+netMin 1 1 4 6 0
+netMin 1 1 4 7 0
+netMin 1 2 1 1 0
+netMin 1 2 1 3 0
+netMin 1 2 1 4 0
+netMin 1 2 1 5 0
+netMin 1 2 1 6 0
+netMin 1 2 1 7 0
+netMin 1 2 2 1 0
+netMin 1 2 2 2 0
+netMin 1 2 2 3 0
+netMin 1 2 2 4 0
+netMin 1 2 2 5 0
+netMin 1 2 2 6 0
+netMin 1 2 2 7 0
+netMin 1 2 3 1 0
+netMin 1 2 3 2 0
+netMin 1 2 3 3 0
+netMin 1 2 3 4 0
+netMin 1 2 3 5 0
+netMin 1 2 3 6 0
+netMin 1 2 3 7 0
+netMin 1 2 4 1 0
+netMin 1 2 4 2 0
+netMin 1 2 4 3 0
+netMin 1 2 4 4 0
+netMin 1 2 4 5 0
+netMin 1 2 4 6 0
+netMin 1 2 4 7 0
+netMin 1 3 1 1 0
+netMin 1 3 1 2 0
+netMin 1 3 1 3 0
+netMin 1 3 1 4 0
+netMin 1 3 1 5 0
+netMin 1 3 1 6 0
+netMin 1 3 1 7 0
+netMin 1 3 2 1 0
+netMin 1 3 2 2 0
+netMin 1 3 2 3 0
+netMin 1 3 2 4 0
+netMin 1 3 2 5 0
+netMin 1 3 2 6 0
+netMin 1 3 2 7 0
+netMin 1 3 3 1 0
+netMin 1 3 3 2 0
+netMin 1 3 3 3 0
+netMin 1 3 3 4 0
+netMin 1 3 3 5 0
+netMin 1 3 3 6 0
+netMin 1 3 3 7 0
+netMin 1 3 4 1 0
+netMin 1 3 4 2 0
+netMin 1 3 4 3 0
+netMin 1 3 4 4 0
+netMin 1 3 4 5 0
+netMin 1 3 4 6 0
+netMin 1 3 4 7 0
+netMin 1 4 1 1 0
+netMin 1 4 1 2 0
+netMin 1 4 1 3 0
+netMin 1 4 1 4 0
+netMin 1 4 1 5 0
+netMin 1 4 1 6 0
+netMin 1 4 1 7 0
+netMin 1 4 2 1 0
+netMin 1 4 2 2 0
+netMin 1 4 2 3 0
+netMin 1 4 2 4 0
+netMin 1 4 2 5 0
+netMin 1 4 2 6 0
+netMin 1 4 2 7 0
+netMin 1 4 3 1 0
+netMin 1 4 3 2 0
+netMin 1 4 3 3 0
+netMin 1 4 3 4 0
+netMin 1 4 3 5 0
+netMin 1 4 3 6 0
+netMin 1 4 3 7 0
+netMin 1 4 4 1 0
+netMin 1 4 4 2 0
+netMin 1 4 4 3 0
+netMin 1 4 4 4 0
+netMin 1 4 4 5 0
+netMin 1 4 4 6 0
+netMin 1 4 4 7 0
+netMin 2 1 1 1 0
+netMin 2 1 1 2 0
+netMin 2 1 1 3 0
+netMin 2 1 1 4 0
+netMin 2 1 1 5 0
+netMin 2 1 1 6 0
+netMin 2 1 1 7 0
+netMin 2 1 2 1 0
+netMin 2 1 2 2 0
+netMin 2 1 2 3 0
+netMin 2 1 2 4 0
+netMin 2 1 2 5 0
+netMin 2 1 2 6 0
+netMin 2 1 2 7 0
+netMin 2 1 3 1 0
+netMin 2 1 3 2 0
+netMin 2 1 3 3 0
+netMin 2 1 3 4 0
+netMin 2 1 3 5 0
+netMin 2 1 3 6 0
+netMin 2 1 3 7 0
+netMin 2 1 4 1 0
+netMin 2 1 4 2 0
+netMin 2 1 4 3 0
+netMin 2 1 4 4 0
+netMin 2 1 4 5 0
+netMin 2 1 4 6 0
+netMin 2 1 4 7 0
+netMin 2 2 1 1 0
+netMin 2 2 1 2 0
+netMin 2 2 1 3 0
+netMin 2 2 1 4 0
+netMin 2 2 1 5 0
+netMin 2 2 1 6 0
+netMin 2 2 1 7 0
+netMin 2 2 2 1 0
+netMin 2 2 2 2 0
+netMin 2 2 2 3 0
+netMin 2 2 2 4 0
+netMin 2 2 2 5 0
+netMin 2 2 2 6 0
+netMin 2 2 2 7 0
+netMin 2 2 3 1 0
+netMin 2 2 3 2 0
+netMin 2 3 2 2 0
+netMin 2 2 3 3 0
+netMin 2 2 3 4 0
+netMin 2 2 3 5 0
+netMin 2 2 3 6 0
+netMin 2 2 3 7 0
+netMin 2 2 4 1 0
+netMin 2 2 4 2 0
+netMin 2 2 4 3 0
+netMin 2 2 4 4 0
+netMin 2 2 4 5 0
+netMin 2 2 4 6 0
+netMin 2 2 4 7 0
+netMin 2 3 1 1 0
+netMin 2 3 1 2 0
+netMin 2 3 1 3 0
+netMin 2 3 1 4 0
+netMin 2 3 1 5 0
+netMin 2 3 1 6 0
+netMin 2 3 1 7 0
+netMin 2 3 2 1 0
+netMin 2 3 2 3 0
+netMin 2 3 2 4 0
+netMin 2 3 2 5 0
+netMin 2 3 2 6 0
+netMin 2 3 2 7 0
+netMin 2 3 3 1 0
+netMin 2 3 3 2 0
+netMin 2 3 3 3 0
+netMin 2 3 3 4 0
+netMin 2 3 3 5 0
+netMin 2 3 3 6 0
+netMin 2 3 3 7 0
+netMin 2 3 4 1 0
+netMin 2 3 4 2 0
+netMin 2 3 4 3 0
+netMin 2 3 4 4 0
+netMin 2 3 4 5 0
+netMin 2 3 4 6 0
+netMin 2 3 4 7 0
+netMin 2 4 1 1 0
+netMin 2 4 1 2 0
+netMin 2 4 1 3 0
+netMin 2 4 1 4 0
+netMin 2 4 1 5 0
+netMin 2 4 1 6 0
+netMin 2 4 1 7 0
+netMin 2 4 2 1 0
+netMin 2 4 2 2 0
+netMin 2 4 2 3 0
+netMin 2 4 2 4 0
+netMin 2 4 2 5 0
+netMin 2 4 2 6 0
+netMin 2 4 2 7 0
+netMin 2 4 3 1 0
+netMin 2 4 3 2 0
+netMin 2 4 3 3 0
+netMin 2 4 3 4 0
+netMin 2 4 3 5 0
+netMin 2 4 3 6 0
+netMin 2 4 3 7 0
+netMin 2 4 4 1 0
+netMin 2 4 4 2 0
+netMin 2 4 4 3 0
+netMin 2 4 4 4 0
+netMin 2 4 4 5 0
+netMin 2 4 4 6 0
+netMin 2 4 4 7 0
+netMin 3 1 1 1 0
+netMin 3 1 1 2 0
+netMin 3 1 1 3 0
+netMin 3 1 1 4 0
+netMin 3 1 1 5 0
+netMin 3 1 1 6 0
+netMin 3 1 1 7 0
+netMin 3 1 2 1 0
+netMin 3 1 2 2 0
+netMin 3 1 2 3 0
+netMin 3 1 2 4 0
+netMin 3 1 2 5 0
+netMin 3 1 2 6 0
+netMin 3 1 2 7 0
+netMin 3 1 3 1 0
+netMin 3 1 3 3 0
+netMin 3 1 3 4 0
+netMin 3 1 3 5 0
+netMin 3 1 3 6 0
+netMin 3 1 3 7 0
+netMin 3 1 4 1 0
+netMin 3 1 4 2 0
+netMin 3 1 4 3 0
+netMin 3 1 4 4 0
+netMin 3 1 4 5 0
+netMin 3 1 4 6 0
+netMin 3 1 4 7 0
+netMin 3 2 1 1 0
+netMin 3 2 1 2 0
+netMin 3 2 1 3 0
+netMin 3 2 1 4 0
+netMin 3 2 1 5 0
+netMin 3 2 1 6 0
+netMin 3 2 1 7 0
+netMin 3 2 2 1 0
+netMin 3 2 2 2 0
+netMin 3 2 2 3 0
+netMin 3 2 2 4 0
+netMin 3 2 2 5 0
+netMin 3 2 2 6 0
+netMin 3 2 2 7 0
+netMin 3 2 3 1 0
+netMin 3 2 3 2 0
+netMin 3 2 3 3 0
+netMin 3 2 3 4 0
+netMin 3 2 3 5 0
+netMin 3 2 3 6 0
+netMin 3 2 3 7 0
+netMin 3 2 4 1 0
+netMin 3 2 4 2 0
+netMin 3 2 4 3 0
+netMin 3 2 4 4 0
+netMin 3 2 4 5 0
+netMin 3 2 4 6 0
+netMin 3 2 4 7 0
+netMin 3 3 1 1 0
+netMin 3 3 1 2 0
+netMin 3 1 3 2 0
+netMin 3 3 1 3 0
+netMin 3 3 1 4 0
+netMin 3 3 1 5 0
+netMin 3 3 1 6 0
+netMin 3 3 1 7 0
+netMin 3 3 2 1 0
+netMin 3 3 2 2 0
+netMin 3 3 2 3 0
+netMin 3 3 2 4 0
+netMin 3 3 2 5 0
+netMin 3 3 2 6 0
+netMin 3 3 2 7 0
+netMin 3 3 3 1 0
+netMin 3 3 3 2 0
+netMin 3 3 3 3 0
+netMin 3 3 3 4 0
+netMin 3 3 3 5 0
+netMin 3 3 3 6 0
+netMin 3 3 3 7 0
+netMin 3 3 4 1 0
+netMin 3 3 4 2 0
+netMin 3 3 4 3 0
+netMin 3 3 4 4 0
+netMin 3 3 4 5 0
+netMin 3 3 4 6 0
+netMin 3 3 4 7 0
+netMin 3 4 1 1 0
+netMin 3 4 1 2 0
+netMin 3 4 1 3 0
+netMin 3 4 1 4 0
+netMin 3 4 1 5 0
+netMin 3 4 1 6 0
+netMin 3 4 1 7 0
+netMin 3 4 2 1 0
+netMin 3 4 2 2 0
+netMin 3 4 2 3 0
+netMin 3 4 2 4 0
+netMin 3 4 2 5 0
+netMin 3 4 2 6 0
+netMin 3 4 2 7 0
+netMin 3 4 3 1 0
+netMin 3 4 3 2 0
+netMin 3 4 3 3 0
+netMin 3 4 3 4 0
+netMin 3 4 3 5 0
+netMin 3 4 3 6 0
+netMin 3 4 3 7 0
+netMin 3 4 4 1 0
+netMin 3 4 4 2 0
+netMin 3 4 4 3 0
+netMin 3 4 4 4 0
+netMin 3 4 4 5 0
+netMin 3 4 4 6 0
+netMin 3 4 4 7 0
+netMin 4 1 1 1 0
+netMin 4 1 1 2 0
+netMin 4 1 1 3 0
+netMin 4 1 1 4 0
+netMin 4 1 1 5 0
+netMin 4 1 1 6 0
+netMin 4 1 1 7 0
+netMin 4 1 2 1 0
+netMin 4 2 1 1 0
+netMin 4 1 2 2 0
+netMin 4 1 2 3 0
+netMin 4 1 2 4 0
+netMin 4 1 2 5 0
+netMin 4 1 2 6 0
+netMin 4 1 2 7 0
+netMin 4 1 3 1 0
+netMin 4 1 3 2 0
+netMin 4 1 3 3 0
+netMin 4 1 3 4 0
+netMin 4 1 3 5 0
+netMin 4 1 3 6 0
+netMin 4 1 3 7 0
+netMin 4 1 4 1 0
+netMin 4 1 4 2 0
+netMin 4 1 4 3 0
+netMin 4 1 4 4 0
+netMin 4 1 4 5 0
+netMin 4 1 4 6 0
+netMin 4 1 4 7 0
+netMin 4 2 1 2 0
+netMin 4 2 1 3 0
+netMin 4 2 1 4 0
+netMin 4 2 1 5 0
+netMin 4 2 1 6 0
+netMin 4 2 1 7 0
+netMin 4 2 2 1 0
+netMin 4 2 2 2 0
+netMin 4 2 2 3 0
+netMin 4 2 2 4 0
+netMin 4 2 2 5 0
+netMin 4 2 2 6 0
+netMin 4 2 2 7 0
+netMin 4 2 3 1 0
+netMin 4 2 3 2 0
+netMin 4 2 3 3 0
+netMin 4 2 3 4 0
+netMin 4 2 3 5 0
+netMin 4 2 3 6 0
+netMin 4 2 3 7 0
+netMin 4 2 4 1 0
+netMin 4 2 4 2 0
+netMin 4 2 4 3 0
+netMin 4 2 4 4 0
+netMin 4 2 4 5 0
+netMin 4 2 4 6 0
+netMin 4 2 4 7 0
+netMin 4 3 1 1 0
+netMin 4 3 1 2 0
+netMin 4 3 1 3 0
+netMin 4 3 1 4 0
+netMin 4 3 1 5 0
+netMin 4 3 1 6 0
+netMin 4 3 1 7 0
+netMin 4 3 2 1 0
+netMin 4 3 2 2 0
+netMin 4 3 2 3 0
+netMin 4 3 2 4 0
+netMin 4 3 2 5 0
+netMin 4 3 2 6 0
+netMin 4 3 2 7 0
+netMin 4 3 3 1 0
+netMin 4 3 3 2 0
+netMin 4 3 3 3 0
+netMin 4 3 3 4 0
+netMin 4 3 3 5 0
+netMin 4 3 3 6 0
+netMin 4 3 3 7 0
+netMin 4 3 4 1 0
+netMin 4 3 4 2 0
+netMin 4 3 4 3 0
+netMin 4 3 4 4 0
+netMin 4 3 4 5 0
+netMin 4 3 4 6 0
+netMin 4 3 4 7 0
+netMin 4 4 1 1 0
+netMin 4 4 1 2 0
+netMin 4 4 1 3 0
+netMin 4 4 1 4 0
+netMin 4 4 1 5 0
+netMin 4 4 1 6 0
+netMin 4 4 1 7 0
+netMin 4 4 2 1 0
+netMin 4 4 2 2 0
+netMin 4 4 2 3 0
+netMin 4 4 2 4 0
+netMin 4 4 2 5 0
+netMin 4 4 2 6 0
+netMin 4 4 2 7 0
+netMin 4 4 3 1 0
+netMin 4 4 3 2 0
+netMin 4 4 3 3 0
+netMin 4 4 3 4 0
+netMin 4 4 3 5 0
+netMin 4 4 3 6 0
+netMin 4 4 3 7 0
+netMin 4 4 4 1 0
+netMin 4 4 4 2 0
+netMin 4 4 4 3 0
+netMin 4 4 4 4 0
+netMin 4 4 4 5 0
+netMin 4 4 4 6 0
+netMin 4 4 4 7 0
+netMin 5 1 1 1 0
+netMin 5 1 1 2 0
+netMin 5 1 1 3 0
+netMin 5 1 1 4 0
+netMin 5 1 1 5 0
+netMin 5 1 1 6 0
+netMin 5 1 1 7 0
+netMin 5 1 2 1 0
+netMin 5 1 2 2 0
+netMin 5 1 2 3 0
+netMin 5 1 2 4 0
+netMin 5 1 2 5 0
+netMin 5 1 2 6 0
+netMin 5 1 2 7 0
+netMin 5 1 3 1 0
+netMin 5 1 3 2 0
+netMin 5 1 3 3 0
+netMin 5 1 3 4 0
+netMin 5 1 3 5 0
+netMin 5 1 3 6 0
+netMin 5 1 3 7 0
+netMin 5 1 4 1 0
+netMin 5 1 4 2 0
+netMin 5 1 4 3 0
+netMin 5 1 4 4 0
+netMin 5 1 4 5 0
+netMin 5 1 4 6 0
+netMin 5 1 4 7 0
+netMin 5 2 1 1 0
+netMin 5 2 1 2 0
+netMin 5 2 1 3 0
+netMin 5 2 1 4 0
+netMin 5 2 1 5 0
+netMin 5 2 1 6 0
+netMin 5 2 1 7 0
+netMin 5 2 2 1 0
+netMin 5 2 2 2 0
+netMin 5 2 2 3 0
+netMin 5 2 2 4 0
+netMin 5 2 2 5 0
+netMin 5 2 2 6 0
+netMin 5 2 2 7 0
+netMin 5 2 3 1 0
+netMin 5 3 2 1 0
+netMin 5 2 3 2 0
+netMin 5 2 3 3 0
+netMin 5 2 3 4 0
+netMin 5 2 3 5 0
+netMin 5 2 3 6 0
+netMin 5 2 3 7 0
+netMin 5 2 4 1 0
+netMin 5 2 4 2 0
+netMin 5 2 4 3 0
+netMin 5 2 4 4 0
+netMin 5 2 4 5 0
+netMin 5 2 4 6 0
+netMin 5 2 4 7 0
+netMin 5 3 1 1 0
+netMin 5 3 1 2 0
+netMin 5 3 1 3 0
+netMin 5 3 1 4 0
+netMin 5 3 1 5 0
+netMin 5 3 1 6 0
+netMin 5 3 1 7 0
+netMin 5 3 2 2 0
+netMin 5 3 2 3 0
+netMin 5 3 2 4 0
+netMin 5 3 2 5 0
+netMin 5 3 2 6 0
+netMin 5 3 2 7 0
+netMin 5 3 3 1 0
+netMin 5 3 3 2 0
+netMin 5 3 3 3 0
+netMin 5 3 3 4 0
+netMin 5 3 3 5 0
+netMin 5 3 3 6 0
+netMin 5 3 3 7 0
+netMin 5 3 4 1 0
+netMin 5 3 4 2 0
+netMin 5 3 4 3 0
+netMin 5 3 4 4 0
+netMin 5 3 4 5 0
+netMin 5 3 4 6 0
+netMin 5 3 4 7 0
+netMin 5 4 1 1 0
+netMin 5 4 1 2 0
+netMin 5 4 1 3 0
+netMin 5 4 1 4 0
+netMin 5 4 1 5 0
+netMin 5 4 1 6 0
+netMin 5 4 1 7 0
+netMin 5 4 2 1 0
+netMin 5 4 2 2 0
+netMin 5 4 2 3 0
+netMin 5 4 2 4 0
+netMin 5 4 2 5 0
+netMin 5 4 2 6 0
+netMin 5 4 2 7 0
+netMin 5 4 3 1 0
+netMin 5 4 3 2 0
+netMin 5 4 3 3 0
+netMin 5 4 3 4 0
+netMin 5 4 3 5 0
+netMin 5 4 3 6 0
+netMin 5 4 3 7 0
+netMin 5 4 4 1 0
+netMin 5 4 4 2 0
+netMin 5 4 4 3 0
+netMin 5 4 4 4 0
+netMin 5 4 4 5 0
+netMin 5 4 4 6 0
+netMin 5 4 4 7 0
+netMin 6 1 1 1 0
+netMin 6 1 1 2 0
+netMin 6 1 1 3 0
+netMin 6 1 1 4 0
+netMin 6 1 1 5 0
+netMin 6 1 1 6 0
+netMin 6 1 1 7 0
+netMin 6 1 2 1 0
+netMin 6 1 2 2 0
+netMin 6 1 2 3 0
+netMin 6 1 2 4 0
+netMin 6 1 2 5 0
+netMin 6 1 2 6 0
+netMin 6 1 2 7 0
+netMin 6 1 3 2 0
+netMin 6 1 3 3 0
+netMin 6 1 3 4 0
+netMin 6 1 3 5 0
+netMin 6 1 3 6 0
+netMin 6 1 3 7 0
+netMin 6 1 4 1 0
+netMin 6 1 4 2 0
+netMin 6 1 4 3 0
+netMin 6 1 4 4 0
+netMin 6 1 4 5 0
+netMin 6 1 4 6 0
+netMin 6 1 4 7 0
+netMin 6 2 1 1 0
+netMin 6 2 1 2 0
+netMin 6 2 1 3 0
+netMin 6 2 1 4 0
+netMin 6 2 1 5 0
+netMin 6 2 1 6 0
+netMin 6 2 1 7 0
+netMin 6 2 2 1 0
+netMin 6 2 2 2 0
+netMin 6 2 2 3 0
+netMin 6 2 2 4 0
+netMin 6 2 2 5 0
+netMin 6 2 2 6 0
+netMin 6 2 2 7 0
+netMin 6 2 3 1 0
+netMin 6 2 3 2 0
+netMin 6 2 3 3 0
+netMin 6 2 3 4 0
+netMin 6 2 3 5 0
+netMin 6 2 3 6 0
+netMin 6 2 3 7 0
+netMin 6 2 4 1 0
+netMin 6 2 4 2 0
+netMin 6 2 4 3 0
+netMin 6 2 4 4 0
+netMin 6 2 4 5 0
+netMin 6 2 4 6 0
+netMin 6 2 4 7 0
+netMin 6 3 1 1 0
+netMin 6 1 3 1 0
+netMin 6 3 1 2 0
+netMin 6 3 1 3 0
+netMin 6 3 1 4 0
+netMin 6 3 1 5 0
+netMin 6 3 1 6 0
+netMin 6 3 1 7 0
+netMin 6 3 2 1 0
+netMin 6 3 2 2 0
+netMin 6 3 2 3 0
+netMin 6 3 2 4 0
+netMin 6 3 2 5 0
+netMin 6 3 2 6 0
+netMin 6 3 2 7 0
+netMin 6 3 3 1 0
+netMin 6 3 3 2 0
+netMin 6 3 3 3 0
+netMin 6 3 3 4 0
+netMin 6 3 3 5 0
+netMin 6 3 3 6 0
+netMin 6 3 3 7 0
+netMin 6 3 4 1 0
+netMin 6 3 4 2 0
+netMin 6 3 4 3 0
+netMin 6 3 4 4 0
+netMin 6 3 4 5 0
+netMin 6 3 4 6 0
+netMin 6 3 4 7 0
+netMin 6 4 1 1 0
+netMin 6 4 1 2 0
+netMin 6 4 1 3 0
+netMin 6 4 1 4 0
+netMin 6 4 1 5 0
+netMin 6 4 1 6 0
+netMin 6 4 1 7 0
+netMin 6 4 2 1 0
+netMin 6 4 2 2 0
+netMin 6 4 2 3 0
+netMin 6 4 2 4 0
+netMin 6 4 2 5 0
+netMin 6 4 2 6 0
+netMin 6 4 2 7 0
+netMin 6 4 3 1 0
+netMin 6 4 3 2 0
+netMin 6 4 3 3 0
+netMin 6 4 3 4 0
+netMin 6 4 3 5 0
+netMin 6 4 3 6 0
+netMin 6 4 3 7 0
+netMin 6 4 4 1 0
+netMin 6 4 4 2 0
+netMin 6 4 4 3 0
+netMin 6 4 4 4 0
+netMin 6 4 4 5 0
+netMin 6 4 4 6 0
+netMin 6 4 4 7 0
+netMin 7 1 1 1 0
+netMin 7 1 1 2 0
+netMin 7 1 1 3 0
+netMin 7 1 1 4 0
+netMin 7 1 1 5 0
+netMin 7 1 1 6 0
+netMin 7 1 1 7 0
+netMin 7 1 2 1 0
+netMin 7 1 2 2 0
+netMin 7 1 2 3 0
+netMin 7 1 2 4 0
+netMin 7 1 2 5 0
+netMin 7 1 2 6 0
+netMin 7 1 2 7 0
+netMin 7 1 3 1 0
+netMin 7 1 3 2 0
+netMin 7 1 3 3 0
+netMin 7 1 3 4 0
+netMin 7 1 3 5 0
+netMin 7 1 3 6 0
+netMin 7 1 3 7 0
+netMin 7 1 4 1 0
+netMin 7 1 4 2 0
+netMin 7 4 1 2 0
+netMin 7 1 4 3 0
+netMin 7 1 4 4 0
+netMin 7 1 4 5 0
+netMin 7 1 4 6 0
+netMin 7 1 4 7 0
+netMin 7 2 1 1 0
+netMin 7 2 1 2 0
+netMin 7 2 1 3 0
+netMin 7 2 1 4 0
+netMin 7 2 1 5 0
+netMin 7 2 1 6 0
+netMin 7 2 1 7 0
+netMin 7 2 2 1 0
+netMin 7 2 2 2 0
+netMin 7 2 2 3 0
+netMin 7 2 2 4 0
+netMin 7 2 2 5 0
+netMin 7 2 2 6 0
+netMin 7 2 2 7 0
+netMin 7 2 3 1 0
+netMin 7 2 3 2 0
+netMin 7 2 3 3 0
+netMin 7 2 3 4 0
+netMin 7 2 3 5 0
+netMin 7 2 3 6 0
+netMin 7 2 3 7 0
+netMin 7 2 4 1 0
+netMin 7 2 4 2 0
+netMin 7 2 4 3 0
+netMin 7 2 4 4 0
+netMin 7 2 4 5 0
+netMin 7 2 4 6 0
+netMin 7 2 4 7 0
+netMin 7 3 1 1 0
+netMin 7 3 1 2 0
+netMin 7 3 1 3 0
+netMin 7 3 1 4 0
+netMin 7 3 1 5 0
+netMin 7 3 1 6 0
+netMin 7 3 1 7 0
+netMin 7 3 2 1 0
+netMin 7 3 2 2 0
+netMin 7 3 2 3 0
+netMin 7 3 2 4 0
+netMin 7 3 2 5 0
+netMin 7 3 2 6 0
+netMin 7 3 2 7 0
+netMin 7 3 3 1 0
+netMin 7 3 3 2 0
+netMin 7 3 3 3 0
+netMin 7 3 3 4 0
+netMin 7 3 3 5 0
+netMin 7 3 3 6 0
+netMin 7 3 3 7 0
+netMin 7 3 4 1 0
+netMin 7 3 4 2 0
+netMin 7 3 4 3 0
+netMin 7 3 4 4 0
+netMin 7 3 4 5 0
+netMin 7 3 4 6 0
+netMin 7 3 4 7 0
+netMin 7 4 1 1 0
+netMin 7 4 1 3 0
+netMin 7 4 1 4 0
+netMin 7 4 1 5 0
+netMin 7 4 1 6 0
+netMin 7 4 1 7 0
+netMin 7 4 2 1 0
+netMin 7 4 2 2 0
+netMin 7 4 2 3 0
+netMin 7 4 2 4 0
+netMin 7 4 2 5 0
+netMin 7 4 2 6 0
+netMin 7 4 2 7 0
+netMin 7 4 3 1 0
+netMin 7 4 3 2 0
+netMin 7 4 3 3 0
+netMin 7 4 3 4 0
+netMin 7 4 3 5 0
+netMin 7 4 3 6 0
+netMin 7 4 3 7 0
+netMin 7 4 4 1 0
+netMin 7 4 4 2 0
+netMin 7 4 4 3 0
+netMin 7 4 4 4 0
+netMin 7 4 4 5 0
+netMin 7 4 4 6 0
+netMin 7 4 4 7 0
+netMin 8 1 1 1 0
+netMin 8 1 1 2 0
+netMin 8 1 1 3 0
+netMin 8 1 1 4 0
+netMin 8 1 1 5 0
+netMin 8 1 1 6 0
+netMin 8 1 1 7 0
+netMin 8 1 2 1 0
+netMin 8 1 2 2 0
+netMin 8 1 2 3 0
+netMin 8 1 2 4 0
+netMin 8 1 2 5 0
+netMin 8 1 2 6 0
+netMin 8 1 2 7 0
+netMin 8 1 3 1 0
+netMin 8 1 3 2 0
+netMin 8 1 3 3 0
+netMin 8 1 3 4 0
+netMin 8 1 3 5 0
+netMin 8 1 3 6 0
+netMin 8 1 3 7 0
+netMin 8 1 4 1 0
+netMin 8 1 4 2 0
+netMin 8 1 4 3 0
+netMin 8 1 4 4 0
+netMin 8 1 4 5 0
+netMin 8 1 4 6 0
+netMin 8 1 4 7 0
+netMin 8 2 1 1 0
+netMin 8 2 1 2 0
+netMin 8 2 1 3 0
+netMin 8 2 1 4 0
+netMin 8 2 1 5 0
+netMin 8 2 1 6 0
+netMin 8 2 1 7 0
+netMin 8 2 2 1 0
+netMin 8 2 2 2 0
+netMin 8 2 2 3 0
+netMin 8 2 2 4 0
+netMin 8 2 2 5 0
+netMin 8 2 2 6 0
+netMin 8 2 2 7 0
+netMin 8 2 3 1 0
+netMin 8 2 3 2 0
+netMin 8 2 3 3 0
+netMin 8 2 3 4 0
+netMin 8 2 3 5 0
+netMin 8 2 3 6 0
+netMin 8 2 3 7 0
+netMin 8 2 4 1 0
+netMin 8 2 4 2 0
+netMin 8 4 2 2 0
+netMin 8 2 4 3 0
+netMin 8 2 4 4 0
+netMin 8 2 4 5 0
+netMin 8 2 4 6 0
+netMin 8 2 4 7 0
+netMin 8 3 1 1 0
+netMin 8 3 1 2 0
+netMin 8 3 1 3 0
+netMin 8 3 1 4 0
+netMin 8 3 1 5 0
+netMin 8 3 1 6 0
+netMin 8 3 1 7 0
+netMin 8 3 2 1 0
+netMin 8 3 2 2 0
+netMin 8 3 2 3 0
+netMin 8 3 2 4 0
+netMin 8 3 2 5 0
+netMin 8 3 2 6 0
+netMin 8 3 2 7 0
+netMin 8 3 3 1 0
+netMin 8 3 3 2 0
+netMin 8 3 3 3 0
+netMin 8 3 3 4 0
+netMin 8 3 3 5 0
+netMin 8 3 3 6 0
+netMin 8 3 3 7 0
+netMin 8 3 4 1 0
+netMin 8 3 4 2 0
+netMin 8 3 4 3 0
+netMin 8 3 4 4 0
+netMin 8 3 4 5 0
+netMin 8 3 4 6 0
+netMin 8 3 4 7 0
+netMin 8 4 1 1 0
+netMin 8 4 1 2 0
+netMin 8 4 1 3 0
+netMin 8 4 1 4 0
+netMin 8 4 1 5 0
+netMin 8 4 1 6 0
+netMin 8 4 1 7 0
+netMin 8 4 2 1 0
+netMin 8 4 2 3 0
+netMin 8 4 2 4 0
+netMin 8 4 2 5 0
+netMin 8 4 2 6 0
+netMin 8 4 2 7 0
+netMin 8 4 3 1 0
+netMin 8 4 3 2 0
+netMin 8 4 3 3 0
+netMin 8 4 3 4 0
+netMin 8 4 3 5 0
+netMin 8 4 3 6 0
+netMin 8 4 3 7 0
+netMin 8 4 4 1 0
+netMin 8 4 4 2 0
+netMin 8 4 4 3 0
+netMin 8 4 4 4 0
+netMin 8 4 4 5 0
+netMin 8 4 4 6 0
+netMin 8 4 4 7 0
+netMin 9 1 1 1 0
+netMin 9 1 1 2 0
+netMin 9 1 1 3 0
+netMin 9 1 1 4 0
+netMin 9 1 1 5 0
+netMin 9 1 1 6 0
+netMin 9 1 1 7 0
+netMin 9 1 2 1 0
+netMin 9 1 2 2 0
+netMin 9 1 2 3 0
+netMin 9 1 2 4 0
+netMin 9 1 2 5 0
+netMin 9 1 2 6 0
+netMin 9 1 2 7 0
+netMin 9 1 3 1 0
+netMin 9 1 3 2 0
+netMin 9 1 3 3 0
+netMin 9 1 3 4 0
+netMin 9 1 3 5 0
+netMin 9 1 3 6 0
+netMin 9 1 3 7 0
+netMin 9 1 4 1 0
+netMin 9 1 4 2 0
+netMin 9 1 4 3 0
+netMin 9 1 4 4 0
+netMin 9 1 4 5 0
+netMin 9 1 4 6 0
+netMin 9 1 4 7 0
+netMin 9 2 1 1 0
+netMin 9 2 1 2 0
+netMin 9 2 1 3 0
+netMin 9 2 1 4 0
+netMin 9 2 1 5 0
+netMin 9 2 1 6 0
+netMin 9 2 1 7 0
+netMin 9 2 2 1 0
+netMin 9 2 2 2 0
+netMin 9 2 2 3 0
+netMin 9 2 2 4 0
+netMin 9 2 2 5 0
+netMin 9 2 2 6 0
+netMin 9 2 2 7 0
+netMin 9 2 3 1 0
+netMin 9 2 3 2 0
+netMin 9 2 3 3 0
+netMin 9 2 3 4 0
+netMin 9 2 3 5 0
+netMin 9 2 3 6 0
+netMin 9 2 3 7 0
+netMin 9 2 4 1 0
+netMin 9 2 4 2 0
+netMin 9 2 4 3 0
+netMin 9 2 4 4 0
+netMin 9 2 4 5 0
+netMin 9 2 4 6 0
+netMin 9 2 4 7 0
+netMin 9 3 1 1 0
+netMin 9 3 1 2 0
+netMin 9 3 1 3 0
+netMin 9 3 1 4 0
+netMin 9 3 1 5 0
+netMin 9 3 1 6 0
+netMin 9 3 1 7 0
+netMin 9 3 2 1 0
+netMin 9 3 2 2 0
+netMin 9 3 2 3 0
+netMin 9 3 2 4 0
+netMin 9 3 2 5 0
+netMin 9 3 2 6 0
+netMin 9 3 2 7 0
+netMin 9 3 3 1 0
+netMin 9 3 3 2 0
+netMin 9 3 3 3 0
+netMin 9 3 3 4 0
+netMin 9 3 3 5 0
+netMin 9 3 3 6 0
+netMin 9 3 3 7 0
+netMin 9 3 4 1 0
+netMin 9 3 4 2 0
+netMin 9 4 3 2 0
+netMin 9 3 4 3 0
+netMin 9 3 4 4 0
+netMin 9 3 4 5 0
+netMin 9 3 4 6 0
+netMin 9 3 4 7 0
+netMin 9 4 1 1 0
+netMin 9 4 1 2 0
+netMin 9 4 1 3 0
+netMin 9 4 1 4 0
+netMin 9 4 1 5 0
+netMin 9 4 1 6 0
+netMin 9 4 1 7 0
+netMin 9 4 2 1 0
+netMin 9 4 2 2 0
+netMin 9 4 2 3 0
+netMin 9 4 2 4 0
+netMin 9 4 2 5 0
+netMin 9 4 2 6 0
+netMin 9 4 2 7 0
+netMin 9 4 3 1 0
+netMin 9 4 3 3 0
+netMin 9 4 3 4 0
+netMin 9 4 3 5 0
+netMin 9 4 3 6 0
+netMin 9 4 3 7 0
+netMin 9 4 4 1 0
+netMin 9 4 4 2 0
+netMin 9 4 4 3 0
+netMin 9 4 4 4 0
+netMin 9 4 4 5 0
+netMin 9 4 4 6 0
+netMin 9 4 4 7 0
+netMin 10 1 1 1 0
+netMin 10 1 1 2 0
+netMin 10 1 1 3 0
+netMin 10 1 1 4 0
+netMin 10 1 1 5 0
+netMin 10 1 1 6 0
+netMin 10 1 1 7 0
+netMin 10 1 2 1 0
+netMin 10 1 2 2 0
+netMin 10 1 2 3 0
+netMin 10 1 2 4 0
+netMin 10 1 2 5 0
+netMin 10 1 2 6 0
+netMin 10 1 2 7 0
+netMin 10 1 3 1 0
+netMin 10 1 3 2 0
+netMin 10 1 3 3 0
+netMin 10 1 3 4 0
+netMin 10 1 3 5 0
+netMin 10 1 3 6 0
+netMin 10 1 3 7 0
+netMin 10 1 4 1 0
+netMin 10 4 1 1 0
+netMin 10 1 4 2 0
+netMin 10 1 4 3 0
+netMin 10 1 4 4 0
+netMin 10 1 4 5 0
+netMin 10 1 4 6 0
+netMin 10 1 4 7 0
+netMin 10 2 1 1 0
+netMin 10 2 1 2 0
+netMin 10 2 1 3 0
+netMin 10 2 1 4 0
+netMin 10 2 1 5 0
+netMin 10 2 1 6 0
+netMin 10 2 1 7 0
+netMin 10 2 2 1 0
+netMin 10 2 2 2 0
+netMin 10 2 2 3 0
+netMin 10 2 2 4 0
+netMin 10 2 2 5 0
+netMin 10 2 2 6 0
+netMin 10 2 2 7 0
+netMin 10 2 3 1 0
+netMin 10 2 3 2 0
+netMin 10 2 3 3 0
+netMin 10 2 3 4 0
+netMin 10 2 3 5 0
+netMin 10 2 3 6 0
+netMin 10 2 3 7 0
+netMin 10 2 4 1 0
+netMin 10 2 4 2 0
+netMin 10 2 4 3 0
+netMin 10 2 4 4 0
+netMin 10 2 4 5 0
+netMin 10 2 4 6 0
+netMin 10 2 4 7 0
+netMin 10 3 1 1 0
+netMin 10 3 1 2 0
+netMin 10 3 1 3 0
+netMin 10 3 1 4 0
+netMin 10 3 1 5 0
+netMin 10 3 1 6 0
+netMin 10 3 1 7 0
+netMin 10 3 2 1 0
+netMin 10 3 2 2 0
+netMin 10 3 2 3 0
+netMin 10 3 2 4 0
+netMin 10 3 2 5 0
+netMin 10 3 2 6 0
+netMin 10 3 2 7 0
+netMin 10 3 3 1 0
+netMin 10 3 3 2 0
+netMin 10 3 3 3 0
+netMin 10 3 3 4 0
+netMin 10 3 3 5 0
+netMin 10 3 3 6 0
+netMin 10 3 3 7 0
+netMin 10 3 4 1 0
+netMin 10 3 4 2 0
+netMin 10 3 4 3 0
+netMin 10 3 4 4 0
+netMin 10 3 4 5 0
+netMin 10 3 4 6 0
+netMin 10 3 4 7 0
+netMin 10 4 1 2 0
+netMin 10 4 1 3 0
+netMin 10 4 1 4 0
+netMin 10 4 1 5 0
+netMin 10 4 1 6 0
+netMin 10 4 1 7 0
+netMin 10 4 2 1 0
+netMin 10 4 2 2 0
+netMin 10 4 2 3 0
+netMin 10 4 2 4 0
+netMin 10 4 2 5 0
+netMin 10 4 2 6 0
+netMin 10 4 2 7 0
+netMin 10 4 3 1 0
+netMin 10 4 3 2 0
+netMin 10 4 3 3 0
+netMin 10 4 3 4 0
+netMin 10 4 3 5 0
+netMin 10 4 3 6 0
+netMin 10 4 3 7 0
+netMin 10 4 4 1 0
+netMin 10 4 4 2 0
+netMin 10 4 4 3 0
+netMin 10 4 4 4 0
+netMin 10 4 4 5 0
+netMin 10 4 4 6 0
+netMin 10 4 4 7 0
+netMin 11 1 1 1 0
+netMin 11 1 1 2 0
+netMin 11 1 1 3 0
+netMin 11 1 1 4 0
+netMin 11 1 1 5 0
+netMin 11 1 1 6 0
+netMin 11 1 1 7 0
+netMin 11 1 2 1 0
+netMin 11 1 2 2 0
+netMin 11 1 2 3 0
+netMin 11 1 2 4 0
+netMin 11 1 2 5 0
+netMin 11 1 2 6 0
+netMin 11 1 2 7 0
+netMin 11 1 3 1 0
+netMin 11 1 3 2 0
+netMin 11 1 3 3 0
+netMin 11 1 3 4 0
+netMin 11 1 3 5 0
+netMin 11 1 3 6 0
+netMin 11 1 3 7 0
+netMin 11 1 4 1 0
+netMin 11 1 4 2 0
+netMin 11 1 4 3 0
+netMin 11 1 4 4 0
+netMin 11 1 4 5 0
+netMin 11 1 4 6 0
+netMin 11 1 4 7 0
+netMin 11 2 1 1 0
+netMin 11 2 1 2 0
+netMin 11 2 1 3 0
+netMin 11 2 1 4 0
+netMin 11 2 1 5 0
+netMin 11 2 1 6 0
+netMin 11 2 1 7 0
+netMin 11 2 2 1 0
+netMin 11 2 2 2 0
+netMin 11 2 2 3 0
+netMin 11 2 2 4 0
+netMin 11 2 2 5 0
+netMin 11 2 2 6 0
+netMin 11 2 2 7 0
+netMin 11 2 3 1 0
+netMin 11 2 3 2 0
+netMin 11 2 3 3 0
+netMin 11 2 3 4 0
+netMin 11 2 3 5 0
+netMin 11 2 3 6 0
+netMin 11 2 3 7 0
+netMin 11 2 4 1 0
+netMin 11 4 2 1 0
+netMin 11 2 4 2 0
+netMin 11 2 4 3 0
+netMin 11 2 4 4 0
+netMin 11 2 4 5 0
+netMin 11 2 4 6 0
+netMin 11 2 4 7 0
+netMin 11 3 1 1 0
+netMin 11 3 1 2 0
+netMin 11 3 1 3 0
+netMin 11 3 1 4 0
+netMin 11 3 1 5 0
+netMin 11 3 1 6 0
+netMin 11 3 1 7 0
+netMin 11 3 2 1 0
+netMin 11 3 2 2 0
+netMin 11 3 2 3 0
+netMin 11 3 2 4 0
+netMin 11 3 2 5 0
+netMin 11 3 2 6 0
+netMin 11 3 2 7 0
+netMin 11 3 3 1 0
+netMin 11 3 3 2 0
+netMin 11 3 3 3 0
+netMin 11 3 3 4 0
+netMin 11 3 3 5 0
+netMin 11 3 3 6 0
+netMin 11 3 3 7 0
+netMin 11 3 4 1 0
+netMin 11 3 4 2 0
+netMin 11 3 4 3 0
+netMin 11 3 4 4 0
+netMin 11 3 4 5 0
+netMin 11 3 4 6 0
+netMin 11 3 4 7 0
+netMin 11 4 1 1 0
+netMin 11 4 1 2 0
+netMin 11 4 1 3 0
+netMin 11 4 1 4 0
+netMin 11 4 1 5 0
+netMin 11 4 1 6 0
+netMin 11 4 1 7 0
+netMin 11 4 2 2 0
+netMin 11 4 2 3 0
+netMin 11 4 2 4 0
+netMin 11 4 2 5 0
+netMin 11 4 2 6 0
+netMin 11 4 2 7 0
+netMin 11 4 3 1 0
+netMin 11 4 3 2 0
+netMin 11 4 3 3 0
+netMin 11 4 3 4 0
+netMin 11 4 3 5 0
+netMin 11 4 3 6 0
+netMin 11 4 3 7 0
+netMin 11 4 4 1 0
+netMin 11 4 4 2 0
+netMin 11 4 4 3 0
+netMin 11 4 4 4 0
+netMin 11 4 4 5 0
+netMin 11 4 4 6 0
+netMin 11 4 4 7 0
+netMin 12 1 1 1 0
+netMin 12 1 1 2 0
+netMin 12 1 1 3 0
+netMin 12 1 1 4 0
+netMin 12 1 1 5 0
+netMin 12 1 1 6 0
+netMin 12 1 1 7 0
+netMin 12 1 2 1 0
+netMin 12 1 2 2 0
+netMin 12 1 2 3 0
+netMin 12 1 2 4 0
+netMin 12 1 2 5 0
+netMin 12 1 2 6 0
+netMin 12 1 2 7 0
+netMin 12 1 3 1 0
+netMin 12 1 3 2 0
+netMin 12 1 3 3 0
+netMin 12 1 3 4 0
+netMin 12 1 3 5 0
+netMin 12 1 3 6 0
+netMin 12 1 3 7 0
+netMin 12 1 4 1 0
+netMin 12 1 4 2 0
+netMin 12 1 4 3 0
+netMin 12 1 4 4 0
+netMin 12 1 4 5 0
+netMin 12 1 4 6 0
+netMin 12 1 4 7 0
+netMin 12 2 1 1 0
+netMin 12 2 1 2 0
+netMin 12 2 1 3 0
+netMin 12 2 1 4 0
+netMin 12 2 1 5 0
+netMin 12 2 1 6 0
+netMin 12 2 1 7 0
+netMin 12 2 2 1 0
+netMin 12 2 2 2 0
+netMin 12 2 2 3 0
+netMin 12 2 2 4 0
+netMin 12 2 2 5 0
+netMin 12 2 2 6 0
+netMin 12 2 2 7 0
+netMin 12 2 3 1 0
+netMin 12 2 3 2 0
+netMin 12 2 3 3 0
+netMin 12 2 3 4 0
+netMin 12 2 3 5 0
+netMin 12 2 3 6 0
+netMin 12 2 3 7 0
+netMin 12 2 4 1 0
+netMin 12 2 4 2 0
+netMin 12 2 4 3 0
+netMin 12 2 4 4 0
+netMin 12 2 4 5 0
+netMin 12 2 4 6 0
+netMin 12 2 4 7 0
+netMin 12 3 1 1 0
+netMin 12 3 1 2 0
+netMin 12 3 1 3 0
+netMin 12 3 1 4 0
+netMin 12 3 1 5 0
+netMin 12 3 1 6 0
+netMin 12 3 1 7 0
+netMin 12 3 2 1 0
+netMin 12 3 2 2 0
+netMin 12 3 2 3 0
+netMin 12 3 2 4 0
+netMin 12 3 2 5 0
+netMin 12 3 2 6 0
+netMin 12 3 2 7 0
+netMin 12 3 3 1 0
+netMin 12 3 3 2 0
+netMin 12 3 3 3 0
+netMin 12 3 3 4 0
+netMin 12 3 3 5 0
+netMin 12 3 3 6 0
+netMin 12 3 3 7 0
+netMin 12 3 4 1 0
+netMin 12 4 3 1 0
+netMin 12 3 4 2 0
+netMin 12 3 4 3 0
+netMin 12 3 4 4 0
+netMin 12 3 4 5 0
+netMin 12 3 4 6 0
+netMin 12 3 4 7 0
+netMin 12 4 1 1 0
+netMin 12 4 1 2 0
+netMin 12 4 1 3 0
+netMin 12 4 1 4 0
+netMin 12 4 1 5 0
+netMin 12 4 1 6 0
+netMin 12 4 1 7 0
+netMin 12 4 2 1 0
+netMin 12 4 2 2 0
+netMin 12 4 2 3 0
+netMin 12 4 2 4 0
+netMin 12 4 2 5 0
+netMin 12 4 2 6 0
+netMin 12 4 2 7 0
+netMin 12 4 3 2 0
+netMin 12 4 3 3 0
+netMin 12 4 3 4 0
+netMin 12 4 3 5 0
+netMin 12 4 3 6 0
+netMin 12 4 3 7 0
+netMin 12 4 4 1 0
+netMin 12 4 4 2 0
+netMin 12 4 4 3 0
+netMin 12 4 4 4 0
+netMin 12 4 4 5 0
+netMin 12 4 4 6 0
+netMin 12 4 4 7 0
+netCO2 1 0
+netCO2 2 0
+netCO2 3 0
+netCO2 4 0
+netCO2 5 0
+netCO2 6 0
+netCO2 7 0
+netCO2 8 0
+netCO2 9 0
+netCO2 10 0
+netCO2 11 0
+netCO2 12 0
+lifeNet 1 50
+lifeNet 2 50
+lifeNet 3 50
+lifeNet 4 55
+lifeNet 5 55
+lifeNet 6 55
+lifeNet 7 50
+lifeNet 8 50
+lifeNet 9 50
+lifeNet 10 55
+lifeNet 11 55
+lifeNet 12 55
+Yx 1 1 1 1 0
+Yx 1 1 1 2 0
+Yx 1 1 1 3 0
+Yx 1 1 1 4 0
+Yx 1 1 1 5 0
+Yx 1 1 1 6 0
+Yx 1 1 1 7 0
+Yx 1 1 2 1 0
+Yx 1 1 2 2 1
+Yx 1 2 1 2 1
+Yx 1 1 2 3 0
+Yx 1 1 2 4 0
+Yx 1 1 2 5 0
+Yx 1 1 2 6 0
+Yx 1 1 2 7 0
+Yx 1 1 3 1 0
+Yx 1 1 3 2 0
+Yx 1 1 3 3 0
+Yx 1 1 3 4 0
+Yx 1 1 3 5 0
+Yx 1 1 3 6 0
+Yx 1 1 3 7 0
+Yx 1 1 4 1 0
+Yx 1 1 4 2 0
+Yx 1 1 4 3 0
+Yx 1 1 4 4 0
+Yx 1 1 4 5 0
+Yx 1 1 4 6 0
+Yx 1 1 4 7 0
+Yx 1 2 1 1 0
+Yx 1 2 1 3 0
+Yx 1 2 1 4 0
+Yx 1 2 1 5 0
+Yx 1 2 1 6 0
+Yx 1 2 1 7 0
+Yx 1 2 2 1 0
+Yx 1 2 2 2 0
+Yx 1 2 2 3 0
+Yx 1 2 2 4 0
+Yx 1 2 2 5 0
+Yx 1 2 2 6 0
+Yx 1 2 2 7 0
+Yx 1 2 3 1 0
+Yx 1 2 3 2 0
+Yx 1 2 3 3 0
+Yx 1 2 3 4 0
+Yx 1 2 3 5 0
+Yx 1 2 3 6 0
+Yx 1 2 3 7 0
+Yx 1 2 4 1 0
+Yx 1 2 4 2 0
+Yx 1 2 4 3 0
+Yx 1 2 4 4 0
+Yx 1 2 4 5 0
+Yx 1 2 4 6 0
+Yx 1 2 4 7 0
+Yx 1 3 1 1 0
+Yx 1 3 1 2 0
+Yx 1 3 1 3 0
+Yx 1 3 1 4 0
+Yx 1 3 1 5 0
+Yx 1 3 1 6 0
+Yx 1 3 1 7 0
+Yx 1 3 2 1 0
+Yx 1 3 2 2 0
+Yx 1 3 2 3 0
+Yx 1 3 2 4 0
+Yx 1 3 2 5 0
+Yx 1 3 2 6 0
+Yx 1 3 2 7 0
+Yx 1 3 3 1 0
+Yx 1 3 3 2 0
+Yx 1 3 3 3 0
+Yx 1 3 3 4 0
+Yx 1 3 3 5 0
+Yx 1 3 3 6 0
+Yx 1 3 3 7 0
+Yx 1 3 4 1 0
+Yx 1 3 4 2 0
+Yx 1 3 4 3 0
+Yx 1 3 4 4 0
+Yx 1 3 4 5 0
+Yx 1 3 4 6 0
+Yx 1 3 4 7 0
+Yx 1 4 1 1 0
+Yx 1 4 1 2 0
+Yx 1 4 1 3 0
+Yx 1 4 1 4 0
+Yx 1 4 1 5 0
+Yx 1 4 1 6 0
+Yx 1 4 1 7 0
+Yx 1 4 2 1 0
+Yx 1 4 2 2 0
+Yx 1 4 2 3 0
+Yx 1 4 2 4 0
+Yx 1 4 2 5 0
+Yx 1 4 2 6 0
+Yx 1 4 2 7 0
+Yx 1 4 3 1 0
+Yx 1 4 3 2 0
+Yx 1 4 3 3 0
+Yx 1 4 3 4 0
+Yx 1 4 3 5 0
+Yx 1 4 3 6 0
+Yx 1 4 3 7 0
+Yx 1 4 4 1 0
+Yx 1 4 4 2 0
+Yx 1 4 4 3 0
+Yx 1 4 4 4 0
+Yx 1 4 4 5 0
+Yx 1 4 4 6 0
+Yx 1 4 4 7 0
+Yx 2 1 1 1 0
+Yx 2 1 1 2 0
+Yx 2 1 1 3 0
+Yx 2 1 1 4 0
+Yx 2 1 1 5 0
+Yx 2 1 1 6 0
+Yx 2 1 1 7 0
+Yx 2 1 2 1 0
+Yx 2 1 2 2 0
+Yx 2 1 2 3 0
+Yx 2 1 2 4 0
+Yx 2 1 2 5 0
+Yx 2 1 2 6 0
+Yx 2 1 2 7 0
+Yx 2 1 3 1 0
+Yx 2 1 3 2 0
+Yx 2 1 3 3 0
+Yx 2 1 3 4 0
+Yx 2 1 3 5 0
+Yx 2 1 3 6 0
+Yx 2 1 3 7 0
+Yx 2 1 4 1 0
+Yx 2 1 4 2 0
+Yx 2 1 4 3 0
+Yx 2 1 4 4 0
+Yx 2 1 4 5 0
+Yx 2 1 4 6 0
+Yx 2 1 4 7 0
+Yx 2 2 1 1 0
+Yx 2 2 1 2 0
+Yx 2 2 1 3 0
+Yx 2 2 1 4 0
+Yx 2 2 1 5 0
+Yx 2 2 1 6 0
+Yx 2 2 1 7 0
+Yx 2 2 2 1 0
+Yx 2 2 2 2 0
+Yx 2 2 2 3 0
+Yx 2 2 2 4 0
+Yx 2 2 2 5 0
+Yx 2 2 2 6 0
+Yx 2 2 2 7 0
+Yx 2 2 3 1 0
+Yx 2 2 3 2 1
+Yx 2 3 2 2 1
+Yx 2 2 3 3 0
+Yx 2 2 3 4 0
+Yx 2 2 3 5 0
+Yx 2 2 3 6 0
+Yx 2 2 3 7 0
+Yx 2 2 4 1 0
+Yx 2 2 4 2 0
+Yx 2 2 4 3 0
+Yx 2 2 4 4 0
+Yx 2 2 4 5 0
+Yx 2 2 4 6 0
+Yx 2 2 4 7 0
+Yx 2 3 1 1 0
+Yx 2 3 1 2 0
+Yx 2 3 1 3 0
+Yx 2 3 1 4 0
+Yx 2 3 1 5 0
+Yx 2 3 1 6 0
+Yx 2 3 1 7 0
+Yx 2 3 2 1 0
+Yx 2 3 2 3 0
+Yx 2 3 2 4 0
+Yx 2 3 2 5 0
+Yx 2 3 2 6 0
+Yx 2 3 2 7 0
+Yx 2 3 3 1 0
+Yx 2 3 3 2 0
+Yx 2 3 3 3 0
+Yx 2 3 3 4 0
+Yx 2 3 3 5 0
+Yx 2 3 3 6 0
+Yx 2 3 3 7 0
+Yx 2 3 4 1 0
+Yx 2 3 4 2 0
+Yx 2 3 4 3 0
+Yx 2 3 4 4 0
+Yx 2 3 4 5 0
+Yx 2 3 4 6 0
+Yx 2 3 4 7 0
+Yx 2 4 1 1 0
+Yx 2 4 1 2 0
+Yx 2 4 1 3 0
+Yx 2 4 1 4 0
+Yx 2 4 1 5 0
+Yx 2 4 1 6 0
+Yx 2 4 1 7 0
+Yx 2 4 2 1 0
+Yx 2 4 2 2 0
+Yx 2 4 2 3 0
+Yx 2 4 2 4 0
+Yx 2 4 2 5 0
+Yx 2 4 2 6 0
+Yx 2 4 2 7 0
+Yx 2 4 3 1 0
+Yx 2 4 3 2 0
+Yx 2 4 3 3 0
+Yx 2 4 3 4 0
+Yx 2 4 3 5 0
+Yx 2 4 3 6 0
+Yx 2 4 3 7 0
+Yx 2 4 4 1 0
+Yx 2 4 4 2 0
+Yx 2 4 4 3 0
+Yx 2 4 4 4 0
+Yx 2 4 4 5 0
+Yx 2 4 4 6 0
+Yx 2 4 4 7 0
+Yx 3 1 1 1 0
+Yx 3 1 1 2 0
+Yx 3 1 1 3 0
+Yx 3 1 1 4 0
+Yx 3 1 1 5 0
+Yx 3 1 1 6 0
+Yx 3 1 1 7 0
+Yx 3 1 2 1 0
+Yx 3 1 2 2 0
+Yx 3 1 2 3 0
+Yx 3 1 2 4 0
+Yx 3 1 2 5 0
+Yx 3 1 2 6 0
+Yx 3 1 2 7 0
+Yx 3 1 3 1 0
+Yx 3 1 3 3 0
+Yx 3 1 3 4 0
+Yx 3 1 3 5 0
+Yx 3 1 3 6 0
+Yx 3 1 3 7 0
+Yx 3 1 4 1 0
+Yx 3 1 4 2 0
+Yx 3 1 4 3 0
+Yx 3 1 4 4 0
+Yx 3 1 4 5 0
+Yx 3 1 4 6 0
+Yx 3 1 4 7 0
+Yx 3 2 1 1 0
+Yx 3 2 1 2 0
+Yx 3 2 1 3 0
+Yx 3 2 1 4 0
+Yx 3 2 1 5 0
+Yx 3 2 1 6 0
+Yx 3 2 1 7 0
+Yx 3 2 2 1 0
+Yx 3 2 2 2 0
+Yx 3 2 2 3 0
+Yx 3 2 2 4 0
+Yx 3 2 2 5 0
+Yx 3 2 2 6 0
+Yx 3 2 2 7 0
+Yx 3 2 3 1 0
+Yx 3 2 3 2 0
+Yx 3 2 3 3 0
+Yx 3 2 3 4 0
+Yx 3 2 3 5 0
+Yx 3 2 3 6 0
+Yx 3 2 3 7 0
+Yx 3 2 4 1 0
+Yx 3 2 4 2 0
+Yx 3 2 4 3 0
+Yx 3 2 4 4 0
+Yx 3 2 4 5 0
+Yx 3 2 4 6 0
+Yx 3 2 4 7 0
+Yx 3 3 1 1 0
+Yx 3 3 1 2 1
+Yx 3 1 3 2 1
+Yx 3 3 1 3 0
+Yx 3 3 1 4 0
+Yx 3 3 1 5 0
+Yx 3 3 1 6 0
+Yx 3 3 1 7 0
+Yx 3 3 2 1 0
+Yx 3 3 2 2 0
+Yx 3 3 2 3 0
+Yx 3 3 2 4 0
+Yx 3 3 2 5 0
+Yx 3 3 2 6 0
+Yx 3 3 2 7 0
+Yx 3 3 3 1 0
+Yx 3 3 3 2 0
+Yx 3 3 3 3 0
+Yx 3 3 3 4 0
+Yx 3 3 3 5 0
+Yx 3 3 3 6 0
+Yx 3 3 3 7 0
+Yx 3 3 4 1 0
+Yx 3 3 4 2 0
+Yx 3 3 4 3 0
+Yx 3 3 4 4 0
+Yx 3 3 4 5 0
+Yx 3 3 4 6 0
+Yx 3 3 4 7 0
+Yx 3 4 1 1 0
+Yx 3 4 1 2 0
+Yx 3 4 1 3 0
+Yx 3 4 1 4 0
+Yx 3 4 1 5 0
+Yx 3 4 1 6 0
+Yx 3 4 1 7 0
+Yx 3 4 2 1 0
+Yx 3 4 2 2 0
+Yx 3 4 2 3 0
+Yx 3 4 2 4 0
+Yx 3 4 2 5 0
+Yx 3 4 2 6 0
+Yx 3 4 2 7 0
+Yx 3 4 3 1 0
+Yx 3 4 3 2 0
+Yx 3 4 3 3 0
+Yx 3 4 3 4 0
+Yx 3 4 3 5 0
+Yx 3 4 3 6 0
+Yx 3 4 3 7 0
+Yx 3 4 4 1 0
+Yx 3 4 4 2 0
+Yx 3 4 4 3 0
+Yx 3 4 4 4 0
+Yx 3 4 4 5 0
+Yx 3 4 4 6 0
+Yx 3 4 4 7 0
+Yx 4 1 1 1 0
+Yx 4 1 1 2 0
+Yx 4 1 1 3 0
+Yx 4 1 1 4 0
+Yx 4 1 1 5 0
+Yx 4 1 1 6 0
+Yx 4 1 1 7 0
+Yx 4 1 2 1 1
+Yx 4 2 1 1 1
+Yx 4 1 2 2 0
+Yx 4 1 2 3 0
+Yx 4 1 2 4 0
+Yx 4 1 2 5 0
+Yx 4 1 2 6 0
+Yx 4 1 2 7 0
+Yx 4 1 3 1 0
+Yx 4 1 3 2 0
+Yx 4 1 3 3 0
+Yx 4 1 3 4 0
+Yx 4 1 3 5 0
+Yx 4 1 3 6 0
+Yx 4 1 3 7 0
+Yx 4 1 4 1 0
+Yx 4 1 4 2 0
+Yx 4 1 4 3 0
+Yx 4 1 4 4 0
+Yx 4 1 4 5 0
+Yx 4 1 4 6 0
+Yx 4 1 4 7 0
+Yx 4 2 1 2 0
+Yx 4 2 1 3 0
+Yx 4 2 1 4 0
+Yx 4 2 1 5 0
+Yx 4 2 1 6 0
+Yx 4 2 1 7 0
+Yx 4 2 2 1 0
+Yx 4 2 2 2 0
+Yx 4 2 2 3 0
+Yx 4 2 2 4 0
+Yx 4 2 2 5 0
+Yx 4 2 2 6 0
+Yx 4 2 2 7 0
+Yx 4 2 3 1 0
+Yx 4 2 3 2 0
+Yx 4 2 3 3 0
+Yx 4 2 3 4 0
+Yx 4 2 3 5 0
+Yx 4 2 3 6 0
+Yx 4 2 3 7 0
+Yx 4 2 4 1 0
+Yx 4 2 4 2 0
+Yx 4 2 4 3 0
+Yx 4 2 4 4 0
+Yx 4 2 4 5 0
+Yx 4 2 4 6 0
+Yx 4 2 4 7 0
+Yx 4 3 1 1 0
+Yx 4 3 1 2 0
+Yx 4 3 1 3 0
+Yx 4 3 1 4 0
+Yx 4 3 1 5 0
+Yx 4 3 1 6 0
+Yx 4 3 1 7 0
+Yx 4 3 2 1 0
+Yx 4 3 2 2 0
+Yx 4 3 2 3 0
+Yx 4 3 2 4 0
+Yx 4 3 2 5 0
+Yx 4 3 2 6 0
+Yx 4 3 2 7 0
+Yx 4 3 3 1 0
+Yx 4 3 3 2 0
+Yx 4 3 3 3 0
+Yx 4 3 3 4 0
+Yx 4 3 3 5 0
+Yx 4 3 3 6 0
+Yx 4 3 3 7 0
+Yx 4 3 4 1 0
+Yx 4 3 4 2 0
+Yx 4 3 4 3 0
+Yx 4 3 4 4 0
+Yx 4 3 4 5 0
+Yx 4 3 4 6 0
+Yx 4 3 4 7 0
+Yx 4 4 1 1 0
+Yx 4 4 1 2 0
+Yx 4 4 1 3 0
+Yx 4 4 1 4 0
+Yx 4 4 1 5 0
+Yx 4 4 1 6 0
+Yx 4 4 1 7 0
+Yx 4 4 2 1 0
+Yx 4 4 2 2 0
+Yx 4 4 2 3 0
+Yx 4 4 2 4 0
+Yx 4 4 2 5 0
+Yx 4 4 2 6 0
+Yx 4 4 2 7 0
+Yx 4 4 3 1 0
+Yx 4 4 3 2 0
+Yx 4 4 3 3 0
+Yx 4 4 3 4 0
+Yx 4 4 3 5 0
+Yx 4 4 3 6 0
+Yx 4 4 3 7 0
+Yx 4 4 4 1 0
+Yx 4 4 4 2 0
+Yx 4 4 4 3 0
+Yx 4 4 4 4 0
+Yx 4 4 4 5 0
+Yx 4 4 4 6 0
+Yx 4 4 4 7 0
+Yx 5 1 1 1 0
+Yx 5 1 1 2 0
+Yx 5 1 1 3 0
+Yx 5 1 1 4 0
+Yx 5 1 1 5 0
+Yx 5 1 1 6 0
+Yx 5 1 1 7 0
+Yx 5 1 2 1 0
+Yx 5 1 2 2 0
+Yx 5 1 2 3 0
+Yx 5 1 2 4 0
+Yx 5 1 2 5 0
+Yx 5 1 2 6 0
+Yx 5 1 2 7 0
+Yx 5 1 3 1 0
+Yx 5 1 3 2 0
+Yx 5 1 3 3 0
+Yx 5 1 3 4 0
+Yx 5 1 3 5 0
+Yx 5 1 3 6 0
+Yx 5 1 3 7 0
+Yx 5 1 4 1 0
+Yx 5 1 4 2 0
+Yx 5 1 4 3 0
+Yx 5 1 4 4 0
+Yx 5 1 4 5 0
+Yx 5 1 4 6 0
+Yx 5 1 4 7 0
+Yx 5 2 1 1 0
+Yx 5 2 1 2 0
+Yx 5 2 1 3 0
+Yx 5 2 1 4 0
+Yx 5 2 1 5 0
+Yx 5 2 1 6 0
+Yx 5 2 1 7 0
+Yx 5 2 2 1 0
+Yx 5 2 2 2 0
+Yx 5 2 2 3 0
+Yx 5 2 2 4 0
+Yx 5 2 2 5 0
+Yx 5 2 2 6 0
+Yx 5 2 2 7 0
+Yx 5 2 3 1 1
+Yx 5 3 2 1 1
+Yx 5 2 3 2 0
+Yx 5 2 3 3 0
+Yx 5 2 3 4 0
+Yx 5 2 3 5 0
+Yx 5 2 3 6 0
+Yx 5 2 3 7 0
+Yx 5 2 4 1 0
+Yx 5 2 4 2 0
+Yx 5 2 4 3 0
+Yx 5 2 4 4 0
+Yx 5 2 4 5 0
+Yx 5 2 4 6 0
+Yx 5 2 4 7 0
+Yx 5 3 1 1 0
+Yx 5 3 1 2 0
+Yx 5 3 1 3 0
+Yx 5 3 1 4 0
+Yx 5 3 1 5 0
+Yx 5 3 1 6 0
+Yx 5 3 1 7 0
+Yx 5 3 2 2 0
+Yx 5 3 2 3 0
+Yx 5 3 2 4 0
+Yx 5 3 2 5 0
+Yx 5 3 2 6 0
+Yx 5 3 2 7 0
+Yx 5 3 3 1 0
+Yx 5 3 3 2 0
+Yx 5 3 3 3 0
+Yx 5 3 3 4 0
+Yx 5 3 3 5 0
+Yx 5 3 3 6 0
+Yx 5 3 3 7 0
+Yx 5 3 4 1 0
+Yx 5 3 4 2 0
+Yx 5 3 4 3 0
+Yx 5 3 4 4 0
+Yx 5 3 4 5 0
+Yx 5 3 4 6 0
+Yx 5 3 4 7 0
+Yx 5 4 1 1 0
+Yx 5 4 1 2 0
+Yx 5 4 1 3 0
+Yx 5 4 1 4 0
+Yx 5 4 1 5 0
+Yx 5 4 1 6 0
+Yx 5 4 1 7 0
+Yx 5 4 2 1 0
+Yx 5 4 2 2 0
+Yx 5 4 2 3 0
+Yx 5 4 2 4 0
+Yx 5 4 2 5 0
+Yx 5 4 2 6 0
+Yx 5 4 2 7 0
+Yx 5 4 3 1 0
+Yx 5 4 3 2 0
+Yx 5 4 3 3 0
+Yx 5 4 3 4 0
+Yx 5 4 3 5 0
+Yx 5 4 3 6 0
+Yx 5 4 3 7 0
+Yx 5 4 4 1 0
+Yx 5 4 4 2 0
+Yx 5 4 4 3 0
+Yx 5 4 4 4 0
+Yx 5 4 4 5 0
+Yx 5 4 4 6 0
+Yx 5 4 4 7 0
+Yx 6 1 1 1 0
+Yx 6 1 1 2 0
+Yx 6 1 1 3 0
+Yx 6 1 1 4 0
+Yx 6 1 1 5 0
+Yx 6 1 1 6 0
+Yx 6 1 1 7 0
+Yx 6 1 2 1 0
+Yx 6 1 2 2 0
+Yx 6 1 2 3 0
+Yx 6 1 2 4 0
+Yx 6 1 2 5 0
+Yx 6 1 2 6 0
+Yx 6 1 2 7 0
+Yx 6 1 3 2 0
+Yx 6 1 3 3 0
+Yx 6 1 3 4 0
+Yx 6 1 3 5 0
+Yx 6 1 3 6 0
+Yx 6 1 3 7 0
+Yx 6 1 4 1 0
+Yx 6 1 4 2 0
+Yx 6 1 4 3 0
+Yx 6 1 4 4 0
+Yx 6 1 4 5 0
+Yx 6 1 4 6 0
+Yx 6 1 4 7 0
+Yx 6 2 1 1 0
+Yx 6 2 1 2 0
+Yx 6 2 1 3 0
+Yx 6 2 1 4 0
+Yx 6 2 1 5 0
+Yx 6 2 1 6 0
+Yx 6 2 1 7 0
+Yx 6 2 2 1 0
+Yx 6 2 2 2 0
+Yx 6 2 2 3 0
+Yx 6 2 2 4 0
+Yx 6 2 2 5 0
+Yx 6 2 2 6 0
+Yx 6 2 2 7 0
+Yx 6 2 3 1 0
+Yx 6 2 3 2 0
+Yx 6 2 3 3 0
+Yx 6 2 3 4 0
+Yx 6 2 3 5 0
+Yx 6 2 3 6 0
+Yx 6 2 3 7 0
+Yx 6 2 4 1 0
+Yx 6 2 4 2 0
+Yx 6 2 4 3 0
+Yx 6 2 4 4 0
+Yx 6 2 4 5 0
+Yx 6 2 4 6 0
+Yx 6 2 4 7 0
+Yx 6 3 1 1 1
+Yx 6 1 3 1 1
+Yx 6 3 1 2 0
+Yx 6 3 1 3 0
+Yx 6 3 1 4 0
+Yx 6 3 1 5 0
+Yx 6 3 1 6 0
+Yx 6 3 1 7 0
+Yx 6 3 2 1 0
+Yx 6 3 2 2 0
+Yx 6 3 2 3 0
+Yx 6 3 2 4 0
+Yx 6 3 2 5 0
+Yx 6 3 2 6 0
+Yx 6 3 2 7 0
+Yx 6 3 3 1 0
+Yx 6 3 3 2 0
+Yx 6 3 3 3 0
+Yx 6 3 3 4 0
+Yx 6 3 3 5 0
+Yx 6 3 3 6 0
+Yx 6 3 3 7 0
+Yx 6 3 4 1 0
+Yx 6 3 4 2 0
+Yx 6 3 4 3 0
+Yx 6 3 4 4 0
+Yx 6 3 4 5 0
+Yx 6 3 4 6 0
+Yx 6 3 4 7 0
+Yx 6 4 1 1 0
+Yx 6 4 1 2 0
+Yx 6 4 1 3 0
+Yx 6 4 1 4 0
+Yx 6 4 1 5 0
+Yx 6 4 1 6 0
+Yx 6 4 1 7 0
+Yx 6 4 2 1 0
+Yx 6 4 2 2 0
+Yx 6 4 2 3 0
+Yx 6 4 2 4 0
+Yx 6 4 2 5 0
+Yx 6 4 2 6 0
+Yx 6 4 2 7 0
+Yx 6 4 3 1 0
+Yx 6 4 3 2 0
+Yx 6 4 3 3 0
+Yx 6 4 3 4 0
+Yx 6 4 3 5 0
+Yx 6 4 3 6 0
+Yx 6 4 3 7 0
+Yx 6 4 4 1 0
+Yx 6 4 4 2 0
+Yx 6 4 4 3 0
+Yx 6 4 4 4 0
+Yx 6 4 4 5 0
+Yx 6 4 4 6 0
+Yx 6 4 4 7 0
+Yx 7 1 1 1 0
+Yx 7 1 1 2 0
+Yx 7 1 1 3 0
+Yx 7 1 1 4 0
+Yx 7 1 1 5 0
+Yx 7 1 1 6 0
+Yx 7 1 1 7 0
+Yx 7 1 2 1 0
+Yx 7 1 2 2 0
+Yx 7 1 2 3 0
+Yx 7 1 2 4 0
+Yx 7 1 2 5 0
+Yx 7 1 2 6 0
+Yx 7 1 2 7 0
+Yx 7 1 3 1 0
+Yx 7 1 3 2 0
+Yx 7 1 3 3 0
+Yx 7 1 3 4 0
+Yx 7 1 3 5 0
+Yx 7 1 3 6 0
+Yx 7 1 3 7 0
+Yx 7 1 4 1 0
+Yx 7 1 4 2 1
+Yx 7 4 1 2 1
+Yx 7 1 4 3 0
+Yx 7 1 4 4 0
+Yx 7 1 4 5 0
+Yx 7 1 4 6 0
+Yx 7 1 4 7 0
+Yx 7 2 1 1 0
+Yx 7 2 1 2 0
+Yx 7 2 1 3 0
+Yx 7 2 1 4 0
+Yx 7 2 1 5 0
+Yx 7 2 1 6 0
+Yx 7 2 1 7 0
+Yx 7 2 2 1 0
+Yx 7 2 2 2 0
+Yx 7 2 2 3 0
+Yx 7 2 2 4 0
+Yx 7 2 2 5 0
+Yx 7 2 2 6 0
+Yx 7 2 2 7 0
+Yx 7 2 3 1 0
+Yx 7 2 3 2 0
+Yx 7 2 3 3 0
+Yx 7 2 3 4 0
+Yx 7 2 3 5 0
+Yx 7 2 3 6 0
+Yx 7 2 3 7 0
+Yx 7 2 4 1 0
+Yx 7 2 4 2 0
+Yx 7 2 4 3 0
+Yx 7 2 4 4 0
+Yx 7 2 4 5 0
+Yx 7 2 4 6 0
+Yx 7 2 4 7 0
+Yx 7 3 1 1 0
+Yx 7 3 1 2 0
+Yx 7 3 1 3 0
+Yx 7 3 1 4 0
+Yx 7 3 1 5 0
+Yx 7 3 1 6 0
+Yx 7 3 1 7 0
+Yx 7 3 2 1 0
+Yx 7 3 2 2 0
+Yx 7 3 2 3 0
+Yx 7 3 2 4 0
+Yx 7 3 2 5 0
+Yx 7 3 2 6 0
+Yx 7 3 2 7 0
+Yx 7 3 3 1 0
+Yx 7 3 3 2 0
+Yx 7 3 3 3 0
+Yx 7 3 3 4 0
+Yx 7 3 3 5 0
+Yx 7 3 3 6 0
+Yx 7 3 3 7 0
+Yx 7 3 4 1 0
+Yx 7 3 4 2 0
+Yx 7 3 4 3 0
+Yx 7 3 4 4 0
+Yx 7 3 4 5 0
+Yx 7 3 4 6 0
+Yx 7 3 4 7 0
+Yx 7 4 1 1 0
+Yx 7 4 1 3 0
+Yx 7 4 1 4 0
+Yx 7 4 1 5 0
+Yx 7 4 1 6 0
+Yx 7 4 1 7 0
+Yx 7 4 2 1 0
+Yx 7 4 2 2 0
+Yx 7 4 2 3 0
+Yx 7 4 2 4 0
+Yx 7 4 2 5 0
+Yx 7 4 2 6 0
+Yx 7 4 2 7 0
+Yx 7 4 3 1 0
+Yx 7 4 3 2 0
+Yx 7 4 3 3 0
+Yx 7 4 3 4 0
+Yx 7 4 3 5 0
+Yx 7 4 3 6 0
+Yx 7 4 3 7 0
+Yx 7 4 4 1 0
+Yx 7 4 4 2 0
+Yx 7 4 4 3 0
+Yx 7 4 4 4 0
+Yx 7 4 4 5 0
+Yx 7 4 4 6 0
+Yx 7 4 4 7 0
+Yx 8 1 1 1 0
+Yx 8 1 1 2 0
+Yx 8 1 1 3 0
+Yx 8 1 1 4 0
+Yx 8 1 1 5 0
+Yx 8 1 1 6 0
+Yx 8 1 1 7 0
+Yx 8 1 2 1 0
+Yx 8 1 2 2 0
+Yx 8 1 2 3 0
+Yx 8 1 2 4 0
+Yx 8 1 2 5 0
+Yx 8 1 2 6 0
+Yx 8 1 2 7 0
+Yx 8 1 3 1 0
+Yx 8 1 3 2 0
+Yx 8 1 3 3 0
+Yx 8 1 3 4 0
+Yx 8 1 3 5 0
+Yx 8 1 3 6 0
+Yx 8 1 3 7 0
+Yx 8 1 4 1 0
+Yx 8 1 4 2 0
+Yx 8 1 4 3 0
+Yx 8 1 4 4 0
+Yx 8 1 4 5 0
+Yx 8 1 4 6 0
+Yx 8 1 4 7 0
+Yx 8 2 1 1 0
+Yx 8 2 1 2 0
+Yx 8 2 1 3 0
+Yx 8 2 1 4 0
+Yx 8 2 1 5 0
+Yx 8 2 1 6 0
+Yx 8 2 1 7 0
+Yx 8 2 2 1 0
+Yx 8 2 2 2 0
+Yx 8 2 2 3 0
+Yx 8 2 2 4 0
+Yx 8 2 2 5 0
+Yx 8 2 2 6 0
+Yx 8 2 2 7 0
+Yx 8 2 3 1 0
+Yx 8 2 3 2 0
+Yx 8 2 3 3 0
+Yx 8 2 3 4 0
+Yx 8 2 3 5 0
+Yx 8 2 3 6 0
+Yx 8 2 3 7 0
+Yx 8 2 4 1 0
+Yx 8 2 4 2 1
+Yx 8 4 2 2 1
+Yx 8 2 4 3 0
+Yx 8 2 4 4 0
+Yx 8 2 4 5 0
+Yx 8 2 4 6 0
+Yx 8 2 4 7 0
+Yx 8 3 1 1 0
+Yx 8 3 1 2 0
+Yx 8 3 1 3 0
+Yx 8 3 1 4 0
+Yx 8 3 1 5 0
+Yx 8 3 1 6 0
+Yx 8 3 1 7 0
+Yx 8 3 2 1 0
+Yx 8 3 2 2 0
+Yx 8 3 2 3 0
+Yx 8 3 2 4 0
+Yx 8 3 2 5 0
+Yx 8 3 2 6 0
+Yx 8 3 2 7 0
+Yx 8 3 3 1 0
+Yx 8 3 3 2 0
+Yx 8 3 3 3 0
+Yx 8 3 3 4 0
+Yx 8 3 3 5 0
+Yx 8 3 3 6 0
+Yx 8 3 3 7 0
+Yx 8 3 4 1 0
+Yx 8 3 4 2 0
+Yx 8 3 4 3 0
+Yx 8 3 4 4 0
+Yx 8 3 4 5 0
+Yx 8 3 4 6 0
+Yx 8 3 4 7 0
+Yx 8 4 1 1 0
+Yx 8 4 1 2 0
+Yx 8 4 1 3 0
+Yx 8 4 1 4 0
+Yx 8 4 1 5 0
+Yx 8 4 1 6 0
+Yx 8 4 1 7 0
+Yx 8 4 2 1 0
+Yx 8 4 2 3 0
+Yx 8 4 2 4 0
+Yx 8 4 2 5 0
+Yx 8 4 2 6 0
+Yx 8 4 2 7 0
+Yx 8 4 3 1 0
+Yx 8 4 3 2 0
+Yx 8 4 3 3 0
+Yx 8 4 3 4 0
+Yx 8 4 3 5 0
+Yx 8 4 3 6 0
+Yx 8 4 3 7 0
+Yx 8 4 4 1 0
+Yx 8 4 4 2 0
+Yx 8 4 4 3 0
+Yx 8 4 4 4 0
+Yx 8 4 4 5 0
+Yx 8 4 4 6 0
+Yx 8 4 4 7 0
+Yx 9 1 1 1 0
+Yx 9 1 1 2 0
+Yx 9 1 1 3 0
+Yx 9 1 1 4 0
+Yx 9 1 1 5 0
+Yx 9 1 1 6 0
+Yx 9 1 1 7 0
+Yx 9 1 2 1 0
+Yx 9 1 2 2 0
+Yx 9 1 2 3 0
+Yx 9 1 2 4 0
+Yx 9 1 2 5 0
+Yx 9 1 2 6 0
+Yx 9 1 2 7 0
+Yx 9 1 3 1 0
+Yx 9 1 3 2 0
+Yx 9 1 3 3 0
+Yx 9 1 3 4 0
+Yx 9 1 3 5 0
+Yx 9 1 3 6 0
+Yx 9 1 3 7 0
+Yx 9 1 4 1 0
+Yx 9 1 4 2 0
+Yx 9 1 4 3 0
+Yx 9 1 4 4 0
+Yx 9 1 4 5 0
+Yx 9 1 4 6 0
+Yx 9 1 4 7 0
+Yx 9 2 1 1 0
+Yx 9 2 1 2 0
+Yx 9 2 1 3 0
+Yx 9 2 1 4 0
+Yx 9 2 1 5 0
+Yx 9 2 1 6 0
+Yx 9 2 1 7 0
+Yx 9 2 2 1 0
+Yx 9 2 2 2 0
+Yx 9 2 2 3 0
+Yx 9 2 2 4 0
+Yx 9 2 2 5 0
+Yx 9 2 2 6 0
+Yx 9 2 2 7 0
+Yx 9 2 3 1 0
+Yx 9 2 3 2 0
+Yx 9 2 3 3 0
+Yx 9 2 3 4 0
+Yx 9 2 3 5 0
+Yx 9 2 3 6 0
+Yx 9 2 3 7 0
+Yx 9 2 4 1 0
+Yx 9 2 4 2 0
+Yx 9 2 4 3 0
+Yx 9 2 4 4 0
+Yx 9 2 4 5 0
+Yx 9 2 4 6 0
+Yx 9 2 4 7 0
+Yx 9 3 1 1 0
+Yx 9 3 1 2 0
+Yx 9 3 1 3 0
+Yx 9 3 1 4 0
+Yx 9 3 1 5 0
+Yx 9 3 1 6 0
+Yx 9 3 1 7 0
+Yx 9 3 2 1 0
+Yx 9 3 2 2 0
+Yx 9 3 2 3 0
+Yx 9 3 2 4 0
+Yx 9 3 2 5 0
+Yx 9 3 2 6 0
+Yx 9 3 2 7 0
+Yx 9 3 3 1 0
+Yx 9 3 3 2 0
+Yx 9 3 3 3 0
+Yx 9 3 3 4 0
+Yx 9 3 3 5 0
+Yx 9 3 3 6 0
+Yx 9 3 3 7 0
+Yx 9 3 4 1 0
+Yx 9 3 4 2 1
+Yx 9 4 3 2 1
+Yx 9 3 4 3 0
+Yx 9 3 4 4 0
+Yx 9 3 4 5 0
+Yx 9 3 4 6 0
+Yx 9 3 4 7 0
+Yx 9 4 1 1 0
+Yx 9 4 1 2 0
+Yx 9 4 1 3 0
+Yx 9 4 1 4 0
+Yx 9 4 1 5 0
+Yx 9 4 1 6 0
+Yx 9 4 1 7 0
+Yx 9 4 2 1 0
+Yx 9 4 2 2 0
+Yx 9 4 2 3 0
+Yx 9 4 2 4 0
+Yx 9 4 2 5 0
+Yx 9 4 2 6 0
+Yx 9 4 2 7 0
+Yx 9 4 3 1 0
+Yx 9 4 3 3 0
+Yx 9 4 3 4 0
+Yx 9 4 3 5 0
+Yx 9 4 3 6 0
+Yx 9 4 3 7 0
+Yx 9 4 4 1 0
+Yx 9 4 4 2 0
+Yx 9 4 4 3 0
+Yx 9 4 4 4 0
+Yx 9 4 4 5 0
+Yx 9 4 4 6 0
+Yx 9 4 4 7 0
+Yx 10 1 1 1 0
+Yx 10 1 1 2 0
+Yx 10 1 1 3 0
+Yx 10 1 1 4 0
+Yx 10 1 1 5 0
+Yx 10 1 1 6 0
+Yx 10 1 1 7 0
+Yx 10 1 2 1 0
+Yx 10 1 2 2 0
+Yx 10 1 2 3 0
+Yx 10 1 2 4 0
+Yx 10 1 2 5 0
+Yx 10 1 2 6 0
+Yx 10 1 2 7 0
+Yx 10 1 3 1 0
+Yx 10 1 3 2 0
+Yx 10 1 3 3 0
+Yx 10 1 3 4 0
+Yx 10 1 3 5 0
+Yx 10 1 3 6 0
+Yx 10 1 3 7 0
+Yx 10 1 4 1 1
+Yx 10 4 1 1 1
+Yx 10 1 4 2 0
+Yx 10 1 4 3 0
+Yx 10 1 4 4 0
+Yx 10 1 4 5 0
+Yx 10 1 4 6 0
+Yx 10 1 4 7 0
+Yx 10 2 1 1 0
+Yx 10 2 1 2 0
+Yx 10 2 1 3 0
+Yx 10 2 1 4 0
+Yx 10 2 1 5 0
+Yx 10 2 1 6 0
+Yx 10 2 1 7 0
+Yx 10 2 2 1 0
+Yx 10 2 2 2 0
+Yx 10 2 2 3 0
+Yx 10 2 2 4 0
+Yx 10 2 2 5 0
+Yx 10 2 2 6 0
+Yx 10 2 2 7 0
+Yx 10 2 3 1 0
+Yx 10 2 3 2 0
+Yx 10 2 3 3 0
+Yx 10 2 3 4 0
+Yx 10 2 3 5 0
+Yx 10 2 3 6 0
+Yx 10 2 3 7 0
+Yx 10 2 4 1 0
+Yx 10 2 4 2 0
+Yx 10 2 4 3 0
+Yx 10 2 4 4 0
+Yx 10 2 4 5 0
+Yx 10 2 4 6 0
+Yx 10 2 4 7 0
+Yx 10 3 1 1 0
+Yx 10 3 1 2 0
+Yx 10 3 1 3 0
+Yx 10 3 1 4 0
+Yx 10 3 1 5 0
+Yx 10 3 1 6 0
+Yx 10 3 1 7 0
+Yx 10 3 2 1 0
+Yx 10 3 2 2 0
+Yx 10 3 2 3 0
+Yx 10 3 2 4 0
+Yx 10 3 2 5 0
+Yx 10 3 2 6 0
+Yx 10 3 2 7 0
+Yx 10 3 3 1 0
+Yx 10 3 3 2 0
+Yx 10 3 3 3 0
+Yx 10 3 3 4 0
+Yx 10 3 3 5 0
+Yx 10 3 3 6 0
+Yx 10 3 3 7 0
+Yx 10 3 4 1 0
+Yx 10 3 4 2 0
+Yx 10 3 4 3 0
+Yx 10 3 4 4 0
+Yx 10 3 4 5 0
+Yx 10 3 4 6 0
+Yx 10 3 4 7 0
+Yx 10 4 1 2 0
+Yx 10 4 1 3 0
+Yx 10 4 1 4 0
+Yx 10 4 1 5 0
+Yx 10 4 1 6 0
+Yx 10 4 1 7 0
+Yx 10 4 2 1 0
+Yx 10 4 2 2 0
+Yx 10 4 2 3 0
+Yx 10 4 2 4 0
+Yx 10 4 2 5 0
+Yx 10 4 2 6 0
+Yx 10 4 2 7 0
+Yx 10 4 3 1 0
+Yx 10 4 3 2 0
+Yx 10 4 3 3 0
+Yx 10 4 3 4 0
+Yx 10 4 3 5 0
+Yx 10 4 3 6 0
+Yx 10 4 3 7 0
+Yx 10 4 4 1 0
+Yx 10 4 4 2 0
+Yx 10 4 4 3 0
+Yx 10 4 4 4 0
+Yx 10 4 4 5 0
+Yx 10 4 4 6 0
+Yx 10 4 4 7 0
+Yx 11 1 1 1 0
+Yx 11 1 1 2 0
+Yx 11 1 1 3 0
+Yx 11 1 1 4 0
+Yx 11 1 1 5 0
+Yx 11 1 1 6 0
+Yx 11 1 1 7 0
+Yx 11 1 2 1 0
+Yx 11 1 2 2 0
+Yx 11 1 2 3 0
+Yx 11 1 2 4 0
+Yx 11 1 2 5 0
+Yx 11 1 2 6 0
+Yx 11 1 2 7 0
+Yx 11 1 3 1 0
+Yx 11 1 3 2 0
+Yx 11 1 3 3 0
+Yx 11 1 3 4 0
+Yx 11 1 3 5 0
+Yx 11 1 3 6 0
+Yx 11 1 3 7 0
+Yx 11 1 4 1 0
+Yx 11 1 4 2 0
+Yx 11 1 4 3 0
+Yx 11 1 4 4 0
+Yx 11 1 4 5 0
+Yx 11 1 4 6 0
+Yx 11 1 4 7 0
+Yx 11 2 1 1 0
+Yx 11 2 1 2 0
+Yx 11 2 1 3 0
+Yx 11 2 1 4 0
+Yx 11 2 1 5 0
+Yx 11 2 1 6 0
+Yx 11 2 1 7 0
+Yx 11 2 2 1 0
+Yx 11 2 2 2 0
+Yx 11 2 2 3 0
+Yx 11 2 2 4 0
+Yx 11 2 2 5 0
+Yx 11 2 2 6 0
+Yx 11 2 2 7 0
+Yx 11 2 3 1 0
+Yx 11 2 3 2 0
+Yx 11 2 3 3 0
+Yx 11 2 3 4 0
+Yx 11 2 3 5 0
+Yx 11 2 3 6 0
+Yx 11 2 3 7 0
+Yx 11 2 4 1 1
+Yx 11 4 2 1 1
+Yx 11 2 4 2 0
+Yx 11 2 4 3 0
+Yx 11 2 4 4 0
+Yx 11 2 4 5 0
+Yx 11 2 4 6 0
+Yx 11 2 4 7 0
+Yx 11 3 1 1 0
+Yx 11 3 1 2 0
+Yx 11 3 1 3 0
+Yx 11 3 1 4 0
+Yx 11 3 1 5 0
+Yx 11 3 1 6 0
+Yx 11 3 1 7 0
+Yx 11 3 2 1 0
+Yx 11 3 2 2 0
+Yx 11 3 2 3 0
+Yx 11 3 2 4 0
+Yx 11 3 2 5 0
+Yx 11 3 2 6 0
+Yx 11 3 2 7 0
+Yx 11 3 3 1 0
+Yx 11 3 3 2 0
+Yx 11 3 3 3 0
+Yx 11 3 3 4 0
+Yx 11 3 3 5 0
+Yx 11 3 3 6 0
+Yx 11 3 3 7 0
+Yx 11 3 4 1 0
+Yx 11 3 4 2 0
+Yx 11 3 4 3 0
+Yx 11 3 4 4 0
+Yx 11 3 4 5 0
+Yx 11 3 4 6 0
+Yx 11 3 4 7 0
+Yx 11 4 1 1 0
+Yx 11 4 1 2 0
+Yx 11 4 1 3 0
+Yx 11 4 1 4 0
+Yx 11 4 1 5 0
+Yx 11 4 1 6 0
+Yx 11 4 1 7 0
+Yx 11 4 2 2 0
+Yx 11 4 2 3 0
+Yx 11 4 2 4 0
+Yx 11 4 2 5 0
+Yx 11 4 2 6 0
+Yx 11 4 2 7 0
+Yx 11 4 3 1 0
+Yx 11 4 3 2 0
+Yx 11 4 3 3 0
+Yx 11 4 3 4 0
+Yx 11 4 3 5 0
+Yx 11 4 3 6 0
+Yx 11 4 3 7 0
+Yx 11 4 4 1 0
+Yx 11 4 4 2 0
+Yx 11 4 4 3 0
+Yx 11 4 4 4 0
+Yx 11 4 4 5 0
+Yx 11 4 4 6 0
+Yx 11 4 4 7 0
+Yx 12 1 1 1 0
+Yx 12 1 1 2 0
+Yx 12 1 1 3 0
+Yx 12 1 1 4 0
+Yx 12 1 1 5 0
+Yx 12 1 1 6 0
+Yx 12 1 1 7 0
+Yx 12 1 2 1 0
+Yx 12 1 2 2 0
+Yx 12 1 2 3 0
+Yx 12 1 2 4 0
+Yx 12 1 2 5 0
+Yx 12 1 2 6 0
+Yx 12 1 2 7 0
+Yx 12 1 3 1 0
+Yx 12 1 3 2 0
+Yx 12 1 3 3 0
+Yx 12 1 3 4 0
+Yx 12 1 3 5 0
+Yx 12 1 3 6 0
+Yx 12 1 3 7 0
+Yx 12 1 4 1 0
+Yx 12 1 4 2 0
+Yx 12 1 4 3 0
+Yx 12 1 4 4 0
+Yx 12 1 4 5 0
+Yx 12 1 4 6 0
+Yx 12 1 4 7 0
+Yx 12 2 1 1 0
+Yx 12 2 1 2 0
+Yx 12 2 1 3 0
+Yx 12 2 1 4 0
+Yx 12 2 1 5 0
+Yx 12 2 1 6 0
+Yx 12 2 1 7 0
+Yx 12 2 2 1 0
+Yx 12 2 2 2 0
+Yx 12 2 2 3 0
+Yx 12 2 2 4 0
+Yx 12 2 2 5 0
+Yx 12 2 2 6 0
+Yx 12 2 2 7 0
+Yx 12 2 3 1 0
+Yx 12 2 3 2 0
+Yx 12 2 3 3 0
+Yx 12 2 3 4 0
+Yx 12 2 3 5 0
+Yx 12 2 3 6 0
+Yx 12 2 3 7 0
+Yx 12 2 4 1 0
+Yx 12 2 4 2 0
+Yx 12 2 4 3 0
+Yx 12 2 4 4 0
+Yx 12 2 4 5 0
+Yx 12 2 4 6 0
+Yx 12 2 4 7 0
+Yx 12 3 1 1 0
+Yx 12 3 1 2 0
+Yx 12 3 1 3 0
+Yx 12 3 1 4 0
+Yx 12 3 1 5 0
+Yx 12 3 1 6 0
+Yx 12 3 1 7 0
+Yx 12 3 2 1 0
+Yx 12 3 2 2 0
+Yx 12 3 2 3 0
+Yx 12 3 2 4 0
+Yx 12 3 2 5 0
+Yx 12 3 2 6 0
+Yx 12 3 2 7 0
+Yx 12 3 3 1 0
+Yx 12 3 3 2 0
+Yx 12 3 3 3 0
+Yx 12 3 3 4 0
+Yx 12 3 3 5 0
+Yx 12 3 3 6 0
+Yx 12 3 3 7 0
+Yx 12 3 4 1 1
+Yx 12 4 3 1 1
+Yx 12 3 4 2 0
+Yx 12 3 4 3 0
+Yx 12 3 4 4 0
+Yx 12 3 4 5 0
+Yx 12 3 4 6 0
+Yx 12 3 4 7 0
+Yx 12 4 1 1 0
+Yx 12 4 1 2 0
+Yx 12 4 1 3 0
+Yx 12 4 1 4 0
+Yx 12 4 1 5 0
+Yx 12 4 1 6 0
+Yx 12 4 1 7 0
+Yx 12 4 2 1 0
+Yx 12 4 2 2 0
+Yx 12 4 2 3 0
+Yx 12 4 2 4 0
+Yx 12 4 2 5 0
+Yx 12 4 2 6 0
+Yx 12 4 2 7 0
+Yx 12 4 3 2 0
+Yx 12 4 3 3 0
+Yx 12 4 3 4 0
+Yx 12 4 3 5 0
+Yx 12 4 3 6 0
+Yx 12 4 3 7 0
+Yx 12 4 4 1 0
+Yx 12 4 4 2 0
+Yx 12 4 4 3 0
+Yx 12 4 4 4 0
+Yx 12 4 4 5 0
+Yx 12 4 4 6 0
+Yx 12 4 4 7 0
+YxCapCost 1 1 1 1 0
+YxCapCost 1 1 1 2 0
+YxCapCost 1 1 1 3 0
+YxCapCost 1 1 1 4 0
+YxCapCost 1 1 1 5 0
+YxCapCost 1 1 1 6 0
+YxCapCost 1 1 1 7 0
+YxCapCost 1 1 2 1 0
+YxCapCost 1 1 2 2 1
+YxCapCost 1 2 1 2 0
+YxCapCost 1 1 2 3 0
+YxCapCost 1 1 2 4 0
+YxCapCost 1 1 2 5 0
+YxCapCost 1 1 2 6 0
+YxCapCost 1 1 2 7 0
+YxCapCost 1 1 3 1 0
+YxCapCost 1 1 3 2 0
+YxCapCost 1 1 3 3 0
+YxCapCost 1 1 3 4 0
+YxCapCost 1 1 3 5 0
+YxCapCost 1 1 3 6 0
+YxCapCost 1 1 3 7 0
+YxCapCost 1 1 4 1 0
+YxCapCost 1 1 4 2 0
+YxCapCost 1 1 4 3 0
+YxCapCost 1 1 4 4 0
+YxCapCost 1 1 4 5 0
+YxCapCost 1 1 4 6 0
+YxCapCost 1 1 4 7 0
+YxCapCost 1 2 1 1 0
+YxCapCost 1 2 1 3 0
+YxCapCost 1 2 1 4 0
+YxCapCost 1 2 1 5 0
+YxCapCost 1 2 1 6 0
+YxCapCost 1 2 1 7 0
+YxCapCost 1 2 2 1 0
+YxCapCost 1 2 2 2 0
+YxCapCost 1 2 2 3 0
+YxCapCost 1 2 2 4 0
+YxCapCost 1 2 2 5 0
+YxCapCost 1 2 2 6 0
+YxCapCost 1 2 2 7 0
+YxCapCost 1 2 3 1 0
+YxCapCost 1 2 3 2 0
+YxCapCost 1 2 3 3 0
+YxCapCost 1 2 3 4 0
+YxCapCost 1 2 3 5 0
+YxCapCost 1 2 3 6 0
+YxCapCost 1 2 3 7 0
+YxCapCost 1 2 4 1 0
+YxCapCost 1 2 4 2 0
+YxCapCost 1 2 4 3 0
+YxCapCost 1 2 4 4 0
+YxCapCost 1 2 4 5 0
+YxCapCost 1 2 4 6 0
+YxCapCost 1 2 4 7 0
+YxCapCost 1 3 1 1 0
+YxCapCost 1 3 1 2 0
+YxCapCost 1 3 1 3 0
+YxCapCost 1 3 1 4 0
+YxCapCost 1 3 1 5 0
+YxCapCost 1 3 1 6 0
+YxCapCost 1 3 1 7 0
+YxCapCost 1 3 2 1 0
+YxCapCost 1 3 2 2 0
+YxCapCost 1 3 2 3 0
+YxCapCost 1 3 2 4 0
+YxCapCost 1 3 2 5 0
+YxCapCost 1 3 2 6 0
+YxCapCost 1 3 2 7 0
+YxCapCost 1 3 3 1 0
+YxCapCost 1 3 3 2 0
+YxCapCost 1 3 3 3 0
+YxCapCost 1 3 3 4 0
+YxCapCost 1 3 3 5 0
+YxCapCost 1 3 3 6 0
+YxCapCost 1 3 3 7 0
+YxCapCost 1 3 4 1 0
+YxCapCost 1 3 4 2 0
+YxCapCost 1 3 4 3 0
+YxCapCost 1 3 4 4 0
+YxCapCost 1 3 4 5 0
+YxCapCost 1 3 4 6 0
+YxCapCost 1 3 4 7 0
+YxCapCost 1 4 1 1 0
+YxCapCost 1 4 1 2 0
+YxCapCost 1 4 1 3 0
+YxCapCost 1 4 1 4 0
+YxCapCost 1 4 1 5 0
+YxCapCost 1 4 1 6 0
+YxCapCost 1 4 1 7 0
+YxCapCost 1 4 2 1 0
+YxCapCost 1 4 2 2 0
+YxCapCost 1 4 2 3 0
+YxCapCost 1 4 2 4 0
+YxCapCost 1 4 2 5 0
+YxCapCost 1 4 2 6 0
+YxCapCost 1 4 2 7 0
+YxCapCost 1 4 3 1 0
+YxCapCost 1 4 3 2 0
+YxCapCost 1 4 3 3 0
+YxCapCost 1 4 3 4 0
+YxCapCost 1 4 3 5 0
+YxCapCost 1 4 3 6 0
+YxCapCost 1 4 3 7 0
+YxCapCost 1 4 4 1 0
+YxCapCost 1 4 4 2 0
+YxCapCost 1 4 4 3 0
+YxCapCost 1 4 4 4 0
+YxCapCost 1 4 4 5 0
+YxCapCost 1 4 4 6 0
+YxCapCost 1 4 4 7 0
+YxCapCost 2 1 1 1 0
+YxCapCost 2 1 1 2 0
+YxCapCost 2 1 1 3 0
+YxCapCost 2 1 1 4 0
+YxCapCost 2 1 1 5 0
+YxCapCost 2 1 1 6 0
+YxCapCost 2 1 1 7 0
+YxCapCost 2 1 2 1 0
+YxCapCost 2 1 2 2 0
+YxCapCost 2 1 2 3 0
+YxCapCost 2 1 2 4 0
+YxCapCost 2 1 2 5 0
+YxCapCost 2 1 2 6 0
+YxCapCost 2 1 2 7 0
+YxCapCost 2 1 3 1 0
+YxCapCost 2 1 3 2 0
+YxCapCost 2 1 3 3 0
+YxCapCost 2 1 3 4 0
+YxCapCost 2 1 3 5 0
+YxCapCost 2 1 3 6 0
+YxCapCost 2 1 3 7 0
+YxCapCost 2 1 4 1 0
+YxCapCost 2 1 4 2 0
+YxCapCost 2 1 4 3 0
+YxCapCost 2 1 4 4 0
+YxCapCost 2 1 4 5 0
+YxCapCost 2 1 4 6 0
+YxCapCost 2 1 4 7 0
+YxCapCost 2 2 1 1 0
+YxCapCost 2 2 1 2 0
+YxCapCost 2 2 1 3 0
+YxCapCost 2 2 1 4 0
+YxCapCost 2 2 1 5 0
+YxCapCost 2 2 1 6 0
+YxCapCost 2 2 1 7 0
+YxCapCost 2 2 2 1 0
+YxCapCost 2 2 2 2 0
+YxCapCost 2 2 2 3 0
+YxCapCost 2 2 2 4 0
+YxCapCost 2 2 2 5 0
+YxCapCost 2 2 2 6 0
+YxCapCost 2 2 2 7 0
+YxCapCost 2 2 3 1 0
+YxCapCost 2 2 3 2 1
+YxCapCost 2 3 2 2 0
+YxCapCost 2 2 3 3 0
+YxCapCost 2 2 3 4 0
+YxCapCost 2 2 3 5 0
+YxCapCost 2 2 3 6 0
+YxCapCost 2 2 3 7 0
+YxCapCost 2 2 4 1 0
+YxCapCost 2 2 4 2 0
+YxCapCost 2 2 4 3 0
+YxCapCost 2 2 4 4 0
+YxCapCost 2 2 4 5 0
+YxCapCost 2 2 4 6 0
+YxCapCost 2 2 4 7 0
+YxCapCost 2 3 1 1 0
+YxCapCost 2 3 1 2 0
+YxCapCost 2 3 1 3 0
+YxCapCost 2 3 1 4 0
+YxCapCost 2 3 1 5 0
+YxCapCost 2 3 1 6 0
+YxCapCost 2 3 1 7 0
+YxCapCost 2 3 2 1 0
+YxCapCost 2 3 2 3 0
+YxCapCost 2 3 2 4 0
+YxCapCost 2 3 2 5 0
+YxCapCost 2 3 2 6 0
+YxCapCost 2 3 2 7 0
+YxCapCost 2 3 3 1 0
+YxCapCost 2 3 3 2 0
+YxCapCost 2 3 3 3 0
+YxCapCost 2 3 3 4 0
+YxCapCost 2 3 3 5 0
+YxCapCost 2 3 3 6 0
+YxCapCost 2 3 3 7 0
+YxCapCost 2 3 4 1 0
+YxCapCost 2 3 4 2 0
+YxCapCost 2 3 4 3 0
+YxCapCost 2 3 4 4 0
+YxCapCost 2 3 4 5 0
+YxCapCost 2 3 4 6 0
+YxCapCost 2 3 4 7 0
+YxCapCost 2 4 1 1 0
+YxCapCost 2 4 1 2 0
+YxCapCost 2 4 1 3 0
+YxCapCost 2 4 1 4 0
+YxCapCost 2 4 1 5 0
+YxCapCost 2 4 1 6 0
+YxCapCost 2 4 1 7 0
+YxCapCost 2 4 2 1 0
+YxCapCost 2 4 2 2 0
+YxCapCost 2 4 2 3 0
+YxCapCost 2 4 2 4 0
+YxCapCost 2 4 2 5 0
+YxCapCost 2 4 2 6 0
+YxCapCost 2 4 2 7 0
+YxCapCost 2 4 3 1 0
+YxCapCost 2 4 3 2 0
+YxCapCost 2 4 3 3 0
+YxCapCost 2 4 3 4 0
+YxCapCost 2 4 3 5 0
+YxCapCost 2 4 3 6 0
+YxCapCost 2 4 3 7 0
+YxCapCost 2 4 4 1 0
+YxCapCost 2 4 4 2 0
+YxCapCost 2 4 4 3 0
+YxCapCost 2 4 4 4 0
+YxCapCost 2 4 4 5 0
+YxCapCost 2 4 4 6 0
+YxCapCost 2 4 4 7 0
+YxCapCost 3 1 1 1 0
+YxCapCost 3 1 1 2 0
+YxCapCost 3 1 1 3 0
+YxCapCost 3 1 1 4 0
+YxCapCost 3 1 1 5 0
+YxCapCost 3 1 1 6 0
+YxCapCost 3 1 1 7 0
+YxCapCost 3 1 2 1 0
+YxCapCost 3 1 2 2 0
+YxCapCost 3 1 2 3 0
+YxCapCost 3 1 2 4 0
+YxCapCost 3 1 2 5 0
+YxCapCost 3 1 2 6 0
+YxCapCost 3 1 2 7 0
+YxCapCost 3 1 3 1 0
+YxCapCost 3 1 3 3 0
+YxCapCost 3 1 3 4 0
+YxCapCost 3 1 3 5 0
+YxCapCost 3 1 3 6 0
+YxCapCost 3 1 3 7 0
+YxCapCost 3 1 4 1 0
+YxCapCost 3 1 4 2 0
+YxCapCost 3 1 4 3 0
+YxCapCost 3 1 4 4 0
+YxCapCost 3 1 4 5 0
+YxCapCost 3 1 4 6 0
+YxCapCost 3 1 4 7 0
+YxCapCost 3 2 1 1 0
+YxCapCost 3 2 1 2 0
+YxCapCost 3 2 1 3 0
+YxCapCost 3 2 1 4 0
+YxCapCost 3 2 1 5 0
+YxCapCost 3 2 1 6 0
+YxCapCost 3 2 1 7 0
+YxCapCost 3 2 2 1 0
+YxCapCost 3 2 2 2 0
+YxCapCost 3 2 2 3 0
+YxCapCost 3 2 2 4 0
+YxCapCost 3 2 2 5 0
+YxCapCost 3 2 2 6 0
+YxCapCost 3 2 2 7 0
+YxCapCost 3 2 3 1 0
+YxCapCost 3 2 3 2 0
+YxCapCost 3 2 3 3 0
+YxCapCost 3 2 3 4 0
+YxCapCost 3 2 3 5 0
+YxCapCost 3 2 3 6 0
+YxCapCost 3 2 3 7 0
+YxCapCost 3 2 4 1 0
+YxCapCost 3 2 4 2 0
+YxCapCost 3 2 4 3 0
+YxCapCost 3 2 4 4 0
+YxCapCost 3 2 4 5 0
+YxCapCost 3 2 4 6 0
+YxCapCost 3 2 4 7 0
+YxCapCost 3 3 1 1 0
+YxCapCost 3 3 1 2 1
+YxCapCost 3 1 3 2 0
+YxCapCost 3 3 1 3 0
+YxCapCost 3 3 1 4 0
+YxCapCost 3 3 1 5 0
+YxCapCost 3 3 1 6 0
+YxCapCost 3 3 1 7 0
+YxCapCost 3 3 2 1 0
+YxCapCost 3 3 2 2 0
+YxCapCost 3 3 2 3 0
+YxCapCost 3 3 2 4 0
+YxCapCost 3 3 2 5 0
+YxCapCost 3 3 2 6 0
+YxCapCost 3 3 2 7 0
+YxCapCost 3 3 3 1 0
+YxCapCost 3 3 3 2 0
+YxCapCost 3 3 3 3 0
+YxCapCost 3 3 3 4 0
+YxCapCost 3 3 3 5 0
+YxCapCost 3 3 3 6 0
+YxCapCost 3 3 3 7 0
+YxCapCost 3 3 4 1 0
+YxCapCost 3 3 4 2 0
+YxCapCost 3 3 4 3 0
+YxCapCost 3 3 4 4 0
+YxCapCost 3 3 4 5 0
+YxCapCost 3 3 4 6 0
+YxCapCost 3 3 4 7 0
+YxCapCost 3 4 1 1 0
+YxCapCost 3 4 1 2 0
+YxCapCost 3 4 1 3 0
+YxCapCost 3 4 1 4 0
+YxCapCost 3 4 1 5 0
+YxCapCost 3 4 1 6 0
+YxCapCost 3 4 1 7 0
+YxCapCost 3 4 2 1 0
+YxCapCost 3 4 2 2 0
+YxCapCost 3 4 2 3 0
+YxCapCost 3 4 2 4 0
+YxCapCost 3 4 2 5 0
+YxCapCost 3 4 2 6 0
+YxCapCost 3 4 2 7 0
+YxCapCost 3 4 3 1 0
+YxCapCost 3 4 3 2 0
+YxCapCost 3 4 3 3 0
+YxCapCost 3 4 3 4 0
+YxCapCost 3 4 3 5 0
+YxCapCost 3 4 3 6 0
+YxCapCost 3 4 3 7 0
+YxCapCost 3 4 4 1 0
+YxCapCost 3 4 4 2 0
+YxCapCost 3 4 4 3 0
+YxCapCost 3 4 4 4 0
+YxCapCost 3 4 4 5 0
+YxCapCost 3 4 4 6 0
+YxCapCost 3 4 4 7 0
+YxCapCost 4 1 1 1 0
+YxCapCost 4 1 1 2 0
+YxCapCost 4 1 1 3 0
+YxCapCost 4 1 1 4 0
+YxCapCost 4 1 1 5 0
+YxCapCost 4 1 1 6 0
+YxCapCost 4 1 1 7 0
+YxCapCost 4 1 2 1 1
+YxCapCost 4 2 1 1 0
+YxCapCost 4 1 2 2 0
+YxCapCost 4 1 2 3 0
+YxCapCost 4 1 2 4 0
+YxCapCost 4 1 2 5 0
+YxCapCost 4 1 2 6 0
+YxCapCost 4 1 2 7 0
+YxCapCost 4 1 3 1 0
+YxCapCost 4 1 3 2 0
+YxCapCost 4 1 3 3 0
+YxCapCost 4 1 3 4 0
+YxCapCost 4 1 3 5 0
+YxCapCost 4 1 3 6 0
+YxCapCost 4 1 3 7 0
+YxCapCost 4 1 4 1 0
+YxCapCost 4 1 4 2 0
+YxCapCost 4 1 4 3 0
+YxCapCost 4 1 4 4 0
+YxCapCost 4 1 4 5 0
+YxCapCost 4 1 4 6 0
+YxCapCost 4 1 4 7 0
+YxCapCost 4 2 1 2 0
+YxCapCost 4 2 1 3 0
+YxCapCost 4 2 1 4 0
+YxCapCost 4 2 1 5 0
+YxCapCost 4 2 1 6 0
+YxCapCost 4 2 1 7 0
+YxCapCost 4 2 2 1 0
+YxCapCost 4 2 2 2 0
+YxCapCost 4 2 2 3 0
+YxCapCost 4 2 2 4 0
+YxCapCost 4 2 2 5 0
+YxCapCost 4 2 2 6 0
+YxCapCost 4 2 2 7 0
+YxCapCost 4 2 3 1 0
+YxCapCost 4 2 3 2 0
+YxCapCost 4 2 3 3 0
+YxCapCost 4 2 3 4 0
+YxCapCost 4 2 3 5 0
+YxCapCost 4 2 3 6 0
+YxCapCost 4 2 3 7 0
+YxCapCost 4 2 4 1 0
+YxCapCost 4 2 4 2 0
+YxCapCost 4 2 4 3 0
+YxCapCost 4 2 4 4 0
+YxCapCost 4 2 4 5 0
+YxCapCost 4 2 4 6 0
+YxCapCost 4 2 4 7 0
+YxCapCost 4 3 1 1 0
+YxCapCost 4 3 1 2 0
+YxCapCost 4 3 1 3 0
+YxCapCost 4 3 1 4 0
+YxCapCost 4 3 1 5 0
+YxCapCost 4 3 1 6 0
+YxCapCost 4 3 1 7 0
+YxCapCost 4 3 2 1 0
+YxCapCost 4 3 2 2 0
+YxCapCost 4 3 2 3 0
+YxCapCost 4 3 2 4 0
+YxCapCost 4 3 2 5 0
+YxCapCost 4 3 2 6 0
+YxCapCost 4 3 2 7 0
+YxCapCost 4 3 3 1 0
+YxCapCost 4 3 3 2 0
+YxCapCost 4 3 3 3 0
+YxCapCost 4 3 3 4 0
+YxCapCost 4 3 3 5 0
+YxCapCost 4 3 3 6 0
+YxCapCost 4 3 3 7 0
+YxCapCost 4 3 4 1 0
+YxCapCost 4 3 4 2 0
+YxCapCost 4 3 4 3 0
+YxCapCost 4 3 4 4 0
+YxCapCost 4 3 4 5 0
+YxCapCost 4 3 4 6 0
+YxCapCost 4 3 4 7 0
+YxCapCost 4 4 1 1 0
+YxCapCost 4 4 1 2 0
+YxCapCost 4 4 1 3 0
+YxCapCost 4 4 1 4 0
+YxCapCost 4 4 1 5 0
+YxCapCost 4 4 1 6 0
+YxCapCost 4 4 1 7 0
+YxCapCost 4 4 2 1 0
+YxCapCost 4 4 2 2 0
+YxCapCost 4 4 2 3 0
+YxCapCost 4 4 2 4 0
+YxCapCost 4 4 2 5 0
+YxCapCost 4 4 2 6 0
+YxCapCost 4 4 2 7 0
+YxCapCost 4 4 3 1 0
+YxCapCost 4 4 3 2 0
+YxCapCost 4 4 3 3 0
+YxCapCost 4 4 3 4 0
+YxCapCost 4 4 3 5 0
+YxCapCost 4 4 3 6 0
+YxCapCost 4 4 3 7 0
+YxCapCost 4 4 4 1 0
+YxCapCost 4 4 4 2 0
+YxCapCost 4 4 4 3 0
+YxCapCost 4 4 4 4 0
+YxCapCost 4 4 4 5 0
+YxCapCost 4 4 4 6 0
+YxCapCost 4 4 4 7 0
+YxCapCost 5 1 1 1 0
+YxCapCost 5 1 1 2 0
+YxCapCost 5 1 1 3 0
+YxCapCost 5 1 1 4 0
+YxCapCost 5 1 1 5 0
+YxCapCost 5 1 1 6 0
+YxCapCost 5 1 1 7 0
+YxCapCost 5 1 2 1 0
+YxCapCost 5 1 2 2 0
+YxCapCost 5 1 2 3 0
+YxCapCost 5 1 2 4 0
+YxCapCost 5 1 2 5 0
+YxCapCost 5 1 2 6 0
+YxCapCost 5 1 2 7 0
+YxCapCost 5 1 3 1 0
+YxCapCost 5 1 3 2 0
+YxCapCost 5 1 3 3 0
+YxCapCost 5 1 3 4 0
+YxCapCost 5 1 3 5 0
+YxCapCost 5 1 3 6 0
+YxCapCost 5 1 3 7 0
+YxCapCost 5 1 4 1 0
+YxCapCost 5 1 4 2 0
+YxCapCost 5 1 4 3 0
+YxCapCost 5 1 4 4 0
+YxCapCost 5 1 4 5 0
+YxCapCost 5 1 4 6 0
+YxCapCost 5 1 4 7 0
+YxCapCost 5 2 1 1 0
+YxCapCost 5 2 1 2 0
+YxCapCost 5 2 1 3 0
+YxCapCost 5 2 1 4 0
+YxCapCost 5 2 1 5 0
+YxCapCost 5 2 1 6 0
+YxCapCost 5 2 1 7 0
+YxCapCost 5 2 2 1 0
+YxCapCost 5 2 2 2 0
+YxCapCost 5 2 2 3 0
+YxCapCost 5 2 2 4 0
+YxCapCost 5 2 2 5 0
+YxCapCost 5 2 2 6 0
+YxCapCost 5 2 2 7 0
+YxCapCost 5 2 3 1 1
+YxCapCost 5 3 2 1 0
+YxCapCost 5 2 3 2 0
+YxCapCost 5 2 3 3 0
+YxCapCost 5 2 3 4 0
+YxCapCost 5 2 3 5 0
+YxCapCost 5 2 3 6 0
+YxCapCost 5 2 3 7 0
+YxCapCost 5 2 4 1 0
+YxCapCost 5 2 4 2 0
+YxCapCost 5 2 4 3 0
+YxCapCost 5 2 4 4 0
+YxCapCost 5 2 4 5 0
+YxCapCost 5 2 4 6 0
+YxCapCost 5 2 4 7 0
+YxCapCost 5 3 1 1 0
+YxCapCost 5 3 1 2 0
+YxCapCost 5 3 1 3 0
+YxCapCost 5 3 1 4 0
+YxCapCost 5 3 1 5 0
+YxCapCost 5 3 1 6 0
+YxCapCost 5 3 1 7 0
+YxCapCost 5 3 2 2 0
+YxCapCost 5 3 2 3 0
+YxCapCost 5 3 2 4 0
+YxCapCost 5 3 2 5 0
+YxCapCost 5 3 2 6 0
+YxCapCost 5 3 2 7 0
+YxCapCost 5 3 3 1 0
+YxCapCost 5 3 3 2 0
+YxCapCost 5 3 3 3 0
+YxCapCost 5 3 3 4 0
+YxCapCost 5 3 3 5 0
+YxCapCost 5 3 3 6 0
+YxCapCost 5 3 3 7 0
+YxCapCost 5 3 4 1 0
+YxCapCost 5 3 4 2 0
+YxCapCost 5 3 4 3 0
+YxCapCost 5 3 4 4 0
+YxCapCost 5 3 4 5 0
+YxCapCost 5 3 4 6 0
+YxCapCost 5 3 4 7 0
+YxCapCost 5 4 1 1 0
+YxCapCost 5 4 1 2 0
+YxCapCost 5 4 1 3 0
+YxCapCost 5 4 1 4 0
+YxCapCost 5 4 1 5 0
+YxCapCost 5 4 1 6 0
+YxCapCost 5 4 1 7 0
+YxCapCost 5 4 2 1 0
+YxCapCost 5 4 2 2 0
+YxCapCost 5 4 2 3 0
+YxCapCost 5 4 2 4 0
+YxCapCost 5 4 2 5 0
+YxCapCost 5 4 2 6 0
+YxCapCost 5 4 2 7 0
+YxCapCost 5 4 3 1 0
+YxCapCost 5 4 3 2 0
+YxCapCost 5 4 3 3 0
+YxCapCost 5 4 3 4 0
+YxCapCost 5 4 3 5 0
+YxCapCost 5 4 3 6 0
+YxCapCost 5 4 3 7 0
+YxCapCost 5 4 4 1 0
+YxCapCost 5 4 4 2 0
+YxCapCost 5 4 4 3 0
+YxCapCost 5 4 4 4 0
+YxCapCost 5 4 4 5 0
+YxCapCost 5 4 4 6 0
+YxCapCost 5 4 4 7 0
+YxCapCost 6 1 1 1 0
+YxCapCost 6 1 1 2 0
+YxCapCost 6 1 1 3 0
+YxCapCost 6 1 1 4 0
+YxCapCost 6 1 1 5 0
+YxCapCost 6 1 1 6 0
+YxCapCost 6 1 1 7 0
+YxCapCost 6 1 2 1 0
+YxCapCost 6 1 2 2 0
+YxCapCost 6 1 2 3 0
+YxCapCost 6 1 2 4 0
+YxCapCost 6 1 2 5 0
+YxCapCost 6 1 2 6 0
+YxCapCost 6 1 2 7 0
+YxCapCost 6 1 3 2 0
+YxCapCost 6 1 3 3 0
+YxCapCost 6 1 3 4 0
+YxCapCost 6 1 3 5 0
+YxCapCost 6 1 3 6 0
+YxCapCost 6 1 3 7 0
+YxCapCost 6 1 4 1 0
+YxCapCost 6 1 4 2 0
+YxCapCost 6 1 4 3 0
+YxCapCost 6 1 4 4 0
+YxCapCost 6 1 4 5 0
+YxCapCost 6 1 4 6 0
+YxCapCost 6 1 4 7 0
+YxCapCost 6 2 1 1 0
+YxCapCost 6 2 1 2 0
+YxCapCost 6 2 1 3 0
+YxCapCost 6 2 1 4 0
+YxCapCost 6 2 1 5 0
+YxCapCost 6 2 1 6 0
+YxCapCost 6 2 1 7 0
+YxCapCost 6 2 2 1 0
+YxCapCost 6 2 2 2 0
+YxCapCost 6 2 2 3 0
+YxCapCost 6 2 2 4 0
+YxCapCost 6 2 2 5 0
+YxCapCost 6 2 2 6 0
+YxCapCost 6 2 2 7 0
+YxCapCost 6 2 3 1 0
+YxCapCost 6 2 3 2 0
+YxCapCost 6 2 3 3 0
+YxCapCost 6 2 3 4 0
+YxCapCost 6 2 3 5 0
+YxCapCost 6 2 3 6 0
+YxCapCost 6 2 3 7 0
+YxCapCost 6 2 4 1 0
+YxCapCost 6 2 4 2 0
+YxCapCost 6 2 4 3 0
+YxCapCost 6 2 4 4 0
+YxCapCost 6 2 4 5 0
+YxCapCost 6 2 4 6 0
+YxCapCost 6 2 4 7 0
+YxCapCost 6 3 1 1 1
+YxCapCost 6 1 3 1 0
+YxCapCost 6 3 1 2 0
+YxCapCost 6 3 1 3 0
+YxCapCost 6 3 1 4 0
+YxCapCost 6 3 1 5 0
+YxCapCost 6 3 1 6 0
+YxCapCost 6 3 1 7 0
+YxCapCost 6 3 2 1 0
+YxCapCost 6 3 2 2 0
+YxCapCost 6 3 2 3 0
+YxCapCost 6 3 2 4 0
+YxCapCost 6 3 2 5 0
+YxCapCost 6 3 2 6 0
+YxCapCost 6 3 2 7 0
+YxCapCost 6 3 3 1 0
+YxCapCost 6 3 3 2 0
+YxCapCost 6 3 3 3 0
+YxCapCost 6 3 3 4 0
+YxCapCost 6 3 3 5 0
+YxCapCost 6 3 3 6 0
+YxCapCost 6 3 3 7 0
+YxCapCost 6 3 4 1 0
+YxCapCost 6 3 4 2 0
+YxCapCost 6 3 4 3 0
+YxCapCost 6 3 4 4 0
+YxCapCost 6 3 4 5 0
+YxCapCost 6 3 4 6 0
+YxCapCost 6 3 4 7 0
+YxCapCost 6 4 1 1 0
+YxCapCost 6 4 1 2 0
+YxCapCost 6 4 1 3 0
+YxCapCost 6 4 1 4 0
+YxCapCost 6 4 1 5 0
+YxCapCost 6 4 1 6 0
+YxCapCost 6 4 1 7 0
+YxCapCost 6 4 2 1 0
+YxCapCost 6 4 2 2 0
+YxCapCost 6 4 2 3 0
+YxCapCost 6 4 2 4 0
+YxCapCost 6 4 2 5 0
+YxCapCost 6 4 2 6 0
+YxCapCost 6 4 2 7 0
+YxCapCost 6 4 3 1 0
+YxCapCost 6 4 3 2 0
+YxCapCost 6 4 3 3 0
+YxCapCost 6 4 3 4 0
+YxCapCost 6 4 3 5 0
+YxCapCost 6 4 3 6 0
+YxCapCost 6 4 3 7 0
+YxCapCost 6 4 4 1 0
+YxCapCost 6 4 4 2 0
+YxCapCost 6 4 4 3 0
+YxCapCost 6 4 4 4 0
+YxCapCost 6 4 4 5 0
+YxCapCost 6 4 4 6 0
+YxCapCost 6 4 4 7 0
+YxCapCost 7 1 1 1 0
+YxCapCost 7 1 1 2 0
+YxCapCost 7 1 1 3 0
+YxCapCost 7 1 1 4 0
+YxCapCost 7 1 1 5 0
+YxCapCost 7 1 1 6 0
+YxCapCost 7 1 1 7 0
+YxCapCost 7 1 2 1 0
+YxCapCost 7 1 2 2 0
+YxCapCost 7 1 2 3 0
+YxCapCost 7 1 2 4 0
+YxCapCost 7 1 2 5 0
+YxCapCost 7 1 2 6 0
+YxCapCost 7 1 2 7 0
+YxCapCost 7 1 3 1 0
+YxCapCost 7 1 3 2 0
+YxCapCost 7 1 3 3 0
+YxCapCost 7 1 3 4 0
+YxCapCost 7 1 3 5 0
+YxCapCost 7 1 3 6 0
+YxCapCost 7 1 3 7 0
+YxCapCost 7 1 4 1 0
+YxCapCost 7 1 4 2 1
+YxCapCost 7 4 1 2 0
+YxCapCost 7 1 4 3 0
+YxCapCost 7 1 4 4 0
+YxCapCost 7 1 4 5 0
+YxCapCost 7 1 4 6 0
+YxCapCost 7 1 4 7 0
+YxCapCost 7 2 1 1 0
+YxCapCost 7 2 1 2 0
+YxCapCost 7 2 1 3 0
+YxCapCost 7 2 1 4 0
+YxCapCost 7 2 1 5 0
+YxCapCost 7 2 1 6 0
+YxCapCost 7 2 1 7 0
+YxCapCost 7 2 2 1 0
+YxCapCost 7 2 2 2 0
+YxCapCost 7 2 2 3 0
+YxCapCost 7 2 2 4 0
+YxCapCost 7 2 2 5 0
+YxCapCost 7 2 2 6 0
+YxCapCost 7 2 2 7 0
+YxCapCost 7 2 3 1 0
+YxCapCost 7 2 3 2 0
+YxCapCost 7 2 3 3 0
+YxCapCost 7 2 3 4 0
+YxCapCost 7 2 3 5 0
+YxCapCost 7 2 3 6 0
+YxCapCost 7 2 3 7 0
+YxCapCost 7 2 4 1 0
+YxCapCost 7 2 4 2 0
+YxCapCost 7 2 4 3 0
+YxCapCost 7 2 4 4 0
+YxCapCost 7 2 4 5 0
+YxCapCost 7 2 4 6 0
+YxCapCost 7 2 4 7 0
+YxCapCost 7 3 1 1 0
+YxCapCost 7 3 1 2 0
+YxCapCost 7 3 1 3 0
+YxCapCost 7 3 1 4 0
+YxCapCost 7 3 1 5 0
+YxCapCost 7 3 1 6 0
+YxCapCost 7 3 1 7 0
+YxCapCost 7 3 2 1 0
+YxCapCost 7 3 2 2 0
+YxCapCost 7 3 2 3 0
+YxCapCost 7 3 2 4 0
+YxCapCost 7 3 2 5 0
+YxCapCost 7 3 2 6 0
+YxCapCost 7 3 2 7 0
+YxCapCost 7 3 3 1 0
+YxCapCost 7 3 3 2 0
+YxCapCost 7 3 3 3 0
+YxCapCost 7 3 3 4 0
+YxCapCost 7 3 3 5 0
+YxCapCost 7 3 3 6 0
+YxCapCost 7 3 3 7 0
+YxCapCost 7 3 4 1 0
+YxCapCost 7 3 4 2 0
+YxCapCost 7 3 4 3 0
+YxCapCost 7 3 4 4 0
+YxCapCost 7 3 4 5 0
+YxCapCost 7 3 4 6 0
+YxCapCost 7 3 4 7 0
+YxCapCost 7 4 1 1 0
+YxCapCost 7 4 1 3 0
+YxCapCost 7 4 1 4 0
+YxCapCost 7 4 1 5 0
+YxCapCost 7 4 1 6 0
+YxCapCost 7 4 1 7 0
+YxCapCost 7 4 2 1 0
+YxCapCost 7 4 2 2 0
+YxCapCost 7 4 2 3 0
+YxCapCost 7 4 2 4 0
+YxCapCost 7 4 2 5 0
+YxCapCost 7 4 2 6 0
+YxCapCost 7 4 2 7 0
+YxCapCost 7 4 3 1 0
+YxCapCost 7 4 3 2 0
+YxCapCost 7 4 3 3 0
+YxCapCost 7 4 3 4 0
+YxCapCost 7 4 3 5 0
+YxCapCost 7 4 3 6 0
+YxCapCost 7 4 3 7 0
+YxCapCost 7 4 4 1 0
+YxCapCost 7 4 4 2 0
+YxCapCost 7 4 4 3 0
+YxCapCost 7 4 4 4 0
+YxCapCost 7 4 4 5 0
+YxCapCost 7 4 4 6 0
+YxCapCost 7 4 4 7 0
+YxCapCost 8 1 1 1 0
+YxCapCost 8 1 1 2 0
+YxCapCost 8 1 1 3 0
+YxCapCost 8 1 1 4 0
+YxCapCost 8 1 1 5 0
+YxCapCost 8 1 1 6 0
+YxCapCost 8 1 1 7 0
+YxCapCost 8 1 2 1 0
+YxCapCost 8 1 2 2 0
+YxCapCost 8 1 2 3 0
+YxCapCost 8 1 2 4 0
+YxCapCost 8 1 2 5 0
+YxCapCost 8 1 2 6 0
+YxCapCost 8 1 2 7 0
+YxCapCost 8 1 3 1 0
+YxCapCost 8 1 3 2 0
+YxCapCost 8 1 3 3 0
+YxCapCost 8 1 3 4 0
+YxCapCost 8 1 3 5 0
+YxCapCost 8 1 3 6 0
+YxCapCost 8 1 3 7 0
+YxCapCost 8 1 4 1 0
+YxCapCost 8 1 4 2 0
+YxCapCost 8 1 4 3 0
+YxCapCost 8 1 4 4 0
+YxCapCost 8 1 4 5 0
+YxCapCost 8 1 4 6 0
+YxCapCost 8 1 4 7 0
+YxCapCost 8 2 1 1 0
+YxCapCost 8 2 1 2 0
+YxCapCost 8 2 1 3 0
+YxCapCost 8 2 1 4 0
+YxCapCost 8 2 1 5 0
+YxCapCost 8 2 1 6 0
+YxCapCost 8 2 1 7 0
+YxCapCost 8 2 2 1 0
+YxCapCost 8 2 2 2 0
+YxCapCost 8 2 2 3 0
+YxCapCost 8 2 2 4 0
+YxCapCost 8 2 2 5 0
+YxCapCost 8 2 2 6 0
+YxCapCost 8 2 2 7 0
+YxCapCost 8 2 3 1 0
+YxCapCost 8 2 3 2 0
+YxCapCost 8 2 3 3 0
+YxCapCost 8 2 3 4 0
+YxCapCost 8 2 3 5 0
+YxCapCost 8 2 3 6 0
+YxCapCost 8 2 3 7 0
+YxCapCost 8 2 4 1 0
+YxCapCost 8 2 4 2 1
+YxCapCost 8 4 2 2 0
+YxCapCost 8 2 4 3 0
+YxCapCost 8 2 4 4 0
+YxCapCost 8 2 4 5 0
+YxCapCost 8 2 4 6 0
+YxCapCost 8 2 4 7 0
+YxCapCost 8 3 1 1 0
+YxCapCost 8 3 1 2 0
+YxCapCost 8 3 1 3 0
+YxCapCost 8 3 1 4 0
+YxCapCost 8 3 1 5 0
+YxCapCost 8 3 1 6 0
+YxCapCost 8 3 1 7 0
+YxCapCost 8 3 2 1 0
+YxCapCost 8 3 2 2 0
+YxCapCost 8 3 2 3 0
+YxCapCost 8 3 2 4 0
+YxCapCost 8 3 2 5 0
+YxCapCost 8 3 2 6 0
+YxCapCost 8 3 2 7 0
+YxCapCost 8 3 3 1 0
+YxCapCost 8 3 3 2 0
+YxCapCost 8 3 3 3 0
+YxCapCost 8 3 3 4 0
+YxCapCost 8 3 3 5 0
+YxCapCost 8 3 3 6 0
+YxCapCost 8 3 3 7 0
+YxCapCost 8 3 4 1 0
+YxCapCost 8 3 4 2 0
+YxCapCost 8 3 4 3 0
+YxCapCost 8 3 4 4 0
+YxCapCost 8 3 4 5 0
+YxCapCost 8 3 4 6 0
+YxCapCost 8 3 4 7 0
+YxCapCost 8 4 1 1 0
+YxCapCost 8 4 1 2 0
+YxCapCost 8 4 1 3 0
+YxCapCost 8 4 1 4 0
+YxCapCost 8 4 1 5 0
+YxCapCost 8 4 1 6 0
+YxCapCost 8 4 1 7 0
+YxCapCost 8 4 2 1 0
+YxCapCost 8 4 2 3 0
+YxCapCost 8 4 2 4 0
+YxCapCost 8 4 2 5 0
+YxCapCost 8 4 2 6 0
+YxCapCost 8 4 2 7 0
+YxCapCost 8 4 3 1 0
+YxCapCost 8 4 3 2 0
+YxCapCost 8 4 3 3 0
+YxCapCost 8 4 3 4 0
+YxCapCost 8 4 3 5 0
+YxCapCost 8 4 3 6 0
+YxCapCost 8 4 3 7 0
+YxCapCost 8 4 4 1 0
+YxCapCost 8 4 4 2 0
+YxCapCost 8 4 4 3 0
+YxCapCost 8 4 4 4 0
+YxCapCost 8 4 4 5 0
+YxCapCost 8 4 4 6 0
+YxCapCost 8 4 4 7 0
+YxCapCost 9 1 1 1 0
+YxCapCost 9 1 1 2 0
+YxCapCost 9 1 1 3 0
+YxCapCost 9 1 1 4 0
+YxCapCost 9 1 1 5 0
+YxCapCost 9 1 1 6 0
+YxCapCost 9 1 1 7 0
+YxCapCost 9 1 2 1 0
+YxCapCost 9 1 2 2 0
+YxCapCost 9 1 2 3 0
+YxCapCost 9 1 2 4 0
+YxCapCost 9 1 2 5 0
+YxCapCost 9 1 2 6 0
+YxCapCost 9 1 2 7 0
+YxCapCost 9 1 3 1 0
+YxCapCost 9 1 3 2 0
+YxCapCost 9 1 3 3 0
+YxCapCost 9 1 3 4 0
+YxCapCost 9 1 3 5 0
+YxCapCost 9 1 3 6 0
+YxCapCost 9 1 3 7 0
+YxCapCost 9 1 4 1 0
+YxCapCost 9 1 4 2 0
+YxCapCost 9 1 4 3 0
+YxCapCost 9 1 4 4 0
+YxCapCost 9 1 4 5 0
+YxCapCost 9 1 4 6 0
+YxCapCost 9 1 4 7 0
+YxCapCost 9 2 1 1 0
+YxCapCost 9 2 1 2 0
+YxCapCost 9 2 1 3 0
+YxCapCost 9 2 1 4 0
+YxCapCost 9 2 1 5 0
+YxCapCost 9 2 1 6 0
+YxCapCost 9 2 1 7 0
+YxCapCost 9 2 2 1 0
+YxCapCost 9 2 2 2 0
+YxCapCost 9 2 2 3 0
+YxCapCost 9 2 2 4 0
+YxCapCost 9 2 2 5 0
+YxCapCost 9 2 2 6 0
+YxCapCost 9 2 2 7 0
+YxCapCost 9 2 3 1 0
+YxCapCost 9 2 3 2 0
+YxCapCost 9 2 3 3 0
+YxCapCost 9 2 3 4 0
+YxCapCost 9 2 3 5 0
+YxCapCost 9 2 3 6 0
+YxCapCost 9 2 3 7 0
+YxCapCost 9 2 4 1 0
+YxCapCost 9 2 4 2 0
+YxCapCost 9 2 4 3 0
+YxCapCost 9 2 4 4 0
+YxCapCost 9 2 4 5 0
+YxCapCost 9 2 4 6 0
+YxCapCost 9 2 4 7 0
+YxCapCost 9 3 1 1 0
+YxCapCost 9 3 1 2 0
+YxCapCost 9 3 1 3 0
+YxCapCost 9 3 1 4 0
+YxCapCost 9 3 1 5 0
+YxCapCost 9 3 1 6 0
+YxCapCost 9 3 1 7 0
+YxCapCost 9 3 2 1 0
+YxCapCost 9 3 2 2 0
+YxCapCost 9 3 2 3 0
+YxCapCost 9 3 2 4 0
+YxCapCost 9 3 2 5 0
+YxCapCost 9 3 2 6 0
+YxCapCost 9 3 2 7 0
+YxCapCost 9 3 3 1 0
+YxCapCost 9 3 3 2 0
+YxCapCost 9 3 3 3 0
+YxCapCost 9 3 3 4 0
+YxCapCost 9 3 3 5 0
+YxCapCost 9 3 3 6 0
+YxCapCost 9 3 3 7 0
+YxCapCost 9 3 4 1 0
+YxCapCost 9 3 4 2 1
+YxCapCost 9 4 3 2 0
+YxCapCost 9 3 4 3 0
+YxCapCost 9 3 4 4 0
+YxCapCost 9 3 4 5 0
+YxCapCost 9 3 4 6 0
+YxCapCost 9 3 4 7 0
+YxCapCost 9 4 1 1 0
+YxCapCost 9 4 1 2 0
+YxCapCost 9 4 1 3 0
+YxCapCost 9 4 1 4 0
+YxCapCost 9 4 1 5 0
+YxCapCost 9 4 1 6 0
+YxCapCost 9 4 1 7 0
+YxCapCost 9 4 2 1 0
+YxCapCost 9 4 2 2 0
+YxCapCost 9 4 2 3 0
+YxCapCost 9 4 2 4 0
+YxCapCost 9 4 2 5 0
+YxCapCost 9 4 2 6 0
+YxCapCost 9 4 2 7 0
+YxCapCost 9 4 3 1 0
+YxCapCost 9 4 3 3 0
+YxCapCost 9 4 3 4 0
+YxCapCost 9 4 3 5 0
+YxCapCost 9 4 3 6 0
+YxCapCost 9 4 3 7 0
+YxCapCost 9 4 4 1 0
+YxCapCost 9 4 4 2 0
+YxCapCost 9 4 4 3 0
+YxCapCost 9 4 4 4 0
+YxCapCost 9 4 4 5 0
+YxCapCost 9 4 4 6 0
+YxCapCost 9 4 4 7 0
+YxCapCost 10 1 1 1 0
+YxCapCost 10 1 1 2 0
+YxCapCost 10 1 1 3 0
+YxCapCost 10 1 1 4 0
+YxCapCost 10 1 1 5 0
+YxCapCost 10 1 1 6 0
+YxCapCost 10 1 1 7 0
+YxCapCost 10 1 2 1 0
+YxCapCost 10 1 2 2 0
+YxCapCost 10 1 2 3 0
+YxCapCost 10 1 2 4 0
+YxCapCost 10 1 2 5 0
+YxCapCost 10 1 2 6 0
+YxCapCost 10 1 2 7 0
+YxCapCost 10 1 3 1 0
+YxCapCost 10 1 3 2 0
+YxCapCost 10 1 3 3 0
+YxCapCost 10 1 3 4 0
+YxCapCost 10 1 3 5 0
+YxCapCost 10 1 3 6 0
+YxCapCost 10 1 3 7 0
+YxCapCost 10 1 4 1 1
+YxCapCost 10 4 1 1 0
+YxCapCost 10 1 4 2 0
+YxCapCost 10 1 4 3 0
+YxCapCost 10 1 4 4 0
+YxCapCost 10 1 4 5 0
+YxCapCost 10 1 4 6 0
+YxCapCost 10 1 4 7 0
+YxCapCost 10 2 1 1 0
+YxCapCost 10 2 1 2 0
+YxCapCost 10 2 1 3 0
+YxCapCost 10 2 1 4 0
+YxCapCost 10 2 1 5 0
+YxCapCost 10 2 1 6 0
+YxCapCost 10 2 1 7 0
+YxCapCost 10 2 2 1 0
+YxCapCost 10 2 2 2 0
+YxCapCost 10 2 2 3 0
+YxCapCost 10 2 2 4 0
+YxCapCost 10 2 2 5 0
+YxCapCost 10 2 2 6 0
+YxCapCost 10 2 2 7 0
+YxCapCost 10 2 3 1 0
+YxCapCost 10 2 3 2 0
+YxCapCost 10 2 3 3 0
+YxCapCost 10 2 3 4 0
+YxCapCost 10 2 3 5 0
+YxCapCost 10 2 3 6 0
+YxCapCost 10 2 3 7 0
+YxCapCost 10 2 4 1 0
+YxCapCost 10 2 4 2 0
+YxCapCost 10 2 4 3 0
+YxCapCost 10 2 4 4 0
+YxCapCost 10 2 4 5 0
+YxCapCost 10 2 4 6 0
+YxCapCost 10 2 4 7 0
+YxCapCost 10 3 1 1 0
+YxCapCost 10 3 1 2 0
+YxCapCost 10 3 1 3 0
+YxCapCost 10 3 1 4 0
+YxCapCost 10 3 1 5 0
+YxCapCost 10 3 1 6 0
+YxCapCost 10 3 1 7 0
+YxCapCost 10 3 2 1 0
+YxCapCost 10 3 2 2 0
+YxCapCost 10 3 2 3 0
+YxCapCost 10 3 2 4 0
+YxCapCost 10 3 2 5 0
+YxCapCost 10 3 2 6 0
+YxCapCost 10 3 2 7 0
+YxCapCost 10 3 3 1 0
+YxCapCost 10 3 3 2 0
+YxCapCost 10 3 3 3 0
+YxCapCost 10 3 3 4 0
+YxCapCost 10 3 3 5 0
+YxCapCost 10 3 3 6 0
+YxCapCost 10 3 3 7 0
+YxCapCost 10 3 4 1 0
+YxCapCost 10 3 4 2 0
+YxCapCost 10 3 4 3 0
+YxCapCost 10 3 4 4 0
+YxCapCost 10 3 4 5 0
+YxCapCost 10 3 4 6 0
+YxCapCost 10 3 4 7 0
+YxCapCost 10 4 1 2 0
+YxCapCost 10 4 1 3 0
+YxCapCost 10 4 1 4 0
+YxCapCost 10 4 1 5 0
+YxCapCost 10 4 1 6 0
+YxCapCost 10 4 1 7 0
+YxCapCost 10 4 2 1 0
+YxCapCost 10 4 2 2 0
+YxCapCost 10 4 2 3 0
+YxCapCost 10 4 2 4 0
+YxCapCost 10 4 2 5 0
+YxCapCost 10 4 2 6 0
+YxCapCost 10 4 2 7 0
+YxCapCost 10 4 3 1 0
+YxCapCost 10 4 3 2 0
+YxCapCost 10 4 3 3 0
+YxCapCost 10 4 3 4 0
+YxCapCost 10 4 3 5 0
+YxCapCost 10 4 3 6 0
+YxCapCost 10 4 3 7 0
+YxCapCost 10 4 4 1 0
+YxCapCost 10 4 4 2 0
+YxCapCost 10 4 4 3 0
+YxCapCost 10 4 4 4 0
+YxCapCost 10 4 4 5 0
+YxCapCost 10 4 4 6 0
+YxCapCost 10 4 4 7 0
+YxCapCost 11 1 1 1 0
+YxCapCost 11 1 1 2 0
+YxCapCost 11 1 1 3 0
+YxCapCost 11 1 1 4 0
+YxCapCost 11 1 1 5 0
+YxCapCost 11 1 1 6 0
+YxCapCost 11 1 1 7 0
+YxCapCost 11 1 2 1 0
+YxCapCost 11 1 2 2 0
+YxCapCost 11 1 2 3 0
+YxCapCost 11 1 2 4 0
+YxCapCost 11 1 2 5 0
+YxCapCost 11 1 2 6 0
+YxCapCost 11 1 2 7 0
+YxCapCost 11 1 3 1 0
+YxCapCost 11 1 3 2 0
+YxCapCost 11 1 3 3 0
+YxCapCost 11 1 3 4 0
+YxCapCost 11 1 3 5 0
+YxCapCost 11 1 3 6 0
+YxCapCost 11 1 3 7 0
+YxCapCost 11 1 4 1 0
+YxCapCost 11 1 4 2 0
+YxCapCost 11 1 4 3 0
+YxCapCost 11 1 4 4 0
+YxCapCost 11 1 4 5 0
+YxCapCost 11 1 4 6 0
+YxCapCost 11 1 4 7 0
+YxCapCost 11 2 1 1 0
+YxCapCost 11 2 1 2 0
+YxCapCost 11 2 1 3 0
+YxCapCost 11 2 1 4 0
+YxCapCost 11 2 1 5 0
+YxCapCost 11 2 1 6 0
+YxCapCost 11 2 1 7 0
+YxCapCost 11 2 2 1 0
+YxCapCost 11 2 2 2 0
+YxCapCost 11 2 2 3 0
+YxCapCost 11 2 2 4 0
+YxCapCost 11 2 2 5 0
+YxCapCost 11 2 2 6 0
+YxCapCost 11 2 2 7 0
+YxCapCost 11 2 3 1 0
+YxCapCost 11 2 3 2 0
+YxCapCost 11 2 3 3 0
+YxCapCost 11 2 3 4 0
+YxCapCost 11 2 3 5 0
+YxCapCost 11 2 3 6 0
+YxCapCost 11 2 3 7 0
+YxCapCost 11 2 4 1 1
+YxCapCost 11 4 2 1 0
+YxCapCost 11 2 4 2 0
+YxCapCost 11 2 4 3 0
+YxCapCost 11 2 4 4 0
+YxCapCost 11 2 4 5 0
+YxCapCost 11 2 4 6 0
+YxCapCost 11 2 4 7 0
+YxCapCost 11 3 1 1 0
+YxCapCost 11 3 1 2 0
+YxCapCost 11 3 1 3 0
+YxCapCost 11 3 1 4 0
+YxCapCost 11 3 1 5 0
+YxCapCost 11 3 1 6 0
+YxCapCost 11 3 1 7 0
+YxCapCost 11 3 2 1 0
+YxCapCost 11 3 2 2 0
+YxCapCost 11 3 2 3 0
+YxCapCost 11 3 2 4 0
+YxCapCost 11 3 2 5 0
+YxCapCost 11 3 2 6 0
+YxCapCost 11 3 2 7 0
+YxCapCost 11 3 3 1 0
+YxCapCost 11 3 3 2 0
+YxCapCost 11 3 3 3 0
+YxCapCost 11 3 3 4 0
+YxCapCost 11 3 3 5 0
+YxCapCost 11 3 3 6 0
+YxCapCost 11 3 3 7 0
+YxCapCost 11 3 4 1 0
+YxCapCost 11 3 4 2 0
+YxCapCost 11 3 4 3 0
+YxCapCost 11 3 4 4 0
+YxCapCost 11 3 4 5 0
+YxCapCost 11 3 4 6 0
+YxCapCost 11 3 4 7 0
+YxCapCost 11 4 1 1 0
+YxCapCost 11 4 1 2 0
+YxCapCost 11 4 1 3 0
+YxCapCost 11 4 1 4 0
+YxCapCost 11 4 1 5 0
+YxCapCost 11 4 1 6 0
+YxCapCost 11 4 1 7 0
+YxCapCost 11 4 2 2 0
+YxCapCost 11 4 2 3 0
+YxCapCost 11 4 2 4 0
+YxCapCost 11 4 2 5 0
+YxCapCost 11 4 2 6 0
+YxCapCost 11 4 2 7 0
+YxCapCost 11 4 3 1 0
+YxCapCost 11 4 3 2 0
+YxCapCost 11 4 3 3 0
+YxCapCost 11 4 3 4 0
+YxCapCost 11 4 3 5 0
+YxCapCost 11 4 3 6 0
+YxCapCost 11 4 3 7 0
+YxCapCost 11 4 4 1 0
+YxCapCost 11 4 4 2 0
+YxCapCost 11 4 4 3 0
+YxCapCost 11 4 4 4 0
+YxCapCost 11 4 4 5 0
+YxCapCost 11 4 4 6 0
+YxCapCost 11 4 4 7 0
+YxCapCost 12 1 1 1 0
+YxCapCost 12 1 1 2 0
+YxCapCost 12 1 1 3 0
+YxCapCost 12 1 1 4 0
+YxCapCost 12 1 1 5 0
+YxCapCost 12 1 1 6 0
+YxCapCost 12 1 1 7 0
+YxCapCost 12 1 2 1 0
+YxCapCost 12 1 2 2 0
+YxCapCost 12 1 2 3 0
+YxCapCost 12 1 2 4 0
+YxCapCost 12 1 2 5 0
+YxCapCost 12 1 2 6 0
+YxCapCost 12 1 2 7 0
+YxCapCost 12 1 3 1 0
+YxCapCost 12 1 3 2 0
+YxCapCost 12 1 3 3 0
+YxCapCost 12 1 3 4 0
+YxCapCost 12 1 3 5 0
+YxCapCost 12 1 3 6 0
+YxCapCost 12 1 3 7 0
+YxCapCost 12 1 4 1 0
+YxCapCost 12 1 4 2 0
+YxCapCost 12 1 4 3 0
+YxCapCost 12 1 4 4 0
+YxCapCost 12 1 4 5 0
+YxCapCost 12 1 4 6 0
+YxCapCost 12 1 4 7 0
+YxCapCost 12 2 1 1 0
+YxCapCost 12 2 1 2 0
+YxCapCost 12 2 1 3 0
+YxCapCost 12 2 1 4 0
+YxCapCost 12 2 1 5 0
+YxCapCost 12 2 1 6 0
+YxCapCost 12 2 1 7 0
+YxCapCost 12 2 2 1 0
+YxCapCost 12 2 2 2 0
+YxCapCost 12 2 2 3 0
+YxCapCost 12 2 2 4 0
+YxCapCost 12 2 2 5 0
+YxCapCost 12 2 2 6 0
+YxCapCost 12 2 2 7 0
+YxCapCost 12 2 3 1 0
+YxCapCost 12 2 3 2 0
+YxCapCost 12 2 3 3 0
+YxCapCost 12 2 3 4 0
+YxCapCost 12 2 3 5 0
+YxCapCost 12 2 3 6 0
+YxCapCost 12 2 3 7 0
+YxCapCost 12 2 4 1 0
+YxCapCost 12 2 4 2 0
+YxCapCost 12 2 4 3 0
+YxCapCost 12 2 4 4 0
+YxCapCost 12 2 4 5 0
+YxCapCost 12 2 4 6 0
+YxCapCost 12 2 4 7 0
+YxCapCost 12 3 1 1 0
+YxCapCost 12 3 1 2 0
+YxCapCost 12 3 1 3 0
+YxCapCost 12 3 1 4 0
+YxCapCost 12 3 1 5 0
+YxCapCost 12 3 1 6 0
+YxCapCost 12 3 1 7 0
+YxCapCost 12 3 2 1 0
+YxCapCost 12 3 2 2 0
+YxCapCost 12 3 2 3 0
+YxCapCost 12 3 2 4 0
+YxCapCost 12 3 2 5 0
+YxCapCost 12 3 2 6 0
+YxCapCost 12 3 2 7 0
+YxCapCost 12 3 3 1 0
+YxCapCost 12 3 3 2 0
+YxCapCost 12 3 3 3 0
+YxCapCost 12 3 3 4 0
+YxCapCost 12 3 3 5 0
+YxCapCost 12 3 3 6 0
+YxCapCost 12 3 3 7 0
+YxCapCost 12 3 4 1 1
+YxCapCost 12 4 3 1 0
+YxCapCost 12 3 4 2 0
+YxCapCost 12 3 4 3 0
+YxCapCost 12 3 4 4 0
+YxCapCost 12 3 4 5 0
+YxCapCost 12 3 4 6 0
+YxCapCost 12 3 4 7 0
+YxCapCost 12 4 1 1 0
+YxCapCost 12 4 1 2 0
+YxCapCost 12 4 1 3 0
+YxCapCost 12 4 1 4 0
+YxCapCost 12 4 1 5 0
+YxCapCost 12 4 1 6 0
+YxCapCost 12 4 1 7 0
+YxCapCost 12 4 2 1 0
+YxCapCost 12 4 2 2 0
+YxCapCost 12 4 2 3 0
+YxCapCost 12 4 2 4 0
+YxCapCost 12 4 2 5 0
+YxCapCost 12 4 2 6 0
+YxCapCost 12 4 2 7 0
+YxCapCost 12 4 3 2 0
+YxCapCost 12 4 3 3 0
+YxCapCost 12 4 3 4 0
+YxCapCost 12 4 3 5 0
+YxCapCost 12 4 3 6 0
+YxCapCost 12 4 3 7 0
+YxCapCost 12 4 4 1 0
+YxCapCost 12 4 4 2 0
+YxCapCost 12 4 4 3 0
+YxCapCost 12 4 4 4 0
+YxCapCost 12 4 4 5 0
+YxCapCost 12 4 4 6 0
+YxCapCost 12 4 4 7 0
+impCost 3 0.09
+impCost 4 0.0
+impCost 5 0.07
+impCost 6 0.11
+impCost 1 0.21
+impCost 7 0.2
+expPrice 1 0.1
+co2Tax 3 0.01
+co2Tax 4 0.0
+co2Tax 5 0.0
+co2Tax 6 0.01
+co2Tax 1 0.0
+co2Tax 7 0.01
+maxImp 3 inf
+maxImp 4 inf
+maxImp 5 4000.0
+maxImp 6 inf
+maxImp 1 inf
+maxImp 7 inf
+ecCO2 3 0.198
+ecCO2 4 0.0
+ecCO2 5 0.01
+ecCO2 6 0.23
+ecCO2 1 0.03
+ecCO2 7 0.24
+interestRate 0.08
+bigM 100000
+maxCarbon nan
+loads 1 1 1 3.0
+loads 1 2 1 3.0
+loads 1 3 1 3.0
+loads 1 4 1 3.0
+loads 1 5 1 3.0
+loads 1 6 1 3.0
+loads 1 7 1 24.0
+loads 1 8 1 23.0
+loads 1 9 1 24.0
+loads 1 10 1 19.0
+loads 1 11 1 19.0
+loads 1 12 1 19.0
+loads 1 13 1 23.0
+loads 1 14 1 23.0
+loads 1 15 1 23.0
+loads 1 16 1 24.0
+loads 1 17 1 22.0
+loads 1 18 1 22.0
+loads 1 19 1 27.0
+loads 1 20 1 28.0
+loads 1 21 1 27.0
+loads 1 22 1 10.0
+loads 1 23 1 12.0
+loads 1 24 1 11.0
+loads 1 25 1 3.0
+loads 1 26 1 3.0
+loads 1 27 1 3.0
+loads 1 28 1 3.0
+loads 1 29 1 3.0
+loads 1 30 1 3.0
+loads 1 31 1 24.0
+loads 1 32 1 24.0
+loads 1 33 1 23.0
+loads 1 34 1 19.0
+loads 1 35 1 19.0
+loads 1 36 1 19.0
+loads 1 37 1 23.0
+loads 1 38 1 23.0
+loads 1 39 1 23.0
+loads 1 40 1 23.0
+loads 1 41 1 22.0
+loads 1 42 1 22.0
+loads 1 43 1 28.0
+loads 1 44 1 27.0
+loads 1 45 1 27.0
+loads 1 46 1 26.0
+loads 1 47 1 25.0
+loads 1 48 1 20.0
+loads 1 1 2 21.0
+loads 1 2 2 24.0
+loads 1 3 2 26.0
+loads 1 4 2 28.0
+loads 1 5 2 30.0
+loads 1 6 2 31.0
+loads 1 7 2 73.0
+loads 1 8 2 66.0
+loads 1 9 2 63.0
+loads 1 10 2 58.0
+loads 1 11 2 49.0
+loads 1 12 2 37.0
+loads 1 13 2 30.0
+loads 1 14 2 27.0
+loads 1 15 2 26.0
+loads 1 16 2 32.0
+loads 1 17 2 31.0
+loads 1 18 2 39.0
+loads 1 19 2 39.0
+loads 1 20 2 40.0
+loads 1 21 2 44.0
+loads 1 22 2 44.0
+loads 1 23 2 14.0
+loads 1 24 2 18.0
+loads 1 25 2 20.0
+loads 1 26 2 23.0
+loads 1 27 2 25.0
+loads 1 28 2 27.0
+loads 1 29 2 29.0
+loads 1 30 2 40.0
+loads 1 31 2 82.0
+loads 1 32 2 70.0
+loads 1 33 2 65.0
+loads 1 34 2 58.0
+loads 1 35 2 49.0
+loads 1 36 2 37.0
+loads 1 37 2 30.0
+loads 1 38 2 27.0
+loads 1 39 2 24.0
+loads 1 40 2 30.0
+loads 1 41 2 29.0
+loads 1 42 2 41.0
+loads 1 43 2 33.0
+loads 1 44 2 37.0
+loads 1 45 2 42.0
+loads 1 46 2 40.0
+loads 1 47 2 38.0
+loads 1 48 2 36.0
+loads 1 1 3 0.0
+loads 1 2 3 0.0
+loads 1 3 3 0.0
+loads 1 4 3 0.0
+loads 1 5 3 0.0
+loads 1 6 3 0.0
+loads 1 7 3 0.0
+loads 1 8 3 0.0
+loads 1 9 3 0.0
+loads 1 10 3 0.0
+loads 1 11 3 0.0
+loads 1 12 3 0.0
+loads 1 13 3 0.0
+loads 1 14 3 0.0
+loads 1 15 3 0.0
+loads 1 16 3 0.0
+loads 1 17 3 0.0
+loads 1 18 3 0.0
+loads 1 19 3 0.0
+loads 1 20 3 0.0
+loads 1 21 3 0.0
+loads 1 22 3 0.0
+loads 1 23 3 0.0
+loads 1 24 3 0.0
+loads 1 25 3 0.0
+loads 1 26 3 0.0
+loads 1 27 3 0.0
+loads 1 28 3 0.0
+loads 1 29 3 0.0
+loads 1 30 3 0.0
+loads 1 31 3 0.0
+loads 1 32 3 0.0
+loads 1 33 3 0.0
+loads 1 34 3 0.0
+loads 1 35 3 0.0
+loads 1 36 3 0.0
+loads 1 37 3 0.0
+loads 1 38 3 0.0
+loads 1 39 3 0.0
+loads 1 40 3 0.0
+loads 1 41 3 0.0
+loads 1 42 3 0.0
+loads 1 43 3 0.0
+loads 1 44 3 0.0
+loads 1 45 3 0.0
+loads 1 46 3 0.0
+loads 1 47 3 0.0
+loads 1 48 3 0.0
+loads 1 1 4 0.0
+loads 1 2 4 0.0
+loads 1 3 4 0.0
+loads 1 4 4 0.0
+loads 1 5 4 0.0
+loads 1 6 4 0.0
+loads 1 7 4 0.0
+loads 1 8 4 0.0
+loads 1 9 4 0.0
+loads 1 10 4 0.0
+loads 1 11 4 0.0
+loads 1 12 4 0.0
+loads 1 13 4 0.0
+loads 1 14 4 0.0
+loads 1 15 4 0.0
+loads 1 16 4 0.0
+loads 1 17 4 0.0
+loads 1 18 4 0.0
+loads 1 19 4 0.0
+loads 1 20 4 0.0
+loads 1 21 4 0.0
+loads 1 22 4 0.0
+loads 1 23 4 0.0
+loads 1 24 4 0.0
+loads 1 25 4 0.0
+loads 1 26 4 0.0
+loads 1 27 4 0.0
+loads 1 28 4 0.0
+loads 1 29 4 0.0
+loads 1 30 4 0.0
+loads 1 31 4 0.0
+loads 1 32 4 0.0
+loads 1 33 4 0.0
+loads 1 34 4 0.0
+loads 1 35 4 0.0
+loads 1 36 4 0.0
+loads 1 37 4 0.0
+loads 1 38 4 0.0
+loads 1 39 4 0.0
+loads 1 40 4 0.0
+loads 1 41 4 0.0
+loads 1 42 4 0.0
+loads 1 43 4 0.0
+loads 1 44 4 0.0
+loads 1 45 4 0.0
+loads 1 46 4 0.0
+loads 1 47 4 0.0
+loads 1 48 4 0.0
+loads 1 1 5 0.0
+loads 1 2 5 0.0
+loads 1 3 5 0.0
+loads 1 4 5 0.0
+loads 1 5 5 0.0
+loads 1 6 5 0.0
+loads 1 7 5 0.0
+loads 1 8 5 0.0
+loads 1 9 5 0.0
+loads 1 10 5 0.0
+loads 1 11 5 0.0
+loads 1 12 5 0.0
+loads 1 13 5 0.0
+loads 1 14 5 0.0
+loads 1 15 5 0.0
+loads 1 16 5 0.0
+loads 1 17 5 0.0
+loads 1 18 5 0.0
+loads 1 19 5 0.0
+loads 1 20 5 0.0
+loads 1 21 5 0.0
+loads 1 22 5 0.0
+loads 1 23 5 0.0
+loads 1 24 5 0.0
+loads 1 25 5 0.0
+loads 1 26 5 0.0
+loads 1 27 5 0.0
+loads 1 28 5 0.0
+loads 1 29 5 0.0
+loads 1 30 5 0.0
+loads 1 31 5 0.0
+loads 1 32 5 0.0
+loads 1 33 5 0.0
+loads 1 34 5 0.0
+loads 1 35 5 0.0
+loads 1 36 5 0.0
+loads 1 37 5 0.0
+loads 1 38 5 0.0
+loads 1 39 5 0.0
+loads 1 40 5 0.0
+loads 1 41 5 0.0
+loads 1 42 5 0.0
+loads 1 43 5 0.0
+loads 1 44 5 0.0
+loads 1 45 5 0.0
+loads 1 46 5 0.0
+loads 1 47 5 0.0
+loads 1 48 5 0.0
+loads 1 1 6 0.0
+loads 1 2 6 0.0
+loads 1 3 6 0.0
+loads 1 4 6 0.0
+loads 1 5 6 0.0
+loads 1 6 6 0.0
+loads 1 7 6 0.0
+loads 1 8 6 0.0
+loads 1 9 6 0.0
+loads 1 10 6 0.0
+loads 1 11 6 0.0
+loads 1 12 6 0.0
+loads 1 13 6 0.0
+loads 1 14 6 0.0
+loads 1 15 6 0.0
+loads 1 16 6 0.0
+loads 1 17 6 0.0
+loads 1 18 6 0.0
+loads 1 19 6 0.0
+loads 1 20 6 0.0
+loads 1 21 6 0.0
+loads 1 22 6 0.0
+loads 1 23 6 0.0
+loads 1 24 6 0.0
+loads 1 25 6 0.0
+loads 1 26 6 0.0
+loads 1 27 6 0.0
+loads 1 28 6 0.0
+loads 1 29 6 0.0
+loads 1 30 6 0.0
+loads 1 31 6 0.0
+loads 1 32 6 0.0
+loads 1 33 6 0.0
+loads 1 34 6 0.0
+loads 1 35 6 0.0
+loads 1 36 6 0.0
+loads 1 37 6 0.0
+loads 1 38 6 0.0
+loads 1 39 6 0.0
+loads 1 40 6 0.0
+loads 1 41 6 0.0
+loads 1 42 6 0.0
+loads 1 43 6 0.0
+loads 1 44 6 0.0
+loads 1 45 6 0.0
+loads 1 46 6 0.0
+loads 1 47 6 0.0
+loads 1 48 6 0.0
+loads 1 1 7 0.0
+loads 1 2 7 0.0
+loads 1 3 7 0.0
+loads 1 4 7 0.0
+loads 1 5 7 0.0
+loads 1 6 7 0.0
+loads 1 7 7 0.0
+loads 1 8 7 0.0
+loads 1 9 7 0.0
+loads 1 10 7 0.0
+loads 1 11 7 0.0
+loads 1 12 7 0.0
+loads 1 13 7 0.0
+loads 1 14 7 0.0
+loads 1 15 7 0.0
+loads 1 16 7 0.0
+loads 1 17 7 0.0
+loads 1 18 7 0.0
+loads 1 19 7 0.0
+loads 1 20 7 0.0
+loads 1 21 7 0.0
+loads 1 22 7 0.0
+loads 1 23 7 0.0
+loads 1 24 7 0.0
+loads 1 25 7 0.0
+loads 1 26 7 0.0
+loads 1 27 7 0.0
+loads 1 28 7 0.0
+loads 1 29 7 0.0
+loads 1 30 7 0.0
+loads 1 31 7 0.0
+loads 1 32 7 0.0
+loads 1 33 7 0.0
+loads 1 34 7 0.0
+loads 1 35 7 0.0
+loads 1 36 7 0.0
+loads 1 37 7 0.0
+loads 1 38 7 0.0
+loads 1 39 7 0.0
+loads 1 40 7 0.0
+loads 1 41 7 0.0
+loads 1 42 7 0.0
+loads 1 43 7 0.0
+loads 1 44 7 0.0
+loads 1 45 7 0.0
+loads 1 46 7 0.0
+loads 1 47 7 0.0
+loads 1 48 7 0.0
+loads 2 1 1 4.0
+loads 2 2 1 4.0
+loads 2 3 1 4.0
+loads 2 4 1 4.0
+loads 2 5 1 4.0
+loads 2 6 1 4.0
+loads 2 7 1 25.0
+loads 2 8 1 24.0
+loads 2 9 1 25.0
+loads 2 10 1 20.0
+loads 2 11 1 20.0
+loads 2 12 1 20.0
+loads 2 13 1 24.0
+loads 2 14 1 24.0
+loads 2 15 1 24.0
+loads 2 16 1 25.0
+loads 2 17 1 23.0
+loads 2 18 1 23.0
+loads 2 19 1 28.0
+loads 2 20 1 29.0
+loads 2 21 1 28.0
+loads 2 22 1 11.0
+loads 2 23 1 13.0
+loads 2 24 1 12.0
+loads 2 25 1 4.0
+loads 2 26 1 4.0
+loads 2 27 1 4.0
+loads 2 28 1 4.0
+loads 2 29 1 4.0
+loads 2 30 1 4.0
+loads 2 31 1 25.0
+loads 2 32 1 25.0
+loads 2 33 1 24.0
+loads 2 34 1 20.0
+loads 2 35 1 20.0
+loads 2 36 1 20.0
+loads 2 37 1 24.0
+loads 2 38 1 24.0
+loads 2 39 1 24.0
+loads 2 40 1 24.0
+loads 2 41 1 23.0
+loads 2 42 1 23.0
+loads 2 43 1 29.0
+loads 2 44 1 28.0
+loads 2 45 1 28.0
+loads 2 46 1 27.0
+loads 2 47 1 26.0
+loads 2 48 1 21.0
+loads 2 1 2 22.0
+loads 2 2 2 25.0
+loads 2 3 2 27.0
+loads 2 4 2 29.0
+loads 2 5 2 31.0
+loads 2 6 2 32.0
+loads 2 7 2 74.0
+loads 2 8 2 67.0
+loads 2 9 2 64.0
+loads 2 10 2 59.0
+loads 2 11 2 50.0
+loads 2 12 2 38.0
+loads 2 13 2 31.0
+loads 2 14 2 28.0
+loads 2 15 2 27.0
+loads 2 16 2 33.0
+loads 2 17 2 32.0
+loads 2 18 2 40.0
+loads 2 19 2 40.0
+loads 2 20 2 41.0
+loads 2 21 2 45.0
+loads 2 22 2 45.0
+loads 2 23 2 15.0
+loads 2 24 2 19.0
+loads 2 25 2 21.0
+loads 2 26 2 24.0
+loads 2 27 2 26.0
+loads 2 28 2 28.0
+loads 2 29 2 30.0
+loads 2 30 2 41.0
+loads 2 31 2 83.0
+loads 2 32 2 71.0
+loads 2 33 2 66.0
+loads 2 34 2 59.0
+loads 2 35 2 50.0
+loads 2 36 2 38.0
+loads 2 37 2 31.0
+loads 2 38 2 28.0
+loads 2 39 2 25.0
+loads 2 40 2 31.0
+loads 2 41 2 30.0
+loads 2 42 2 42.0
+loads 2 43 2 34.0
+loads 2 44 2 38.0
+loads 2 45 2 43.0
+loads 2 46 2 41.0
+loads 2 47 2 39.0
+loads 2 48 2 37.0
+loads 2 1 3 0.0
+loads 2 2 3 0.0
+loads 2 3 3 0.0
+loads 2 4 3 0.0
+loads 2 5 3 0.0
+loads 2 6 3 0.0
+loads 2 7 3 0.0
+loads 2 8 3 0.0
+loads 2 9 3 0.0
+loads 2 10 3 0.0
+loads 2 11 3 0.0
+loads 2 12 3 0.0
+loads 2 13 3 0.0
+loads 2 14 3 0.0
+loads 2 15 3 0.0
+loads 2 16 3 0.0
+loads 2 17 3 0.0
+loads 2 18 3 0.0
+loads 2 19 3 0.0
+loads 2 20 3 0.0
+loads 2 21 3 0.0
+loads 2 22 3 0.0
+loads 2 23 3 0.0
+loads 2 24 3 0.0
+loads 2 25 3 0.0
+loads 2 26 3 0.0
+loads 2 27 3 0.0
+loads 2 28 3 0.0
+loads 2 29 3 0.0
+loads 2 30 3 0.0
+loads 2 31 3 0.0
+loads 2 32 3 0.0
+loads 2 33 3 0.0
+loads 2 34 3 0.0
+loads 2 35 3 0.0
+loads 2 36 3 0.0
+loads 2 37 3 0.0
+loads 2 38 3 0.0
+loads 2 39 3 0.0
+loads 2 40 3 0.0
+loads 2 41 3 0.0
+loads 2 42 3 0.0
+loads 2 43 3 0.0
+loads 2 44 3 0.0
+loads 2 45 3 0.0
+loads 2 46 3 0.0
+loads 2 47 3 0.0
+loads 2 48 3 0.0
+loads 2 1 4 0.0
+loads 2 2 4 0.0
+loads 2 3 4 0.0
+loads 2 4 4 0.0
+loads 2 5 4 0.0
+loads 2 6 4 0.0
+loads 2 7 4 0.0
+loads 2 8 4 0.0
+loads 2 9 4 0.0
+loads 2 10 4 0.0
+loads 2 11 4 0.0
+loads 2 12 4 0.0
+loads 2 13 4 0.0
+loads 2 14 4 0.0
+loads 2 15 4 0.0
+loads 2 16 4 0.0
+loads 2 17 4 0.0
+loads 2 18 4 0.0
+loads 2 19 4 0.0
+loads 2 20 4 0.0
+loads 2 21 4 0.0
+loads 2 22 4 0.0
+loads 2 23 4 0.0
+loads 2 24 4 0.0
+loads 2 25 4 0.0
+loads 2 26 4 0.0
+loads 2 27 4 0.0
+loads 2 28 4 0.0
+loads 2 29 4 0.0
+loads 2 30 4 0.0
+loads 2 31 4 0.0
+loads 2 32 4 0.0
+loads 2 33 4 0.0
+loads 2 34 4 0.0
+loads 2 35 4 0.0
+loads 2 36 4 0.0
+loads 2 37 4 0.0
+loads 2 38 4 0.0
+loads 2 39 4 0.0
+loads 2 40 4 0.0
+loads 2 41 4 0.0
+loads 2 42 4 0.0
+loads 2 43 4 0.0
+loads 2 44 4 0.0
+loads 2 45 4 0.0
+loads 2 46 4 0.0
+loads 2 47 4 0.0
+loads 2 48 4 0.0
+loads 2 1 5 0.0
+loads 2 2 5 0.0
+loads 2 3 5 0.0
+loads 2 4 5 0.0
+loads 2 5 5 0.0
+loads 2 6 5 0.0
+loads 2 7 5 0.0
+loads 2 8 5 0.0
+loads 2 9 5 0.0
+loads 2 10 5 0.0
+loads 2 11 5 0.0
+loads 2 12 5 0.0
+loads 2 13 5 0.0
+loads 2 14 5 0.0
+loads 2 15 5 0.0
+loads 2 16 5 0.0
+loads 2 17 5 0.0
+loads 2 18 5 0.0
+loads 2 19 5 0.0
+loads 2 20 5 0.0
+loads 2 21 5 0.0
+loads 2 22 5 0.0
+loads 2 23 5 0.0
+loads 2 24 5 0.0
+loads 2 25 5 0.0
+loads 2 26 5 0.0
+loads 2 27 5 0.0
+loads 2 28 5 0.0
+loads 2 29 5 0.0
+loads 2 30 5 0.0
+loads 2 31 5 0.0
+loads 2 32 5 0.0
+loads 2 33 5 0.0
+loads 2 34 5 0.0
+loads 2 35 5 0.0
+loads 2 36 5 0.0
+loads 2 37 5 0.0
+loads 2 38 5 0.0
+loads 2 39 5 0.0
+loads 2 40 5 0.0
+loads 2 41 5 0.0
+loads 2 42 5 0.0
+loads 2 43 5 0.0
+loads 2 44 5 0.0
+loads 2 45 5 0.0
+loads 2 46 5 0.0
+loads 2 47 5 0.0
+loads 2 48 5 0.0
+loads 2 1 6 0.0
+loads 2 2 6 0.0
+loads 2 3 6 0.0
+loads 2 4 6 0.0
+loads 2 5 6 0.0
+loads 2 6 6 0.0
+loads 2 7 6 0.0
+loads 2 8 6 0.0
+loads 2 9 6 0.0
+loads 2 10 6 0.0
+loads 2 11 6 0.0
+loads 2 12 6 0.0
+loads 2 13 6 0.0
+loads 2 14 6 0.0
+loads 2 15 6 0.0
+loads 2 16 6 0.0
+loads 2 17 6 0.0
+loads 2 18 6 0.0
+loads 2 19 6 0.0
+loads 2 20 6 0.0
+loads 2 21 6 0.0
+loads 2 22 6 0.0
+loads 2 23 6 0.0
+loads 2 24 6 0.0
+loads 2 25 6 0.0
+loads 2 26 6 0.0
+loads 2 27 6 0.0
+loads 2 28 6 0.0
+loads 2 29 6 0.0
+loads 2 30 6 0.0
+loads 2 31 6 0.0
+loads 2 32 6 0.0
+loads 2 33 6 0.0
+loads 2 34 6 0.0
+loads 2 35 6 0.0
+loads 2 36 6 0.0
+loads 2 37 6 0.0
+loads 2 38 6 0.0
+loads 2 39 6 0.0
+loads 2 40 6 0.0
+loads 2 41 6 0.0
+loads 2 42 6 0.0
+loads 2 43 6 0.0
+loads 2 44 6 0.0
+loads 2 45 6 0.0
+loads 2 46 6 0.0
+loads 2 47 6 0.0
+loads 2 48 6 0.0
+loads 2 1 7 0.0
+loads 2 2 7 0.0
+loads 2 3 7 0.0
+loads 2 4 7 0.0
+loads 2 5 7 0.0
+loads 2 6 7 0.0
+loads 2 7 7 0.0
+loads 2 8 7 0.0
+loads 2 9 7 0.0
+loads 2 10 7 0.0
+loads 2 11 7 0.0
+loads 2 12 7 0.0
+loads 2 13 7 0.0
+loads 2 14 7 0.0
+loads 2 15 7 0.0
+loads 2 16 7 0.0
+loads 2 17 7 0.0
+loads 2 18 7 0.0
+loads 2 19 7 0.0
+loads 2 20 7 0.0
+loads 2 21 7 0.0
+loads 2 22 7 0.0
+loads 2 23 7 0.0
+loads 2 24 7 0.0
+loads 2 25 7 0.0
+loads 2 26 7 0.0
+loads 2 27 7 0.0
+loads 2 28 7 0.0
+loads 2 29 7 0.0
+loads 2 30 7 0.0
+loads 2 31 7 0.0
+loads 2 32 7 0.0
+loads 2 33 7 0.0
+loads 2 34 7 0.0
+loads 2 35 7 0.0
+loads 2 36 7 0.0
+loads 2 37 7 0.0
+loads 2 38 7 0.0
+loads 2 39 7 0.0
+loads 2 40 7 0.0
+loads 2 41 7 0.0
+loads 2 42 7 0.0
+loads 2 43 7 0.0
+loads 2 44 7 0.0
+loads 2 45 7 0.0
+loads 2 46 7 0.0
+loads 2 47 7 0.0
+loads 2 48 7 0.0
+loads 3 1 1 5.0
+loads 3 2 1 5.0
+loads 3 3 1 5.0
+loads 3 4 1 5.0
+loads 3 5 1 5.0
+loads 3 6 1 5.0
+loads 3 7 1 26.0
+loads 3 8 1 25.0
+loads 3 9 1 26.0
+loads 3 10 1 21.0
+loads 3 11 1 21.0
+loads 3 12 1 21.0
+loads 3 13 1 25.0
+loads 3 14 1 25.0
+loads 3 15 1 25.0
+loads 3 16 1 26.0
+loads 3 17 1 24.0
+loads 3 18 1 24.0
+loads 3 19 1 29.0
+loads 3 20 1 30.0
+loads 3 21 1 29.0
+loads 3 22 1 12.0
+loads 3 23 1 14.0
+loads 3 24 1 13.0
+loads 3 25 1 5.0
+loads 3 26 1 5.0
+loads 3 27 1 5.0
+loads 3 28 1 5.0
+loads 3 29 1 5.0
+loads 3 30 1 5.0
+loads 3 31 1 26.0
+loads 3 32 1 26.0
+loads 3 33 1 25.0
+loads 3 34 1 21.0
+loads 3 35 1 21.0
+loads 3 36 1 21.0
+loads 3 37 1 25.0
+loads 3 38 1 25.0
+loads 3 39 1 25.0
+loads 3 40 1 25.0
+loads 3 41 1 24.0
+loads 3 42 1 24.0
+loads 3 43 1 30.0
+loads 3 44 1 29.0
+loads 3 45 1 29.0
+loads 3 46 1 28.0
+loads 3 47 1 27.0
+loads 3 48 1 22.0
+loads 3 1 2 23.0
+loads 3 2 2 26.0
+loads 3 3 2 28.0
+loads 3 4 2 30.0
+loads 3 5 2 32.0
+loads 3 6 2 33.0
+loads 3 7 2 75.0
+loads 3 8 2 68.0
+loads 3 9 2 65.0
+loads 3 10 2 60.0
+loads 3 11 2 51.0
+loads 3 12 2 39.0
+loads 3 13 2 32.0
+loads 3 14 2 29.0
+loads 3 15 2 28.0
+loads 3 16 2 34.0
+loads 3 17 2 33.0
+loads 3 18 2 41.0
+loads 3 19 2 41.0
+loads 3 20 2 42.0
+loads 3 21 2 46.0
+loads 3 22 2 46.0
+loads 3 23 2 16.0
+loads 3 24 2 20.0
+loads 3 25 2 22.0
+loads 3 26 2 25.0
+loads 3 27 2 27.0
+loads 3 28 2 29.0
+loads 3 29 2 31.0
+loads 3 30 2 42.0
+loads 3 31 2 84.0
+loads 3 32 2 72.0
+loads 3 33 2 67.0
+loads 3 34 2 60.0
+loads 3 35 2 51.0
+loads 3 36 2 39.0
+loads 3 37 2 32.0
+loads 3 38 2 29.0
+loads 3 39 2 26.0
+loads 3 40 2 32.0
+loads 3 41 2 31.0
+loads 3 42 2 43.0
+loads 3 43 2 35.0
+loads 3 44 2 39.0
+loads 3 45 2 44.0
+loads 3 46 2 42.0
+loads 3 47 2 40.0
+loads 3 48 2 38.0
+loads 3 1 3 0.0
+loads 3 2 3 0.0
+loads 3 3 3 0.0
+loads 3 4 3 0.0
+loads 3 5 3 0.0
+loads 3 6 3 0.0
+loads 3 7 3 0.0
+loads 3 8 3 0.0
+loads 3 9 3 0.0
+loads 3 10 3 0.0
+loads 3 11 3 0.0
+loads 3 12 3 0.0
+loads 3 13 3 0.0
+loads 3 14 3 0.0
+loads 3 15 3 0.0
+loads 3 16 3 0.0
+loads 3 17 3 0.0
+loads 3 18 3 0.0
+loads 3 19 3 0.0
+loads 3 20 3 0.0
+loads 3 21 3 0.0
+loads 3 22 3 0.0
+loads 3 23 3 0.0
+loads 3 24 3 0.0
+loads 3 25 3 0.0
+loads 3 26 3 0.0
+loads 3 27 3 0.0
+loads 3 28 3 0.0
+loads 3 29 3 0.0
+loads 3 30 3 0.0
+loads 3 31 3 0.0
+loads 3 32 3 0.0
+loads 3 33 3 0.0
+loads 3 34 3 0.0
+loads 3 35 3 0.0
+loads 3 36 3 0.0
+loads 3 37 3 0.0
+loads 3 38 3 0.0
+loads 3 39 3 0.0
+loads 3 40 3 0.0
+loads 3 41 3 0.0
+loads 3 42 3 0.0
+loads 3 43 3 0.0
+loads 3 44 3 0.0
+loads 3 45 3 0.0
+loads 3 46 3 0.0
+loads 3 47 3 0.0
+loads 3 48 3 0.0
+loads 3 1 4 0.0
+loads 3 2 4 0.0
+loads 3 3 4 0.0
+loads 3 4 4 0.0
+loads 3 5 4 0.0
+loads 3 6 4 0.0
+loads 3 7 4 0.0
+loads 3 8 4 0.0
+loads 3 9 4 0.0
+loads 3 10 4 0.0
+loads 3 11 4 0.0
+loads 3 12 4 0.0
+loads 3 13 4 0.0
+loads 3 14 4 0.0
+loads 3 15 4 0.0
+loads 3 16 4 0.0
+loads 3 17 4 0.0
+loads 3 18 4 0.0
+loads 3 19 4 0.0
+loads 3 20 4 0.0
+loads 3 21 4 0.0
+loads 3 22 4 0.0
+loads 3 23 4 0.0
+loads 3 24 4 0.0
+loads 3 25 4 0.0
+loads 3 26 4 0.0
+loads 3 27 4 0.0
+loads 3 28 4 0.0
+loads 3 29 4 0.0
+loads 3 30 4 0.0
+loads 3 31 4 0.0
+loads 3 32 4 0.0
+loads 3 33 4 0.0
+loads 3 34 4 0.0
+loads 3 35 4 0.0
+loads 3 36 4 0.0
+loads 3 37 4 0.0
+loads 3 38 4 0.0
+loads 3 39 4 0.0
+loads 3 40 4 0.0
+loads 3 41 4 0.0
+loads 3 42 4 0.0
+loads 3 43 4 0.0
+loads 3 44 4 0.0
+loads 3 45 4 0.0
+loads 3 46 4 0.0
+loads 3 47 4 0.0
+loads 3 48 4 0.0
+loads 3 1 5 0.0
+loads 3 2 5 0.0
+loads 3 3 5 0.0
+loads 3 4 5 0.0
+loads 3 5 5 0.0
+loads 3 6 5 0.0
+loads 3 7 5 0.0
+loads 3 8 5 0.0
+loads 3 9 5 0.0
+loads 3 10 5 0.0
+loads 3 11 5 0.0
+loads 3 12 5 0.0
+loads 3 13 5 0.0
+loads 3 14 5 0.0
+loads 3 15 5 0.0
+loads 3 16 5 0.0
+loads 3 17 5 0.0
+loads 3 18 5 0.0
+loads 3 19 5 0.0
+loads 3 20 5 0.0
+loads 3 21 5 0.0
+loads 3 22 5 0.0
+loads 3 23 5 0.0
+loads 3 24 5 0.0
+loads 3 25 5 0.0
+loads 3 26 5 0.0
+loads 3 27 5 0.0
+loads 3 28 5 0.0
+loads 3 29 5 0.0
+loads 3 30 5 0.0
+loads 3 31 5 0.0
+loads 3 32 5 0.0
+loads 3 33 5 0.0
+loads 3 34 5 0.0
+loads 3 35 5 0.0
+loads 3 36 5 0.0
+loads 3 37 5 0.0
+loads 3 38 5 0.0
+loads 3 39 5 0.0
+loads 3 40 5 0.0
+loads 3 41 5 0.0
+loads 3 42 5 0.0
+loads 3 43 5 0.0
+loads 3 44 5 0.0
+loads 3 45 5 0.0
+loads 3 46 5 0.0
+loads 3 47 5 0.0
+loads 3 48 5 0.0
+loads 3 1 6 0.0
+loads 3 2 6 0.0
+loads 3 3 6 0.0
+loads 3 4 6 0.0
+loads 3 5 6 0.0
+loads 3 6 6 0.0
+loads 3 7 6 0.0
+loads 3 8 6 0.0
+loads 3 9 6 0.0
+loads 3 10 6 0.0
+loads 3 11 6 0.0
+loads 3 12 6 0.0
+loads 3 13 6 0.0
+loads 3 14 6 0.0
+loads 3 15 6 0.0
+loads 3 16 6 0.0
+loads 3 17 6 0.0
+loads 3 18 6 0.0
+loads 3 19 6 0.0
+loads 3 20 6 0.0
+loads 3 21 6 0.0
+loads 3 22 6 0.0
+loads 3 23 6 0.0
+loads 3 24 6 0.0
+loads 3 25 6 0.0
+loads 3 26 6 0.0
+loads 3 27 6 0.0
+loads 3 28 6 0.0
+loads 3 29 6 0.0
+loads 3 30 6 0.0
+loads 3 31 6 0.0
+loads 3 32 6 0.0
+loads 3 33 6 0.0
+loads 3 34 6 0.0
+loads 3 35 6 0.0
+loads 3 36 6 0.0
+loads 3 37 6 0.0
+loads 3 38 6 0.0
+loads 3 39 6 0.0
+loads 3 40 6 0.0
+loads 3 41 6 0.0
+loads 3 42 6 0.0
+loads 3 43 6 0.0
+loads 3 44 6 0.0
+loads 3 45 6 0.0
+loads 3 46 6 0.0
+loads 3 47 6 0.0
+loads 3 48 6 0.0
+loads 3 1 7 0.0
+loads 3 2 7 0.0
+loads 3 3 7 0.0
+loads 3 4 7 0.0
+loads 3 5 7 0.0
+loads 3 6 7 0.0
+loads 3 7 7 0.0
+loads 3 8 7 0.0
+loads 3 9 7 0.0
+loads 3 10 7 0.0
+loads 3 11 7 0.0
+loads 3 12 7 0.0
+loads 3 13 7 0.0
+loads 3 14 7 0.0
+loads 3 15 7 0.0
+loads 3 16 7 0.0
+loads 3 17 7 0.0
+loads 3 18 7 0.0
+loads 3 19 7 0.0
+loads 3 20 7 0.0
+loads 3 21 7 0.0
+loads 3 22 7 0.0
+loads 3 23 7 0.0
+loads 3 24 7 0.0
+loads 3 25 7 0.0
+loads 3 26 7 0.0
+loads 3 27 7 0.0
+loads 3 28 7 0.0
+loads 3 29 7 0.0
+loads 3 30 7 0.0
+loads 3 31 7 0.0
+loads 3 32 7 0.0
+loads 3 33 7 0.0
+loads 3 34 7 0.0
+loads 3 35 7 0.0
+loads 3 36 7 0.0
+loads 3 37 7 0.0
+loads 3 38 7 0.0
+loads 3 39 7 0.0
+loads 3 40 7 0.0
+loads 3 41 7 0.0
+loads 3 42 7 0.0
+loads 3 43 7 0.0
+loads 3 44 7 0.0
+loads 3 45 7 0.0
+loads 3 46 7 0.0
+loads 3 47 7 0.0
+loads 3 48 7 0.0
+loads 4 1 1 0.0
+loads 4 2 1 0.0
+loads 4 3 1 0.0
+loads 4 4 1 0.0
+loads 4 5 1 0.0
+loads 4 6 1 0.0
+loads 4 7 1 0.0
+loads 4 8 1 0.0
+loads 4 9 1 0.0
+loads 4 10 1 0.0
+loads 4 11 1 0.0
+loads 4 12 1 0.0
+loads 4 13 1 0.0
+loads 4 14 1 0.0
+loads 4 15 1 0.0
+loads 4 16 1 0.0
+loads 4 17 1 0.0
+loads 4 18 1 0.0
+loads 4 19 1 0.0
+loads 4 20 1 0.0
+loads 4 21 1 0.0
+loads 4 22 1 0.0
+loads 4 23 1 0.0
+loads 4 24 1 0.0
+loads 4 25 1 0.0
+loads 4 26 1 0.0
+loads 4 27 1 0.0
+loads 4 28 1 0.0
+loads 4 29 1 0.0
+loads 4 30 1 0.0
+loads 4 31 1 0.0
+loads 4 32 1 0.0
+loads 4 33 1 0.0
+loads 4 34 1 0.0
+loads 4 35 1 0.0
+loads 4 36 1 0.0
+loads 4 37 1 0.0
+loads 4 38 1 0.0
+loads 4 39 1 0.0
+loads 4 40 1 0.0
+loads 4 41 1 0.0
+loads 4 42 1 0.0
+loads 4 43 1 0.0
+loads 4 44 1 0.0
+loads 4 45 1 0.0
+loads 4 46 1 0.0
+loads 4 47 1 0.0
+loads 4 48 1 0.0
+loads 4 1 2 0.0
+loads 4 2 2 0.0
+loads 4 3 2 0.0
+loads 4 4 2 0.0
+loads 4 5 2 0.0
+loads 4 6 2 0.0
+loads 4 7 2 0.0
+loads 4 8 2 0.0
+loads 4 9 2 0.0
+loads 4 10 2 0.0
+loads 4 11 2 0.0
+loads 4 12 2 0.0
+loads 4 13 2 0.0
+loads 4 14 2 0.0
+loads 4 15 2 0.0
+loads 4 16 2 0.0
+loads 4 17 2 0.0
+loads 4 18 2 0.0
+loads 4 19 2 0.0
+loads 4 20 2 0.0
+loads 4 21 2 0.0
+loads 4 22 2 0.0
+loads 4 23 2 0.0
+loads 4 24 2 0.0
+loads 4 25 2 0.0
+loads 4 26 2 0.0
+loads 4 27 2 0.0
+loads 4 28 2 0.0
+loads 4 29 2 0.0
+loads 4 30 2 0.0
+loads 4 31 2 0.0
+loads 4 32 2 0.0
+loads 4 33 2 0.0
+loads 4 34 2 0.0
+loads 4 35 2 0.0
+loads 4 36 2 0.0
+loads 4 37 2 0.0
+loads 4 38 2 0.0
+loads 4 39 2 0.0
+loads 4 40 2 0.0
+loads 4 41 2 0.0
+loads 4 42 2 0.0
+loads 4 43 2 0.0
+loads 4 44 2 0.0
+loads 4 45 2 0.0
+loads 4 46 2 0.0
+loads 4 47 2 0.0
+loads 4 48 2 0.0
+loads 4 1 3 0.0
+loads 4 2 3 0.0
+loads 4 3 3 0.0
+loads 4 4 3 0.0
+loads 4 5 3 0.0
+loads 4 6 3 0.0
+loads 4 7 3 0.0
+loads 4 8 3 0.0
+loads 4 9 3 0.0
+loads 4 10 3 0.0
+loads 4 11 3 0.0
+loads 4 12 3 0.0
+loads 4 13 3 0.0
+loads 4 14 3 0.0
+loads 4 15 3 0.0
+loads 4 16 3 0.0
+loads 4 17 3 0.0
+loads 4 18 3 0.0
+loads 4 19 3 0.0
+loads 4 20 3 0.0
+loads 4 21 3 0.0
+loads 4 22 3 0.0
+loads 4 23 3 0.0
+loads 4 24 3 0.0
+loads 4 25 3 0.0
+loads 4 26 3 0.0
+loads 4 27 3 0.0
+loads 4 28 3 0.0
+loads 4 29 3 0.0
+loads 4 30 3 0.0
+loads 4 31 3 0.0
+loads 4 32 3 0.0
+loads 4 33 3 0.0
+loads 4 34 3 0.0
+loads 4 35 3 0.0
+loads 4 36 3 0.0
+loads 4 37 3 0.0
+loads 4 38 3 0.0
+loads 4 39 3 0.0
+loads 4 40 3 0.0
+loads 4 41 3 0.0
+loads 4 42 3 0.0
+loads 4 43 3 0.0
+loads 4 44 3 0.0
+loads 4 45 3 0.0
+loads 4 46 3 0.0
+loads 4 47 3 0.0
+loads 4 48 3 0.0
+loads 4 1 4 0.0
+loads 4 2 4 0.0
+loads 4 3 4 0.0
+loads 4 4 4 0.0
+loads 4 5 4 0.0
+loads 4 6 4 0.0
+loads 4 7 4 0.0
+loads 4 8 4 0.0
+loads 4 9 4 0.0
+loads 4 10 4 0.0
+loads 4 11 4 0.0
+loads 4 12 4 0.0
+loads 4 13 4 0.0
+loads 4 14 4 0.0
+loads 4 15 4 0.0
+loads 4 16 4 0.0
+loads 4 17 4 0.0
+loads 4 18 4 0.0
+loads 4 19 4 0.0
+loads 4 20 4 0.0
+loads 4 21 4 0.0
+loads 4 22 4 0.0
+loads 4 23 4 0.0
+loads 4 24 4 0.0
+loads 4 25 4 0.0
+loads 4 26 4 0.0
+loads 4 27 4 0.0
+loads 4 28 4 0.0
+loads 4 29 4 0.0
+loads 4 30 4 0.0
+loads 4 31 4 0.0
+loads 4 32 4 0.0
+loads 4 33 4 0.0
+loads 4 34 4 0.0
+loads 4 35 4 0.0
+loads 4 36 4 0.0
+loads 4 37 4 0.0
+loads 4 38 4 0.0
+loads 4 39 4 0.0
+loads 4 40 4 0.0
+loads 4 41 4 0.0
+loads 4 42 4 0.0
+loads 4 43 4 0.0
+loads 4 44 4 0.0
+loads 4 45 4 0.0
+loads 4 46 4 0.0
+loads 4 47 4 0.0
+loads 4 48 4 0.0
+loads 4 1 5 0.0
+loads 4 2 5 0.0
+loads 4 3 5 0.0
+loads 4 4 5 0.0
+loads 4 5 5 0.0
+loads 4 6 5 0.0
+loads 4 7 5 0.0
+loads 4 8 5 0.0
+loads 4 9 5 0.0
+loads 4 10 5 0.0
+loads 4 11 5 0.0
+loads 4 12 5 0.0
+loads 4 13 5 0.0
+loads 4 14 5 0.0
+loads 4 15 5 0.0
+loads 4 16 5 0.0
+loads 4 17 5 0.0
+loads 4 18 5 0.0
+loads 4 19 5 0.0
+loads 4 20 5 0.0
+loads 4 21 5 0.0
+loads 4 22 5 0.0
+loads 4 23 5 0.0
+loads 4 24 5 0.0
+loads 4 25 5 0.0
+loads 4 26 5 0.0
+loads 4 27 5 0.0
+loads 4 28 5 0.0
+loads 4 29 5 0.0
+loads 4 30 5 0.0
+loads 4 31 5 0.0
+loads 4 32 5 0.0
+loads 4 33 5 0.0
+loads 4 34 5 0.0
+loads 4 35 5 0.0
+loads 4 36 5 0.0
+loads 4 37 5 0.0
+loads 4 38 5 0.0
+loads 4 39 5 0.0
+loads 4 40 5 0.0
+loads 4 41 5 0.0
+loads 4 42 5 0.0
+loads 4 43 5 0.0
+loads 4 44 5 0.0
+loads 4 45 5 0.0
+loads 4 46 5 0.0
+loads 4 47 5 0.0
+loads 4 48 5 0.0
+loads 4 1 6 0.0
+loads 4 2 6 0.0
+loads 4 3 6 0.0
+loads 4 4 6 0.0
+loads 4 5 6 0.0
+loads 4 6 6 0.0
+loads 4 7 6 0.0
+loads 4 8 6 0.0
+loads 4 9 6 0.0
+loads 4 10 6 0.0
+loads 4 11 6 0.0
+loads 4 12 6 0.0
+loads 4 13 6 0.0
+loads 4 14 6 0.0
+loads 4 15 6 0.0
+loads 4 16 6 0.0
+loads 4 17 6 0.0
+loads 4 18 6 0.0
+loads 4 19 6 0.0
+loads 4 20 6 0.0
+loads 4 21 6 0.0
+loads 4 22 6 0.0
+loads 4 23 6 0.0
+loads 4 24 6 0.0
+loads 4 25 6 0.0
+loads 4 26 6 0.0
+loads 4 27 6 0.0
+loads 4 28 6 0.0
+loads 4 29 6 0.0
+loads 4 30 6 0.0
+loads 4 31 6 0.0
+loads 4 32 6 0.0
+loads 4 33 6 0.0
+loads 4 34 6 0.0
+loads 4 35 6 0.0
+loads 4 36 6 0.0
+loads 4 37 6 0.0
+loads 4 38 6 0.0
+loads 4 39 6 0.0
+loads 4 40 6 0.0
+loads 4 41 6 0.0
+loads 4 42 6 0.0
+loads 4 43 6 0.0
+loads 4 44 6 0.0
+loads 4 45 6 0.0
+loads 4 46 6 0.0
+loads 4 47 6 0.0
+loads 4 48 6 0.0
+loads 4 1 7 0.0
+loads 4 2 7 0.0
+loads 4 3 7 0.0
+loads 4 4 7 0.0
+loads 4 5 7 0.0
+loads 4 6 7 0.0
+loads 4 7 7 0.0
+loads 4 8 7 0.0
+loads 4 9 7 0.0
+loads 4 10 7 0.0
+loads 4 11 7 0.0
+loads 4 12 7 0.0
+loads 4 13 7 0.0
+loads 4 14 7 0.0
+loads 4 15 7 0.0
+loads 4 16 7 0.0
+loads 4 17 7 0.0
+loads 4 18 7 0.0
+loads 4 19 7 0.0
+loads 4 20 7 0.0
+loads 4 21 7 0.0
+loads 4 22 7 0.0
+loads 4 23 7 0.0
+loads 4 24 7 0.0
+loads 4 25 7 0.0
+loads 4 26 7 0.0
+loads 4 27 7 0.0
+loads 4 28 7 0.0
+loads 4 29 7 0.0
+loads 4 30 7 0.0
+loads 4 31 7 0.0
+loads 4 32 7 0.0
+loads 4 33 7 0.0
+loads 4 34 7 0.0
+loads 4 35 7 0.0
+loads 4 36 7 0.0
+loads 4 37 7 0.0
+loads 4 38 7 0.0
+loads 4 39 7 0.0
+loads 4 40 7 0.0
+loads 4 41 7 0.0
+loads 4 42 7 0.0
+loads 4 43 7 0.0
+loads 4 44 7 0.0
+loads 4 45 7 0.0
+loads 4 46 7 0.0
+loads 4 47 7 0.0
+loads 4 48 7 0.0
+solarEm 1 0.0
+solarEm 2 0.0
+solarEm 3 0.0
+solarEm 4 0.0
+solarEm 5 0.0
+solarEm 6 0.0
+solarEm 7 0.0
+solarEm 8 0.0
+solarEm 9 0.0
+solarEm 10 0.0
+solarEm 11 0.056
+solarEm 12 0.192
+solarEm 13 0.324
+solarEm 14 0.38
+solarEm 15 0.324
+solarEm 16 0.189
+solarEm 17 0.037
+solarEm 18 0.0
+solarEm 19 0.0
+solarEm 20 0.0
+solarEm 21 0.0
+solarEm 22 0.0
+solarEm 23 0.0
+solarEm 24 0.0
+solarEm 25 0.0
+solarEm 26 0.0
+solarEm 27 0.0
+solarEm 28 0.0
+solarEm 29 0.0
+solarEm 30 0.0
+solarEm 31 0.0
+solarEm 32 0.0
+solarEm 33 0.0
+solarEm 34 0.0
+solarEm 35 0.056
+solarEm 36 0.194
+solarEm 37 0.327
+solarEm 38 0.383
+solarEm 39 0.328
+solarEm 40 0.192
+solarEm 41 0.039
+solarEm 42 0.0
+solarEm 43 0.0
+solarEm 44 0.0
+solarEm 45 0.0
+solarEm 46 0.0
+solarEm 47 0.0
+solarEm 48 0.0
+maxSolarArea 500
