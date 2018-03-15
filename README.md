@@ -86,7 +86,7 @@ Viewing Results
 -	Results are saved to the specified text file
 -	Note that the e-hub tool numbers technologies, storages, network links and energy carriers from 1:N in the order that they appear in the input file
 
-A macro-enabled spreadsheet utilizing pivot tables has been developed to ease viewing and navigation of the results. This spreadsheet is located under the “results” GitHub folder. Note that Excel is currently limited to displaying approx. 1 millions data rows per worksheet (therefore, using the spreadsheet may not be suitable for very large models):
+A macro-enabled spreadsheet utilizing pivot tables has been developed to ease viewing and navigation of the results. This spreadsheet is located under the “results” GitHub folder. Note that Excel is currently limited to displaying approx. 1 million data rows per worksheet (therefore, using the spreadsheet may not be suitable for very large models). To use this spreadsheet:
 -	Navigate to the “Setup” worksheet
 -	Click on the “Get File” button. This button executes a macro which will import your results. You will be prompted to provide two files:
     1.	Select the .xls input file associated with your run as the first file. This file is used to relabel the numeric indices of the result variables as the data is imported. (Numeric indices are overwritten with the original naming conventions provided in the input spreadsheet (e.g., for technologies, energy carriers, storage, etc.).)
