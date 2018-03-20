@@ -39,15 +39,6 @@ def const_stg(data, model):
         return (model.YstgIn[h,m,stg,e] + model.YstgOut[h,m,stg,e] <= 1)
     model.stgflow_const = Constraint(model.hubs, model.Time, model.Stg, model.EC, rule=stgflow_rule)
     
-#    # storage InStg and OutStg == 0 in first time step
-#    def initInStg_rule(model, h, stg, e):
-#        return (model.InStg[h,1,stg,e] == 0)
-#    model.initInStg = Constraint(model.hubs, model.Stg, model.EC, rule=initInStg_rule)
-#    
-#    def initOutStg_rule(model, h, stg, e):
-#        return (model.OutStg[h,1,stg,e] == 0)
-#    model.initOutStg = Constraint(model.hubs, model.Stg, model.EC, rule=initOutStg_rule)
-    
     # storage max charging
     def storageChargeRate_rule(model, h, m, stg, e):
         return (model.InStg[h,m,stg,e] <= model.maxStorCh[stg] * model.CapStg[h,stg,e])

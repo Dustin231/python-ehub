@@ -69,6 +69,7 @@ Running a Model
 -	Download the latest e-hub tool version from GitHub (https://github.com/hues-platform/python-ehub/tree/NextGen)
 -	The entire e-hub model is stored within the “code” folder
 -	The main run file is “main.py”
+-	Documentation on the file structure of the code is found in the “E-hub tool - Code Structure - Dev v5.4.docx” file under the GitHub “docs” folder
 -	The model can be run from a Python IDE (integrated development environment), such as Spyder (included in the Anaconda package)
 -	Note: modify the “run_solve.py” file in order to use a solver other than gurobi. (This file is currently configured for gurobi only.)
 

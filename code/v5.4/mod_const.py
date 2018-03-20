@@ -22,6 +22,5 @@ def gen_cnst(data, model):
     const_techSpec(data, model) # specific technology constraints; defined in cnst_techSpc.py
     const_net(model) # network constraints; defined in cnst_net.py
     const_stg(data, model) # storage constraints; defined in cnst_stg.py
-    const_co2(data, model) # carbon constraints; defined in cnst_co2.py
     const_cost(model) # cost constraints; defined in cnst_cost.py
-    
+    const_co2(data, model) # carbon constraints; defined in cnst_co2.py
