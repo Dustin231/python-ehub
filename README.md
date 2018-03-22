@@ -28,6 +28,7 @@ Installation Quick Start
 
 **Solver:**
 -	To install the glpk solver, enter the command: “conda install -c conda-forge glpk” (using Anaconda Prompt)
+-	To install the Gurobi solver, please visit http://www.gurobi.com/ and follow the download instructions. Note that a license (e.g., academic license) is required. 
 
 **OpenOffice:**
 -	Download and install the appropriate OpenOffice software package for your machine from:  https://www.openoffice.org/download/ 
