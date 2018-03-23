@@ -61,6 +61,15 @@ Note that the complete optimization problem is defined and documented in the “
 
 *Solar Profile:* Solar irradiation profile and energy carrier (if any)
 
+*Imp Hr:* Hourly import energy carrier costs (if any). Note that a fixed import price will be ignored if specified for an energy carrier with an hourly cost profile.
+
+*Exp Hr:* Hourly export energy carrier costs (if any). As above, note that a fixed export price will be ignored if specified for an energy carrier with an hourly export price profile.
+
+*CF Hr:* Hourly capacity factors (if any). Note that hourly capacity factors may be specified for select, non-consecutive hours.
+
+*Options:* Users may ignore this worksheet. (It provides dropdown menu options under the General tab.)
+
+
 Note that custom modeling equations can be defined by a user in Python within the “mod_custom.py” file under the “code” GitHub folder.
 
 
