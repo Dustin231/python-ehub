@@ -1043,6 +1043,7 @@ class VizTool:
         
 viz = VizTool()
 curdoc().add_root(viz.layout())
+#show(viz.layout())
         
        
         
