@@ -31,7 +31,7 @@ def gen_custom(data, model):
     #----------------------------------------------------------------------
     # Parameters
     #----------------------------------------------------------------------
-    model.maxSolarArea = Param(initialize=500) # max roof-top area in each hub (m2); hard-coded custom constraint
+    model.maxSolarArea = Param(initialize=100000) # max roof-top area in each hub (m2); hard-coded custom constraint
 
     #----------------------------------------------------------------------
     # Constraints
