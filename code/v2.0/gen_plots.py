@@ -25,6 +25,7 @@ def generate_plots(input_path, param_file, result_file, experiment, visualizatio
     eout = []
     outstg = []
     eimp = []
+    eexp = []
     for row in lines:
         if(row.find("TotalCost") >= 0):
             row2 = row.split(sep=" ")
@@ -57,6 +58,10 @@ def generate_plots(input_path, param_file, result_file, experiment, visualizatio
         if(row.find("Eimp") >= 0):
             row2 = row.split(sep=" ")
             eimp.append(row2[2:5])
+            
+        if(row.find("Eexp") >= 0):
+            row2 = row.split(sep=" ")
+            eexp.append(row2[2:5])
     
     capacities['heat_pump'] = capacities['1']
     capacities['gas_boiler'] = capacities['2']
@@ -98,8 +103,12 @@ def generate_plots(input_path, param_file, result_file, experiment, visualizatio
     eimpdf['tech']='grid'
     eoutdf = eoutdf.append(eimpdf)
     
+    eexpdf = pd.DataFrame(eexp, columns = ['tm', 'ec', 'value'])
+    eexpdf = eexpdf.apply(pd.to_numeric)
+    
     electricity_production = eoutdf.loc[eoutdf['ec'] == 1]
     heat_production = eoutdf.loc[eoutdf['ec'] == 2]
+    electricity_exports = eexpdf.loc[eexpdf['ec'] == 1]
     
     directory = visualizations_directory + experiment
     if not os.path.exists(directory):
@@ -118,30 +127,33 @@ def generate_plots(input_path, param_file, result_file, experiment, visualizatio
     print("Saving plots to: " + directory)
     
     # CONVERSION TECHNOLOGY CAPACITIES
+    plt.close('all')
     plt.bar(range(len(capacities)), list(capacities.values()), align='center')
     plt.xticks(range(len(capacities)), list(capacities.keys()))
     plt.xlabel('Technology')
     plt.ylabel('Capacity (kW)')
     plt.title('Generation technology capacities')
-    fig.clf()
     fig = plt.gcf()
     fig.savefig(directory + '/capacities_conversion_technologies.pdf', format='pdf')
 
 
     # STORAGE TECHNOLOGY CAPACITIES
+    plt.close()
+    plt.close(fig)
     cs = capacities_stor.copy(deep=True)
     cs.plot(kind='bar')
     plt.xlabel('Technology')
     plt.ylabel('Capacity (kWh)')
     plt.title('Storage technology capacities')
-    fig.clf()
     fig = plt.gcf()
     fig.savefig(directory + '/capacities_storage_technologies.pdf', format='pdf')
     
     
     # ELECTRICITY PRODUCTION - AGGREGATED WEEKLY RESULTS
+    plt.close(fig)
+    plt.close()
     ep = electricity_production.copy(deep=True)
-    week = round(ep['tm']/(7*24))
+    week = round(ep['tm']/(24))
     ep['week'] = week
     del ep['tm']
     del ep['ec']
@@ -149,19 +161,21 @@ def generate_plots(input_path, param_file, result_file, experiment, visualizatio
     ep2 = ep2.unstack()
     ep2.columns = ep2.columns.droplevel()
     ep2.plot(kind='bar', stacked=True)
-    plt.xlabel('Week')
+    plt.xticks([])
+    plt.xlabel('Day')
     plt.ylabel('Electricity generation (kWh)')
-    plt.title('Electricity generation per technology (aggregated by week)')
-    fig.clf()
+    plt.title('Electricity generation per technology (aggregated by day)')
     fig = plt.gcf()
     fig.set_size_inches(12, 4, forward=True)
     plt.legend(loc=9, bbox_to_anchor=(1.0, 1.0))
-    fig.savefig(directory + '/electricity_production_per_week.pdf', format='pdf')
+    fig.savefig(directory + '/electricity_production_per_day.pdf', format='pdf')
 
 
     # HEAT PRODUCTION - AGGREGATED WEEKLY RESULTS
+    plt.close(fig)
+    plt.close()
     ep = heat_production.copy(deep=True)
-    week = round(ep['tm']/(7*24))
+    week = round(ep['tm']/(24))
     ep['week'] = week
     del ep['tm']
     del ep['ec']
@@ -169,13 +183,56 @@ def generate_plots(input_path, param_file, result_file, experiment, visualizatio
     ep2 = ep2.unstack()
     ep2.columns = ep2.columns.droplevel()
     ep2.plot(kind='bar', stacked=True)
-    plt.xlabel('Week')
+    plt.xticks([])
+    plt.xlabel('Day')
     plt.ylabel('Heat generation (kWh)')
-    plt.title('Heat generation per technology (aggregated by week)')
-    fig.clf()
+    plt.title('Heat generation per technology (aggregated by day)')
     fig = plt.gcf()
     fig.set_size_inches(12, 4, forward=True)
     plt.legend(loc=9, bbox_to_anchor=(1.0, 1.0))
-    fig.savefig(directory + '/heat_production_per_week.pdf', format='pdf')
+    fig.savefig(directory + '/heat_production_per_day.pdf', format='pdf')
+    
+    # ELECTRICITY PRODUCTION - WINTER WEEK
+#    plt.close(fig)
+#    plt.close()
+#    ep = electricity_production.copy(deep=True)
+#    week = round(ep['tm']/(7*24))
+#    ep['week'] = week
+#    ep = ep.loc[ep['week'] == 1]
+#    del ep['week']
+#    del ep['ec']
+#    ep2 = ep.groupby(['tech']).sum()
+#    #ep2 = ep2.unstack()
+#    print(ep2)
+#    #ep2.columns = ep2.columns.droplevel()
+#    ep2.plot(kind='bar', stacked=True)
+#    plt.xlabel('Hour')
+#    plt.ylabel('Electricity generation (kWh)')
+#    plt.title('Electricity generation per technology for a week in winter')
+#    fig = plt.gcf()
+#    fig.set_size_inches(12, 4, forward=True)
+#    plt.legend(loc=9, bbox_to_anchor=(1.0, 1.0))
+#    fig.savefig(directory + '/electricity_production_winter_week.pdf', format='pdf')
+
+    # ELECTRICITY EXPORTS - AGGREGATED DAILY RESULTS
+    plt.close(fig)
+    plt.close()
+    exp = electricity_exports.copy(deep=True)
+    day = round(exp['tm']/(24))
+    exp['day'] = day
+    del exp['tm']
+    del exp['ec']
+    exp2 = exp.groupby(['day']).sum()
+    exp2.plot(kind='bar', stacked=True)
+    plt.xlabel('Day')
+    plt.ylabel('Electricity exports (kWh)')
+    plt.title('Electricity exports to grid (aggregated daily)')
+    plt.xticks([])
+    fig = plt.gcf()
+    fig.set_size_inches(12, 4, forward=True)
+    plt.legend(loc=9, bbox_to_anchor=(1.0, 1.0))
+    fig.savefig(directory + '/electricity_exports_per_day.pdf', format='pdf')
+    plt.clf()
+    plt.close('all')
     
     print("FINISHED!")
