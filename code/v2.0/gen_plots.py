@@ -77,8 +77,8 @@ def generate_plots(input_path, param_file, result_file, experiment, visualizatio
     capacities_stor = pd.DataFrame(capstor, columns = ['tech','ec','value'])
     del capacities_stor['ec']
     capacities_stor = capacities_stor.apply(pd.to_numeric)
-    capacities_stor['tech'] = capacities_stor['tech'].replace(1, 'battery')
-    capacities_stor['tech'] = capacities_stor['tech'].replace(2, 'hot_water_tank')
+    capacities_stor['tech'] = capacities_stor['tech'].replace(1, 'hot_water_tank')
+    capacities_stor['tech'] = capacities_stor['tech'].replace(2, 'battery')
     capacities_stor = capacities_stor.groupby(['tech']).sum()
     #capacities_stor['battery'] = capacities_stor['1']
     #capacities_stor['hot_water_tank'] = capacities_stor['2']
@@ -94,8 +94,8 @@ def generate_plots(input_path, param_file, result_file, experiment, visualizatio
     
     stgoutdf = pd.DataFrame(outstg, columns = ['tm', 'tech', 'ec', 'value'])
     stgoutdf = stgoutdf.apply(pd.to_numeric)
-    stgoutdf['tech'] = stgoutdf['tech'].replace(1, 'battery')
-    stgoutdf['tech'] = stgoutdf['tech'].replace(2, 'hot_water_tank')
+    stgoutdf['tech'] = stgoutdf['tech'].replace(1, 'hot_water_tank')
+    stgoutdf['tech'] = stgoutdf['tech'].replace(2, 'battery')
     eoutdf = eoutdf.append(stgoutdf)
     
     eimpdf = pd.DataFrame(eimp, columns = ['tm', 'ec', 'value'])
