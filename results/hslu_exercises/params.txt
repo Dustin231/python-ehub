@@ -1,65 +1,84 @@
 eff 1 3.2
 eff 2 0.94
 eff 3 0.17
+effFixOut 4 1 0.0030000000000000005
+effFixOut 4 2 0.0051081081081081085
+effFixOut 4 3 0
+effFixOut 4 4 0
 partLoad 1 nan
 partLoad 2 nan
 partLoad 3 nan
+partLoad 4 nan
 lifeTechs 1 20
 lifeTechs 2 30
 lifeTechs 3 25
-maxCapTechs 1 1 100000
-maxCapTechs 1 2 100000
-maxCapTechs 1 3 2500
+lifeTechs 4 20
+maxCapTechs 1 1 inf
+maxCapTechs 1 2 inf
+maxCapTechs 1 3 inf
+maxCapTechs 1 4 inf
 minCapTechs 1 1 0
 minCapTechs 1 2 0
 minCapTechs 1 3 0
+minCapTechs 1 4 0
 maxOutTechs 1 1 inf
 maxOutTechs 1 2 inf
 maxOutTechs 1 3 inf
+maxOutTechs 1 4 inf
 minOutTechs 1 1 0
 minOutTechs 1 2 0
 minOutTechs 1 3 0
+minOutTechs 1 4 0
 techCO2 1 0
 techCO2 2 0
 techCO2 3 0
-YtCapCost 1 1
-YtCapCost 2 1
-YtCapCost 3 1
+techCO2 4 0
+YtCapCost 1 0
+YtCapCost 2 0
+YtCapCost 3 0
+YtCapCost 4 0
 solkWm2 1 nan
 solkWm2 2 nan
 solkWm2 3 0.2
+solkWm2 4 nan
 invTech 1 2270
 invTech 2 730
 invTech 3 325
+invTech 4 2870
 omvTech 1 0.1
 omvTech 2 0.01
 omvTech 3 0.06
+omvTech 4 0.021
 omfTech 1 0
 omfTech 2 0
 omfTech 3 0
+omfTech 4 0
 CRFtech 1 0.10185220882315059
 CRFtech 2 0.08882743338727227
 CRFtech 3 0.09367877905196811
+CRFtech 4 0.10185220882315059
 maxCFA 1 1
 maxCFA 2 1
 maxCFA 3 1
+maxCFA 4 1
 minCFA 1 0
 minCFA 2 0
 minCFA 3 0
-maxStorCh 1 0.3
-maxStorCh 2 0.25
-maxStorDisch 1 0.3
-maxStorDisch 2 0.25
-standbyLoss 1 0.0001
-standbyLoss 2 0.001
+minCFA 4 0
+maxStorCh 1 0.25
+maxStorCh 2 0.3
+maxStorDisch 1 0.25
+maxStorDisch 2 0.3
+standbyLoss 1 0.001
+standbyLoss 2 0.0001
 chargingEff 1 0.9
 chargingEff 2 0.9
 dischargingEff 1 0.9
 dischargingEff 2 0.9
 minSoC 1 0.0
 minSoC 2 0.0
-invStg 1 430
-invStg 2 40
+invStg 1 40
+invStg 2 430
 lifeStg 1 20
 lifeStg 2 20
 omfStg 1 0
@@ -68,10 +87,10 @@ stgCO2 1 0
 stgCO2 2 0
 CRFstg 1 0.10185220882315059
 CRFstg 2 0.10185220882315059
-maxCapStg 1 1 1 100000.0
-maxCapStg 1 2 1 0.0
-maxCapStg 1 1 2 0.0
-maxCapStg 1 2 2 100000.0
+maxCapStg 1 1 1 0.0
+maxCapStg 1 2 1 inf
+maxCapStg 1 1 2 inf
+maxCapStg 1 2 2 0.0
 maxCapStg 1 1 3 0.0
 maxCapStg 1 2 3 0.0
 maxCapStg 1 1 4 0.0
@@ -84,8 +103,8 @@ minCapStg 1 1 3 0.0
 minCapStg 1 2 3 0.0
 minCapStg 1 1 4 0.0
 minCapStg 1 2 4 0.0
-YsCapCost 1 1
-YsCapCost 2 1
+YsCapCost 1 0
+YsCapCost 2 0
 impCostFx 3 0.09
 impCostFx 4 0.0
 impCostFx 1 0.24
@@ -43902,4 +43921,4 @@ solarEm 8757 0.0
 solarEm 8758 0.0
 solarEm 8759 0.0
 solarEm 8760 0.0
-maxSolarArea 500
+maxSolarArea 100000
