@@ -13,8 +13,15 @@ def const_sys(data, model):
     # Energy balance
     #-----------------------------------------------------------------------------#
     
+#    def energyBalance_rule(model, h,  m, e): #energy balance when multiple hubs are present
+#        return (model.loads[h,m,e] + model.Eexp[h,m,e] == (model.Eimp[h, m, e] + sum(model.OutStg[h,m,s,e] - model.InStg[h,m,s,e] for s in model.Stg) +
+#                                                            sum(model.Eout[h,m,t,e] - model.Ein[h,m,t,e] for t in model.Tech) 
+#                                                                    + sum(model.NetE[l,j,h,e,m]*(1-model.netLoss[l]*model.netLength[l])- model.NetE[l,h,j,e,m] for l in model.LinkID for j in model.hubs ))) 
+#    
+#    model.energyBalance = Constraint(model.hubs, model.Time, model.EC, rule=energyBalance_rule)
+    
     def energyBalance_rule(model, h,  m, e): #energy balance when multiple hubs are present
-        return (model.loads[h,m,e] + model.Eexp[h,m,e] == (model.Eimp[h, m, e] + sum(model.OutStg[h,m,s,e] - model.InStg[h,m,s,e] for s in model.Stg) +
+        return (model.loads[h,m,e] + model.Eexp[h,m,e] == (model.Eimp[h, m, e] - sum(model.FlowStg[h,m,s,e] for s in model.Stg) +
                                                             sum(model.Eout[h,m,t,e] - model.Ein[h,m,t,e] for t in model.Tech) 
                                                                     + sum(model.NetE[l,j,h,e,m]*(1-model.netLoss[l]*model.netLength[l])- model.NetE[l,h,j,e,m] for l in model.LinkID for j in model.hubs ))) 
     

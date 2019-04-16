@@ -20,11 +20,8 @@ def gen_var(data, model):
     
     # Storage technology variables
     model.CapStg = Var(model.hubs, model.Stg, model.EC, domain=NonNegativeReals) # installed storage capacity
-    model.InStg = Var(model.hubs, model.Time, model.Stg, model.EC, domain=NonNegativeReals) # energy into storage
-    model.OutStg = Var(model.hubs, model.Time, model.Stg, model.EC, domain=NonNegativeReals) # energy out of storage
+    model.FlowStg = Var(model.hubs, model.Time, model.Stg, model.EC, domain=Reals) # energy into storage
     model.SoC = Var(model.hubs, model.SubTime, model.Stg, model.EC, domain=NonNegativeReals) # state of charge of storage
-    model.YstgIn = Var(model.hubs, model.Time, model.Stg, model.EC, domain=Binary) # binary indicator for storage in
-    model.YstgOut = Var(model.hubs, model.Time, model.Stg, model.EC, domain=Binary) # binary indicator for storage out
     
     # Network variables
     model.CapNet = Var(model.LinkID, model.hub_i, model.hub_j, model.EC, domain=NonNegativeReals) # installed network link capacity
