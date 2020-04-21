@@ -24,9 +24,9 @@ def generate_plots2(input_path, results_path, param_file, result_file, experimen
     writer = pd.ExcelWriter(plot_path + results_data, engine='xlsxwriter')
     
     # READ LABELS FROM INPUT FILE
-    energy_carriers = pd.read_excel(input_path,sheetname='Energy Carriers', header=None, skiprows=3)
-    conversion_techs = pd.read_excel(input_path,sheetname='Energy Converters', header=None, skiprows=2,skip_footer=20)
-    storage_techs = pd.read_excel(input_path,sheetname='Storage', header=None, skiprows=2,skip_footer=15)
+    energy_carriers = pd.read_excel(input_path,sheet_name='Energy Carriers', header=None, skiprows=3)
+    conversion_techs = pd.read_excel(input_path,sheet_name='Energy Converters', header=None, skiprows=2,skipfooter=20)
+    storage_techs = pd.read_excel(input_path,sheet_name='Storage', header=None, skiprows=2,skipfooter=15)
     
     energy_carriers2 = energy_carriers[0].tolist()
     conversion_techs2 = conversion_techs.drop([0],axis=1).transpose()

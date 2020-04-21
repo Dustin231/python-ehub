@@ -112,7 +112,7 @@ class InputData:
         Retrieve the list of energy carriers used in the model, assign the energy carriers values from 1 to N in a dictionary, and save the energy carrier values in a list
         """
         # Read data
-        ECs = pd.read_excel(self.path,sheetname=self.ECSheet, header=None, skiprows=3)
+        ECs = pd.read_excel(self.path,sheet_name=self.ECSheet, header=None, skiprows=3)
         ECs = ECs.dropna(axis=1, how='all')
         
         self.nEC = ECs.shape[0]
@@ -127,7 +127,7 @@ class InputData:
         """
         Retrieve number of hubs, interest rate, objective minimization target, and max CO2 emissions from input spreadsheet
         """    
-        gendata=pd.read_excel(self.path,sheetname=self.GeneralSheet, skiprows=1, index_col=0)
+        gendata=pd.read_excel(self.path,sheet_name=self.GeneralSheet, skiprows=1, index_col=0)
         gendata=gendata.dropna(axis=1,how='all')
         self.nHub=int(gendata.loc["Number of hubs"][0])
         self.interest=gendata.loc["Interest rate (%)"][0]/100
@@ -139,7 +139,7 @@ class InputData:
         """
         Retrieve import EC data from Excel spreadsheet
         """
-        Imp=pd.read_excel(self.path,sheetname=self.ImpSheet, skiprows=2, index_col=0)
+        Imp=pd.read_excel(self.path,sheet_name=self.ImpSheet, skiprows=2, index_col=0)
         
         Imp.loc[:,"Maximum supply (kWh)"] = Imp.loc[:,"Maximum supply (kWh)"].fillna(float('inf')) # replace nan values for max cap with infinity
         Imp=Imp.fillna(0) # fill the remaining blanks (nan) with zero values
@@ -160,7 +160,7 @@ class InputData:
         """
         Retrieve export EC data from Excel spreadsheet
         """
-        Exp=pd.read_excel(self.path,sheetname=self.ExpSheet, skiprows=2, index_col=0) 
+        Exp=pd.read_excel(self.path,sheet_name=self.ExpSheet, skiprows=2, index_col=0) 
         Exp=Exp.fillna(0) # fill the remaining blanks (nan) with zero values
         
         # lookup EC IDs
@@ -172,11 +172,28 @@ class InputData:
         self.expEC = ecID
         self.expPriceFx = Exp["Export Price (CHF/kWh)"]
         
+#    def Rd_Demand(self):
+#        """
+#        Retrieve demand data from Excel spreadsheet
+#        """
+#        DemandDatas=pd.read_excel(self.path,sheet_name=self.DemandSheet, header=None, skiprows=1)
+#        self.DemandData = DemandDatas.loc[4:DemandDatas.shape[0],1:DemandDatas.shape[1]] # demand data; extract data from index row label 3:last row, and column label 1:last column
+#        self.DemandData = self.DemandData.fillna(0) # fill blanks (nan) with zero values
+#        self.DemandHub = DemandDatas.loc[2,1:DemandDatas.shape[1]].values.tolist() # hub data; convert to list to be consistent with DemEC formatting
+#        self.nTime= self.DemandData.shape[0] # number of time periods
+#        dec = DemandDatas.loc[1,1:DemandDatas.shape[1]] # row of demand energy carriers
+#        
+#        # lookup energy carrier names
+#        DemEC = self.LookupEC(dec,"Energy carrier lookup failed in Demand Data input spreadsheet")              
+#        self.DemandEC = DemEC # demand EC data
+        
+    # retrieve demand data from the XLSX
     def Rd_Demand(self):
+        
         """
         Retrieve demand data from Excel spreadsheet
         """
-        DemandDatas=pd.read_excel(self.path,sheetname=self.DemandSheet, header=None, skiprows=1)
+        DemandDatas=pd.read_excel(self.path,sheet_name=self.DemandSheet, header=None, skiprows=1)
         self.DemandData = DemandDatas.loc[4:DemandDatas.shape[0],1:DemandDatas.shape[1]] # demand data; extract data from index row label 3:last row, and column label 1:last column
         self.DemandData = self.DemandData.fillna(0) # fill blanks (nan) with zero values
         self.DemandHub = DemandDatas.loc[2,1:DemandDatas.shape[1]].values.tolist() # hub data; convert to list to be consistent with DemEC formatting
@@ -186,6 +203,12 @@ class InputData:
         # lookup energy carrier names
         DemEC = self.LookupEC(dec,"Energy carrier lookup failed in Demand Data input spreadsheet")              
         self.DemandEC = DemEC # demand EC data
+
+        DemandData2=pd.read_excel(self.path,sheet_name=self.DemandSheet, header=[0,1], skiprows=2, index_col=0)
+        DemandData2=DemandData2.rename(self.EC_dict, axis='columns')
+        DemandData2 = DemandData2.stack().stack()
+        DemandData2 = DemandData2.swaplevel(i=-2,j=-3)
+        self.loads=DemandData2.to_dict()
         
     def TechInOut(self):
         """
@@ -234,7 +257,7 @@ class InputData:
         """
         Retrieve energy converter data from Excel spreadsheet
         """
-        Technologies=pd.read_excel(self.path,sheetname=self.TechSheet, skiprows=2, index_col=0) #technology characteristics
+        Technologies=pd.read_excel(self.path,sheet_name=self.TechSheet, skiprows=2, index_col=0) #technology characteristics
         Technologies=Technologies.dropna(axis=1, how='all') #technology characteristics
         self.TechData = Technologies
         
@@ -283,7 +306,7 @@ class InputData:
         """
         Retrieve storage data from Excel spreadsheet
         """
-        Storage=pd.read_excel(self.path,sheetname=self.StgSheet, skiprows=2, index_col=0)
+        Storage=pd.read_excel(self.path,sheet_name=self.StgSheet, skiprows=2, index_col=0)
         Storage=Storage.dropna(axis=1, how='all')
         self.StorageData=Storage
         
@@ -311,10 +334,16 @@ class InputData:
         self.stndby = self.stndby.fillna(0)
         self.minSoC = self.StorageData.loc["Minimum SoC (%)"]/100
         self.minSoC = self.minSoC.fillna(0)
-        self.maxCapStg = self.StorageData.loc["Maximum capacity (kWh)"] 
-        self.maxCapStg = self.maxCapStg.fillna(float('inf')) # replace nan values for max cap with infinity
-        self.minCapStg = self.StorageData.loc["Minimum capacity (kWh)"]
-        self.minCapStg = self.minCapStg.fillna(0)
+#        self.maxCapStg = self.StorageData.loc["Maximum capacity (kWh)"] 
+#        self.maxCapStg = self.maxCapStg.fillna(float('inf')) # replace nan values for max cap with infinity
+#        self.minCapStg = self.StorageData.loc["Minimum capacity (kWh)"]
+#        self.minCapStg = self.minCapStg.fillna(0)
+        maxCapStg = self.StorageData.loc["Maximum capacity (kWh)"] 
+        maxCapStg = maxCapStg.fillna(float('inf')) # replace nan values for max cap with infinity
+        self.maxCapStg = self.GenDict(self.nStg,maxCapStg)
+        minCapStg = self.StorageData.loc["Minimum capacity (kWh)"]
+        minCapStg = minCapStg.fillna(0)
+        self.minCapStg = self.GenDict(self.nStg,minCapStg)
         self.co2Stg = self.StorageData.loc["CO2 investment (kg-CO2/kWh)"]
         self.co2Stg = self.co2Stg.fillna(0)
         self.hubStg = self.StorageData.loc["Hubs"] # leave nan
@@ -323,7 +352,7 @@ class InputData:
         """
         Retrieve network data from Excel spreadsheet
         """
-        net = pd.read_excel(self.path,sheetname=self.NetSheet, header=None, skiprows=2, index_col = 0)
+        net = pd.read_excel(self.path,sheet_name=self.NetSheet, header=None, skiprows=2, index_col = 0)
         net = net.dropna(axis=1, how='all')
         self.NetworkData = net
 
@@ -361,13 +390,13 @@ class InputData:
         Retrieve solar data from Excel spreadsheet
         """
         # solar irradiance
-        SolarData=pd.read_excel(self.path,sheetname=self.SolarSheet, skiprows=4)
+        SolarData=pd.read_excel(self.path,sheet_name=self.SolarSheet, skiprows=4)
         SolarData = SolarData.loc[0:SolarData.shape[0],'Irradiation (kW/m2)'] 
         SolarData= SolarData.dropna(axis=0,how='all')
         self.solIrr = SolarData
     
         # lookup and store solar EC
-        solEC=pd.read_excel(self.path,sheetname=self.SolarSheet, skiprows=1, index_col=0)
+        solEC=pd.read_excel(self.path,sheet_name=self.SolarSheet, skiprows=1, index_col=0)
         solEC=solEC.iloc[0][0]
         self.solECID = []
         self.techSol = []
@@ -382,7 +411,7 @@ class InputData:
             
             
     def Rd_EimpHr(self):            
-        impHrData=pd.read_excel(self.path,sheetname=self.ImpHrSheet, header=None, skiprows=3)
+        impHrData=pd.read_excel(self.path,sheet_name=self.ImpHrSheet, header=None, skiprows=3)
         impHrData= impHrData.dropna(axis=1,how='all')
         self.impHr = impHrData.loc[1:impHrData.shape[0],1:impHrData.shape[1]] # extract data from index row label 0:last row, and column label 1:last column
         self.impHr = self.impHr.fillna(0) # fill blanks (nan) with zero values
@@ -398,7 +427,7 @@ class InputData:
         self.impHrEC = impHrECid
         
     def Rd_EexpHr(self):            
-        expHrData=pd.read_excel(self.path,sheetname=self.ExpHrSheet, header=None, skiprows=3)
+        expHrData=pd.read_excel(self.path,sheet_name=self.ExpHrSheet, header=None, skiprows=3)
         expHrData= expHrData.dropna(axis=1,how='all')
         self.expHr = expHrData.loc[1:expHrData.shape[0],1:expHrData.shape[1]] # extract data from index row label 0:last row, and column label 1:last column
         self.expHr = self.expHr.fillna(0) # fill blanks (nan) with zero values
@@ -414,7 +443,7 @@ class InputData:
         self.expHrEC = expHrECid  
         
     def Rd_CFHr(self):
-        cfHrData = pd.read_excel(self.path,sheetname=self.CFHrSheet, header=None, skiprows=2)
+        cfHrData = pd.read_excel(self.path,sheet_name=self.CFHrSheet, header=None, skiprows=2)
         cfHrTech = cfHrData.iloc[0,1:cfHrData.shape[1]]
         cfHrTechId = self.LookupTech(cfHrTech, "Hourly capacity factor technology label not recognized. Check hourly capacity factor input spreadsheet.")
         self.cfHrEq = cfHrData.iloc[1,1:cfHrData.shape[1]]

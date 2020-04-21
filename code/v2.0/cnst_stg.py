@@ -39,10 +39,10 @@ def const_stg(data, model):
     
     # maximum storage capacity constraint
     def storageMaxCap_rule(model, h, stg, e):
-        return (model.CapStg[h,stg,e] <= model.maxCapStg[h,stg,e])
+        return (model.CapStg[h,stg,e] <= model.maxCapStg[stg])
     model.storageMaxCap = Constraint(model.hubs, model.Stg, model.EC, rule=storageMaxCap_rule)
     
     # minimum storage capacity constraint
     def storageMinCap_rule(model, h, stg, e):
-        return (model.CapStg[h,stg,e] >= model.minCapStg[h,stg,e])
+        return (model.CapStg[h,stg,e] >= model.minCapStg[stg])
     model.storageMinCap = Constraint(model.hubs, model.Stg, model.EC, rule=storageMinCap_rule)

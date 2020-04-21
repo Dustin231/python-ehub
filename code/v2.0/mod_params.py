@@ -42,9 +42,11 @@ def gen_param(data, model):
     model.stgCO2 = Param(model.Stg, initialize = data.GenDict(data.nStg,data.co2Stg)) # carbon factor for storage installation
     model.CRFstg = Param(model.Stg, domain=NonNegativeReals, initialize=data.CRF(data.lifeStg)) # storage captial recovery factor
 #    model.CRFstg = Param(model.Stg, domain=NonNegativeReals, initialize=data.StgCRF()) # storage captial recovery factor
-    maxS_dict, minS_dict = data.StgMaxMinCapInit()
-    model.maxCapStg = Param(model.hubs, model.Stg, model.EC, initialize = maxS_dict) # max installed storage capacity
-    model.minCapStg = Param(model.hubs, model.Stg, model.EC, initialize = minS_dict) # min installed storage capacity
+#    maxS_dict, minS_dict = data.StgMaxMinCapInit()
+#    model.maxCapStg = Param(model.hubs, model.Stg, model.EC, initialize = maxS_dict) # max installed storage capacity
+#    model.minCapStg = Param(model.hubs, model.Stg, model.EC, initialize = minS_dict) # min installed storage capacity
+    model.maxCapStg = Param(model.Stg, initialize = data.maxCapStg) # max installed storage capacity
+    model.minCapStg = Param(model.Stg, initialize = data.minCapStg) # min installed storage capacity
     model.YsCapCost = Param(model.Stg, initialize = data.StgCapInit(model)) # storage pre-installed capacities initialization and flag setting
 
     # Network parameters
@@ -76,5 +78,5 @@ def gen_param(data, model):
     model.interestRate = Param(within=NonNegativeReals, initialize=data.interest) # interest rate (this param not used directly)
     model.bigM = Param(within=NonNegativeReals, initialize=data.bigm) # acts as an upper limit for Eout from part load technologies and network link exchanges
     model.maxCarbon = Param(initialize=data.maxcarbon) # max total carbon
-    model.loads = Param(model.hubs, model.Time, model.EC, initialize=data.DemandInit()) # demands
+    model.loads = Param(model.hubs, model.Time, model.EC, default=0, initialize=data.loads) # demands
     model.solarEm = Param(model.Time, initialize=data.GenDict(data.nTime,data.solIrr)) # insolation
